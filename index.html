@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Восток</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+HK:wght@400;500&family=PT+Sans:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="socials">
+          <a href="#" class="social social--ok" aria-label="Одноклассники"></a>
+          <a href="#" class="social social--vk" aria-label="ВКонтакте"></a>
+        </div>
+
+        <div class="header-info">
+          <div class="header-info__item">
+            <span class="header-info__icon header-info__icon--map" aria-hidden="true"></span>
+            <span class="header-info__text">Чита, ул Комсомольская, д 79</span>
+          </div>
+          <a class="header-info__item" href="tel:+79143687045">
+            <span class="header-info__icon header-info__icon--phone" aria-hidden="true"></span>
+            <span class="header-info__text header-info__text--phone">+7(914)368-70-45</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-main">
+        <img class="logo" src="./assets/icons/ЛогоВосток.svg" alt="Восток" />
+        <div class="header-main__actions">
+          <nav class="nav" aria-label="Навигация по странице">
+            <a class="nav__link" href="#factory">Фабрика</a>
+            <a class="nav__link" href="#shops">Магазины</a>
+            <a class="nav__link" href="#products">Продукция</a>
+          </nav>
+          <a class="catalog-button" href="#catalog">Перейти в каталог</a>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="hero-photo" aria-label="Фото кондитерской фабрики">
+        <div class="hero-content">
+          <h1 class="hero-title">Любимые сладости<br>Забайкальского края</h1>
+          <p class="hero-text">КФ «ВОСТОК» — это десятилетия традиций, воплощенные в современном кондитерском искусстве. Мы создаем сладости, которые объединяют поколения.</p>
+          <a class="hero-button" href="#catalog">Выбрать торт</a>
+        </div>
+      </section>
+      <section class="section section--products" id="products">
+        <h2 class="page-title">Наша продукция</h2>
+        <div class="products-toolbar">
+          <div class="products-switcher" role="tablist" aria-label="Категории продукции">
+            <span class="products-switcher__indicator" aria-hidden="true"></span>
+            <button class="products-switcher__item products-switcher__item--active" type="button" role="tab" aria-selected="true" data-category="cakes">Торты</button>
+            <button class="products-switcher__item" type="button" role="tab" aria-selected="false" data-category="pastries">Пирожное</button>
+            <button class="products-switcher__item" type="button" role="tab" aria-selected="false" data-category="cookies">Печенье</button>
+          </div>
+          <div class="products-arrows" aria-label="Управление каруселью продукции">
+            <button class="products-arrow products-arrow--prev" type="button" aria-label="Предыдущие товары"></button>
+            <button class="products-arrow products-arrow--next" type="button" aria-label="Следующие товары"></button>
+          </div>
+        </div>
+        <div class="products-grid"></div>
+        <a class="products-more" href="#catalog">Смотреть всё</a>
+      </section>
+      <section class="section section--factory" id="factory">
+        <h2 class="page-title">О производстве</h2>
+        <div class="factory-intro">
+          <h3 class="factory-title">Десерты<br>на любой вкус</h3>
+          <div class="factory-info">
+            <p class="factory-text">Ежедневно мы производим свыше 60 наименований кондитерской продукции, сохраняя традиции нашего края. Отлаженные процессы и контроль качества на каждом этапе обеспечивают стабильный результат и широкий ассортимент каждый день. Мы регулярно обновляем линейку изделий, сохраняя узнаваемый вкус и качество.</p>
+            <div class="factory-stats">
+              <div class="factory-stat-item">
+                <p class="factory-stat">140+</p>
+                <p class="factory-stat-caption">Кондитерских<br>позиций в производстве</p>
+                <a class="factory-link" href="#factory">Узнать о фабрике</a>
+              </div>
+              <div class="factory-stat-item">
+                <p class="factory-stat">60+</p>
+                <p class="factory-stat-caption">Лет радуем вас и<br>ваших близких</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ingredients-scene" aria-label="Натуральные ингредиенты">
+        <div class="ingredients-scene__stage">
+          <div class="ingredients-scene__berries" aria-hidden="true">
+            <img class="berry berry--blur-1" src="./assets/berries/cherry-blur-01.png" alt="" data-depth="-0.42" data-drift="-80" data-rotate="-30" data-phase="-0.24" data-curve="28" />
+            <img class="berry berry--blur-2" src="./assets/berries/cherry-blur-04.png" alt="" data-depth="0.36" data-drift="90" data-rotate="34" data-phase="0.12" data-curve="-34" />
+            <img class="berry berry--blur-3" src="./assets/berries/cherry-blur-08.png" alt="" data-depth="-0.58" data-drift="70" data-rotate="-38" data-phase="-0.02" data-curve="22" />
+            <img class="berry berry--blur-4" src="./assets/berries/cherry-blur-11.png" alt="" data-depth="0.48" data-drift="-80" data-rotate="42" data-phase="0.26" data-curve="-26" />
+            <img class="berry berry--sharp-1" src="./assets/berries/cherry-sharp-01.png" alt="" data-depth="-0.38" data-drift="96" data-rotate="54" data-phase="-0.14" data-curve="30" />
+            <img class="berry berry--sharp-2" src="./assets/berries/cherry-sharp-02.png" alt="" data-depth="0.48" data-drift="-100" data-rotate="-58" data-phase="0.06" data-curve="-34" />
+            <img class="berry berry--front-1" src="./assets/berries/cherry-front-01.png" alt="" data-depth="0.72" data-drift="-130" data-rotate="-72" data-phase="-0.2" data-curve="44" />
+            <img class="berry berry--front-2" src="./assets/berries/cherry-front-03.png" alt="" data-depth="-0.46" data-drift="110" data-rotate="66" data-phase="0.18" data-curve="-42" />
+            <img class="berry berry--front-3" src="./assets/berries/cherry-front-05.png" alt="" data-depth="0.82" data-drift="-120" data-rotate="74" data-phase="0.08" data-curve="40" />
+            <img class="berry berry--blur-5" src="./assets/berries/cherry-blur-02.png" alt="" data-depth="-0.64" data-drift="88" data-rotate="44" data-phase="-0.08" data-curve="-28" />
+            <img class="berry berry--blur-6" src="./assets/berries/cherry-blur-06.png" alt="" data-depth="0.52" data-drift="-96" data-rotate="-50" data-phase="0.32" data-curve="36" />
+            <img class="berry berry--blur-7" src="./assets/berries/cherry-blur-09.png" alt="" data-depth="-0.46" data-drift="110" data-rotate="46" data-phase="0.04" data-curve="-38" />
+            <img class="berry berry--blur-8" src="./assets/berries/cherry-blur-12.png" alt="" data-depth="0.42" data-drift="-78" data-rotate="-40" data-phase="-0.34" data-curve="26" />
+            <img class="berry berry--front-4" src="./assets/berries/cherry-front-02.png" alt="" data-depth="0.86" data-drift="140" data-rotate="82" data-phase="-0.04" data-curve="-48" />
+            <img class="berry berry--front-5" src="./assets/berries/cherry-front-04.png" alt="" data-depth="-0.56" data-drift="-120" data-rotate="-76" data-phase="0.22" data-curve="42" />
+            <img class="berry berry--corner-1" src="./assets/berries/cherry-front-01.png" alt="" data-depth="0.68" data-drift="-70" data-rotate="-52" data-phase="-0.38" data-curve="24" data-speed="0.82" />
+            <img class="berry berry--corner-2" src="./assets/berries/cherry-blur-05.png" alt="" data-depth="-0.52" data-drift="86" data-rotate="44" data-phase="0.36" data-curve="-32" data-speed="1.16" />
+            <img class="berry berry--corner-3" src="./assets/berries/cherry-blur-10.png" alt="" data-depth="0.46" data-drift="-92" data-rotate="-38" data-phase="0.48" data-curve="36" data-speed="0.94" />
+            <img class="berry berry--corner-4" src="./assets/berries/cherry-front-03.png" alt="" data-depth="-0.64" data-drift="78" data-rotate="58" data-phase="-0.46" data-curve="-28" data-speed="1.28" />
+            <img class="berry berry--edge-1" src="./assets/berries/cherry-blur-03.png" alt="" data-depth="-0.34" data-drift="-64" data-rotate="-32" data-phase="-0.08" data-curve="22" data-speed="1.08" />
+            <img class="berry berry--edge-2" src="./assets/berries/cherry-front-05.png" alt="" data-depth="0.92" data-drift="118" data-rotate="86" data-phase="0.14" data-curve="-44" data-speed="0.88" />
+            <img class="berry berry--edge-3" src="./assets/berries/cherry-blur-07.png" alt="" data-depth="0.4" data-drift="-74" data-rotate="-46" data-phase="0.28" data-curve="30" data-speed="1.22" />
+            <img class="berry berry--edge-4" src="./assets/berries/cherry-sharp-01.png" alt="" data-depth="-0.5" data-drift="92" data-rotate="64" data-phase="-0.22" data-curve="-26" data-speed="0.76" />
+          </div>
+          <div class="ingredients-scene__content">
+            <img class="ingredients-scene__logo" src="./assets/icons/ЛогоВосток.svg" alt="Восток" />
+            <p class="ingredients-scene__text">В идеальном десерте не должно быть ничего лишнего, поэтому выбираем только натуральные ингредиенты и полностью ручную сборку</p>
+            <p class="ingredients-scene__year">1964</p>
+          </div>
+        </div>
+      </section>
+      <section class="category-showcase" aria-label="Категории продукции">
+        <a class="category-showcase__card" href="#products" data-category-link="cakes">
+          <span class="category-showcase__label">Торты</span>
+        </a>
+        <a class="category-showcase__card" href="#products" data-category-link="candies">
+          <span class="category-showcase__label">Конфеты</span>
+        </a>
+        <a class="category-showcase__card" href="#products" data-category-link="cookies">
+          <span class="category-showcase__label">Печенье</span>
+        </a>
+        <a class="category-showcase__card" href="#products" data-category-link="pastries">
+          <span class="category-showcase__label">Пирожное</span>
+        </a>
+      </section>
+      <section class="advantages" aria-labelledby="advantages-title">
+        <h2 class="page-title" id="advantages-title">Наши преимущества</h2>
+        <article class="advantage-card">
+          <div class="advantage-card__media" aria-hidden="true"></div>
+          <div class="advantage-card__content">
+            <h3 class="advantage-card__title">Широкий ассортимент</h3>
+            <p class="advantage-card__text">В нашей линейке — более 140 наименований продукции: от классических вкусов до современных сочетаний. Такой выбор позволяет легко найти подходящий вариант для любого случая и настроения.</p>
+          </div>
+        </article>
+        <article class="advantage-card advantage-card--reverse">
+          <div class="advantage-card__content">
+            <h3 class="advantage-card__title">Ежедневное производство</h3>
+            <p class="advantage-card__text">Мы производим продукцию каждый день, соблюдая выверенные процессы и технологию. Это позволяет поддерживать стабильное качество и сохранять свежесть изделий изо дня в день.</p>
+          </div>
+          <div class="advantage-card__media" aria-hidden="true"></div>
+        </article>
+        <article class="advantage-card">
+          <div class="advantage-card__media" aria-hidden="true"></div>
+          <div class="advantage-card__content">
+            <h3 class="advantage-card__title">Сохранение традиций</h3>
+            <p class="advantage-card__text">Мы сохраняем рецептуры и подход, которые знакомы и понятны нескольким поколениям. Опираясь на традиции Забайкальского края, мы развиваем их в современном производстве.</p>
+          </div>
+        </article>
+        <article class="advantage-card advantage-card--reverse">
+          <div class="advantage-card__content">
+            <h3 class="advantage-card__title">Контроль качества</h3>
+            <p class="advantage-card__text">Каждый этап производства проходит проверку — от отбора сырья до выпуска готовой продукции. Это позволяет нам обеспечивать стабильный результат и уверенность в качестве.</p>
+          </div>
+          <div class="advantage-card__media" aria-hidden="true"></div>
+        </article>
+      </section>
+      <section class="catalog-cta" aria-label="Переход в каталог">
+        <div class="catalog-cta__inner">
+          <img class="catalog-cta__logo" src="./assets/icons/ЛогоВосток.svg" alt="Восток" />
+          <div class="catalog-cta__content">
+            <h2 class="catalog-cta__title">Порадуйте себя и своих близких</h2>
+            <p class="catalog-cta__text">Мы собрали в каталоге весь ассортимент продукции, чтобы вы могли в любой момент выбрать то, что подойдёт именно вам.</p>
+            <a class="catalog-cta__button" href="#products">Перейти в каталог</a>
+          </div>
+        </div>
+      </section>
+      <section class="purchase-order" aria-labelledby="purchase-order-title">
+        <h2 class="page-title" id="purchase-order-title">Покупка и заказ</h2>
+        <div class="purchase-order__grid">
+          <div class="purchase-order__content">
+            <article class="purchase-order__item">
+              <h3 class="purchase-order__title">Фирменный магазин</h3>
+              <p class="purchase-order__text">Вся продукция доступна в нашем фирменном магазине. Ассортимент обновляется ежедневно — в наличии всегда свежие изделия.</p>
+              <div class="purchase-order__meta">
+                <p class="purchase-order__label">Адрес</p>
+                <p class="purchase-order__value purchase-order__value--address">Чита, ул Курнатовского, д 18</p>
+              </div>
+              <div class="purchase-order__meta">
+                <p class="purchase-order__label">График работы</p>
+                <p class="purchase-order__value">Пн – Сб 09:00–20:00<br>Вс 09:00–19:00</p>
+              </div>
+            </article>
+            <article class="purchase-order__item">
+              <h3 class="purchase-order__title">Торты на заказ</h3>
+              <p class="purchase-order__text">Заказ тортов оформляется в магазине. Вы можете выбрать вкус, обсудить оформление и оставить заявку с предоплатой.</p>
+              <p class="purchase-order__note">Заказ на торты принимаются за 4 дня до торжества</p>
+            </article>
+          </div>
+          <div class="purchase-order__media" aria-hidden="true"></div>
+        </div>
+      </section>
+      <div id="shops"></div>
+      <div id="catalog"></div>
+    </main>
+    <footer class="footer">
+      <div class="footer__hero">
+        <img class="footer__logo" src="./assets/icons/ЛогоВосток.svg" alt="Восток" />
+        <p class="footer__brand">Восток</p>
+      </div>
+      <div class="footer__content">
+        <div class="footer__column">
+          <p class="footer__label">Навигация</p>
+          <nav class="footer__nav" aria-label="Навигация в футере">
+            <a class="footer__link" href="#factory">Фабрика</a>
+            <a class="footer__link" href="#shops">Магазины</a>
+            <a class="footer__link" href="#products">Продукция</a>
+            <a class="footer__link" href="#catalog">Каталог</a>
+          </nav>
+        </div>
+        <div class="footer__column">
+          <p class="footer__label">Контакты</p>
+          <p class="footer__contact">Чита, ул Комсомольская, д 79</p>
+          <a class="footer__contact" href="tel:+79143687045">+7(914)368-70-45</a>
+        </div>
+        <div class="footer__column footer__column--socials">
+          <p class="footer__label">Мы в соцсетях</p>
+          <div class="footer__socials">
+            <a href="#" class="social social--ok" aria-label="Одноклассники"></a>
+            <a href="#" class="social social--vk" aria-label="ВКонтакте"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© Кондитерская фабрика «Восток»</p>
+        <a class="footer__catalog" href="#products">Перейти в каталог</a>
+      </div>
+    </footer>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
