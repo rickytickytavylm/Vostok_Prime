@@ -377,8 +377,8 @@ body.is-footer-visible .header {
 
 .logo {
   display: block;
-  width: 83px;
-  height: 65px;
+  width: auto;
+  height: 62px;
   flex: 0 0 auto;
 }
 
@@ -1936,8 +1936,8 @@ body.is-footer-visible .header {
   }
 
   .logo {
-    width: 62px;
-    height: auto;
+    width: auto;
+    height: 48px;
   }
 
   .header-main__actions {
