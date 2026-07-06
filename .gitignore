@@ -2,3 +2,8 @@
 Thumbs.db
 *.log
 node_modules/
+
+# Сырьё для сборки каталога (не нужно живому сайту, ломает деплой Pages из-за кириллицы/пробелов в именах)
+assets/new cakes/
+assets/new cakes2/
+jobs.json
