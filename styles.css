@@ -429,12 +429,12 @@ body.is-footer-visible .header {
   position: relative;
   display: flex;
   align-items: flex-start;
-  aspect-ratio: 1280 / 853;
+  aspect-ratio: 1672 / 941;
   min-height: 0;
   padding: 200px 80px 88px;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.28) 100%),
-    url("./assets/webp/hero-desktop.webp") no-repeat center / cover;
+    url("./assets/webp/prime_hero.webp") no-repeat center / cover;
   overflow: hidden;
 }
 
@@ -2808,13 +2808,21 @@ body.is-product-view .header {
 }
 
 @media (max-width: 640px) {
-  /* Шапка в мобе не нужна - навигация уезжает вниз */
+  /* В мобе оставляем только логотип сверху, навигация уезжает вниз */
   .header {
+    display: flex;
+  }
+
+  .header-main__actions {
+    display: none;
+  }
+
+  .burger {
     display: none;
   }
 
   .hero-photo {
-    padding: 40px 20px 72px;
+    padding: 88px 20px 72px;
   }
 
   .tabbar {
