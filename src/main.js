@@ -1,4 +1,5 @@
 const header = document.querySelector(".header");
+const tabbar = document.querySelector("[data-tabbar]");
 const productsSwitcher = document.querySelector(".products-switcher");
 const productTabsIndicator = document.querySelector(".products-switcher__indicator");
 const productsGrid = document.querySelector(".products-grid");
@@ -57,16 +58,48 @@ const getProductImages = (product) => {
 };
 
 const updateHeader = () => {
-  if (!header) return;
-
-  const scrolled = currentView !== "home" || window.scrollY > 40;
-  header.classList.toggle("is-scrolled", scrolled);
-
   const distanceToBottom = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
-  const isFooterVisible = currentView === "home" && distanceToBottom < 520;
-  header.classList.toggle("is-hidden", isFooterVisible);
-  document.body.classList.toggle("is-footer-visible", isFooterVisible);
+
+  if (header) {
+    const scrolled = currentView !== "home" || window.scrollY > 40;
+    header.classList.toggle("is-scrolled", scrolled);
+
+    const isFooterVisible = currentView === "home" && distanceToBottom < 520;
+    header.classList.toggle("is-hidden", isFooterVisible);
+    document.body.classList.toggle("is-footer-visible", isFooterVisible);
+  }
+
+  if (tabbar) {
+    // На главной панель прячется в стартовой позиции и у самого низа (чтобы не закрывать футер),
+    // на подстраницах показываем сразу.
+    const nearBottom = distanceToBottom < 96;
+    const show = (currentView !== "home" || window.scrollY > 60) && !nearBottom;
+    tabbar.classList.toggle("is-visible", show);
+  }
 };
+
+const setActiveTab = () => {
+  if (!tabbar) return;
+  const hash = window.location.hash;
+  let active = "home";
+  if (currentView === "catalog" || currentView === "product" || hash.startsWith("#catalog") || hash.startsWith("#/c/") || hash.startsWith("#/p/")) {
+    active = "catalog";
+  } else if (hash.startsWith("#products")) {
+    active = "products";
+  } else if (hash.startsWith("#factory")) {
+    active = "factory";
+  }
+  tabbar.querySelectorAll(".tabbar__item").forEach((item) => {
+    item.classList.toggle("is-active", item.dataset.tab === active);
+  });
+};
+
+tabbar?.querySelectorAll(".tabbar__item").forEach((item) => {
+  item.addEventListener("click", () => {
+    tabbar.querySelectorAll(".tabbar__item").forEach((el) => el.classList.remove("is-active"));
+    item.classList.add("is-active");
+  });
+});
 
 const createProductCard = (product, index) => {
   const weights = product.weights;
@@ -402,6 +435,7 @@ const showView = (name) => {
   document.body.classList.toggle("is-subpage", name !== "home");
   document.body.classList.toggle("is-product-view", name === "product");
   updateHeader();
+  setActiveTab();
 };
 
 const renderCatalogPage = (categoryId) => {
@@ -457,6 +491,7 @@ const router = () => {
 };
 
 window.addEventListener("hashchange", router);
+window.addEventListener("hashchange", setActiveTab);
 window.addEventListener("scroll", updateHeader, { passive: true });
 
 buildProductTabs();
