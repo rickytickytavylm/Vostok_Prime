@@ -1,0 +1,2320 @@
+{
+  "generated_by": "scripts/build_catalog.py",
+  "sections": [
+    {
+      "id": "classic",
+      "label": "Классические"
+    },
+    {
+      "id": "homemade",
+      "label": "Домашние торты"
+    },
+    {
+      "id": "other",
+      "label": "Другие торты"
+    },
+    {
+      "id": "pastries",
+      "label": "Пирожное"
+    },
+    {
+      "id": "cookies",
+      "label": "Печенье"
+    }
+  ],
+  "cakes": {
+    "vishnevyy": {
+      "slug": "vishnevyy",
+      "images": {
+        "whole": "./assets/webp/cakes/vishnevyy-whole.webp",
+        "cut": "./assets/webp/cakes/vishnevyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\вишневый-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\вишневый-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Вишневый",
+      "section": "homemade",
+      "biscuit": "b",
+      "description": "Шоколадный бисквит на сметане с добавлением молотой вишни прослоен сливочным кремом с вишнёвым конфитюром.",
+      "desc_source": "mom"
+    },
+    "vishnya-so-slivkami": {
+      "slug": "vishnya-so-slivkami",
+      "images": {
+        "whole": "./assets/webp/cakes/vishnya-so-slivkami-whole.webp",
+        "cut": "./assets/webp/cakes/vishnya-so-slivkami-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\вишня-со-сливками-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\вишня-со-сливками-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Вишня со сливками",
+      "section": "other",
+      "biscuit": null,
+      "description": "Нежный бисквит с вишнёвой начинкой и воздушными сливками.",
+      "desc_source": "placeholder"
+    },
+    "vostochnaya-skazka": {
+      "slug": "vostochnaya-skazka",
+      "images": {
+        "whole": "./assets/webp/cakes/vostochnaya-skazka-whole.webp",
+        "cut": "./assets/webp/cakes/vostochnaya-skazka-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\восточная-сказка-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\восточная-сказка-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Восточная сказка",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Слои шоколадного и белого бисквита на сметане и сгущённом молоке прослоены йогуртовым кремом и клубничным конфитюром.",
+      "desc_source": "mom"
+    },
+    "goroskop": {
+      "slug": "goroskop",
+      "images": {
+        "whole": "./assets/webp/cakes/goroskop-whole.webp",
+        "cut": "./assets/webp/cakes/goroskop-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\гороскоп-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\гороскоп-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Гороскоп",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Песочные коржи в сочетании с шоколадным сливочно-белковым кремом.",
+      "desc_source": "mom"
+    },
+    "domashniy": {
+      "slug": "domashniy",
+      "images": {
+        "whole": "./assets/webp/cakes/domashniy-whole.webp",
+        "cut": "./assets/webp/cakes/domashniy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\домашний-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\домашний-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Домашний",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Классический белый бисквит в сочетании со взбитыми сливками.",
+      "desc_source": "mom"
+    },
+    "zemlenichnyy-desert": {
+      "slug": "zemlenichnyy-desert",
+      "images": {
+        "whole": "./assets/webp/cakes/zemlenichnyy-desert-whole.webp",
+        "cut": "./assets/webp/cakes/zemlenichnyy-desert-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\земленичный-десерт-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\земленичный-десерт-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Земляничный десерт",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Белый бисквит на сметане и сгущённом молоке в сочетании со взбитыми сливками с земляничным вкусом.",
+      "desc_source": "mom"
+    },
+    "idilliya": {
+      "slug": "idilliya",
+      "images": {
+        "whole": "./assets/webp/cakes/idilliya-whole.webp",
+        "cut": "./assets/webp/cakes/idilliya-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\идиллия-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\идиллия-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Идиллия",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Бисквит на сметане и сгущённом молоке.",
+      "desc_source": "pending"
+    },
+    "izobilie": {
+      "slug": "izobilie",
+      "images": {
+        "cut": "./assets/webp/cakes/izobilie-cut.webp",
+        "whole": "./assets/webp/cakes/izobilie-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\изобилие разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\изобилие-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Изобилие",
+      "section": "homemade",
+      "biscuit": "g",
+      "description": "Масляный бисквит со сгущённым молоком с добавлением грецкого ореха прослоен сливочным кремом с кусочками чернослива.",
+      "desc_source": "mom"
+    },
+    "kapriz": {
+      "slug": "kapriz",
+      "images": {
+        "whole": "./assets/webp/cakes/kapriz-whole.webp",
+        "cut": "./assets/webp/cakes/kapriz-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\каприз-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\каприз-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Каприз",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Классический белый бисквит прослоен взбитыми сливками с клубничным вкусом. Оформлен воздушным рисом.",
+      "desc_source": "mom"
+    },
+    "kurskiy": {
+      "slug": "kurskiy",
+      "images": {
+        "whole": "./assets/webp/cakes/kurskiy-whole.webp",
+        "cut": "./assets/webp/cakes/kurskiy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\курский-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\курский-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Курский",
+      "section": "other",
+      "biscuit": null,
+      "description": "Песочные коржи с нежной начинкой по традиционному рецепту.",
+      "desc_source": "placeholder"
+    },
+    "lavandovyy": {
+      "slug": "lavandovyy",
+      "images": {
+        "whole": "./assets/webp/cakes/lavandovyy-whole.webp",
+        "cut": "./assets/webp/cakes/lavandovyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\лавандовый-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\лавандовый-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Лавандовый",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Лавандовый бисквит прослоен взбитыми сливками и конфитюром «Черника».",
+      "desc_source": "mom"
+    },
+    "lakomka": {
+      "slug": "lakomka",
+      "images": {
+        "cut": "./assets/webp/cakes/lakomka-cut.webp",
+        "whole": "./assets/webp/cakes/lakomka-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\лакомка-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes2\\лакомка_общийjpg.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes2\\лакоммка_разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Лакомка",
+      "section": "other",
+      "biscuit": null,
+      "description": "Шоколадно-ореховый торт со сгущённым молоком.",
+      "desc_source": "pending"
+    },
+    "lyubimyy": {
+      "slug": "lyubimyy",
+      "images": {
+        "whole": "./assets/webp/cakes/lyubimyy-whole.webp",
+        "cut": "./assets/webp/cakes/lyubimyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\любимый-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\любимый-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Любимый",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Песочные коржи в сочетании со сливочным кремом на основе варёного сгущённого молока.",
+      "desc_source": "mom"
+    },
+    "medovichok": {
+      "slug": "medovichok",
+      "images": {
+        "whole": "./assets/webp/cakes/medovichok-whole.webp",
+        "cut": "./assets/webp/cakes/medovichok-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\медовичек-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\медовичек-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Медовичок",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Коржи с натуральным мёдом прослоены варёным сгущённым молоком.",
+      "desc_source": "mom"
+    },
+    "medovyy": {
+      "slug": "medovyy",
+      "images": {
+        "whole": "./assets/webp/cakes/medovyy-whole.webp",
+        "cut": "./assets/webp/cakes/medovyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\медовый-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\медовый-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Медовый",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Коржи с натуральным мёдом прослоены сливочно-йогуртовым кремом.",
+      "desc_source": "mom"
+    },
+    "mokko": {
+      "slug": "mokko",
+      "images": {
+        "whole": "./assets/webp/cakes/mokko-whole.webp",
+        "cut": "./assets/webp/cakes/mokko-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\мокко-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\мокко-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Мокко",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Шоколадный бисквит на сметане и сгущённом молоке в сочетании со сливочно-шоколадным кремом.",
+      "desc_source": "mom"
+    },
+    "originalnyy": {
+      "slug": "originalnyy",
+      "images": {
+        "whole": "./assets/webp/cakes/originalnyy-whole.webp",
+        "cut": "./assets/webp/cakes/originalnyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\оригинальный-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\оригинальный-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Оригинальный",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Слои шоколадного и белого бисквита на сметане и сгущённом молоке прослоены сметанным кремом.",
+      "desc_source": "mom"
+    },
+    "parizhskie-tayny": {
+      "slug": "parizhskie-tayny",
+      "images": {
+        "whole": "./assets/webp/cakes/parizhskie-tayny-whole.webp",
+        "cut": "./assets/webp/cakes/parizhskie-tayny-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\парижские-тайны-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\парижские-тайны-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Парижские тайны",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Белый бисквит на сметане и сгущённом молоке в сочетании со взбитыми сливками.",
+      "desc_source": "mom"
+    },
+    "praga": {
+      "slug": "praga",
+      "images": {
+        "whole": "./assets/webp/cakes/praga-whole.webp",
+        "cut": "./assets/webp/cakes/praga-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\прага-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\прага-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Прага",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Бисквит на сметане и сгущённом молоке.",
+      "desc_source": "pending"
+    },
+    "prazdnichnyy": {
+      "slug": "prazdnichnyy",
+      "images": {
+        "whole": "./assets/webp/cakes/prazdnichnyy-whole.webp",
+        "cut": "./assets/webp/cakes/prazdnichnyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\праздничный-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\праздничный-рразрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Праздничный",
+      "section": "other",
+      "biscuit": null,
+      "description": "Яркий праздничный торт с праздничным декором для особых случаев.",
+      "desc_source": "placeholder"
+    },
+    "s-chersnoslivym": {
+      "slug": "s-chersnoslivym",
+      "images": {
+        "whole": "./assets/webp/cakes/s-chersnoslivym-whole.webp",
+        "cut": "./assets/webp/cakes/s-chersnoslivym-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\с-черсносливым-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\с-черсносливым-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "С черносливом",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Бисквит на сметане и сгущённом молоке с черносливом.",
+      "desc_source": "pending"
+    },
+    "sakura": {
+      "slug": "sakura",
+      "images": {
+        "whole": "./assets/webp/cakes/sakura-whole.webp",
+        "cut": "./assets/webp/cakes/sakura-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\сакура-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\сакура-разрезjpg.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Сакура",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Бисквит на сметане и сгущённом молоке.",
+      "desc_source": "pending"
+    },
+    "snikers": {
+      "slug": "snikers",
+      "images": {
+        "whole": "./assets/webp/cakes/snikers-whole.webp",
+        "cut": "./assets/webp/cakes/snikers-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\сникерс-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\сникерс-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Сникерс",
+      "section": "other",
+      "biscuit": null,
+      "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
+      "desc_source": "placeholder"
+    },
+    "soblazn": {
+      "slug": "soblazn",
+      "images": {
+        "whole": "./assets/webp/cakes/soblazn-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\соблазн-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Соблазн",
+      "section": "other",
+      "biscuit": null,
+      "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением.",
+      "desc_source": "placeholder"
+    },
+    "tvorozhnyy-schastlivchik": {
+      "slug": "tvorozhnyy-schastlivchik",
+      "images": {
+        "whole": "./assets/webp/cakes/tvorozhnyy-schastlivchik-whole.webp",
+        "cut": "./assets/webp/cakes/tvorozhnyy-schastlivchik-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\творожный-счастливчик-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\творожный-счастливчик-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Творожный счастливчик",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Классический белый бисквит с натуральным творогом в сочетании со взбитыми сливками.",
+      "desc_source": "mom"
+    },
+    "tiramisu": {
+      "slug": "tiramisu",
+      "images": {
+        "whole": "./assets/webp/cakes/tiramisu-whole.webp",
+        "cut": "./assets/webp/cakes/tiramisu-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\тирамису-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\тирамису-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Тирамису",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Слои белого бисквита на сметане и сгущённом молоке прослоены взбитыми сливками со вкусом кофе.",
+      "desc_source": "mom"
+    },
+    "tri-zhelaniya": {
+      "slug": "tri-zhelaniya",
+      "images": {
+        "whole": "./assets/webp/cakes/tri-zhelaniya-whole.webp",
+        "cut": "./assets/webp/cakes/tri-zhelaniya-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\три-желания-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\три-желания-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Три желания",
+      "section": "homemade",
+      "biscuit": "v",
+      "description": "Три разных бисквита на основе сгущённого молока с добавлением какао, грецкого ореха и мака в сочетании со сливочно-йогуртовым кремом.",
+      "desc_source": "mom"
+    },
+    "tryufelnyy": {
+      "slug": "tryufelnyy",
+      "images": {
+        "whole": "./assets/webp/cakes/tryufelnyy-whole.webp",
+        "cut": "./assets/webp/cakes/tryufelnyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\трюфельный-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\трюфельный-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Трюфельный",
+      "section": "other",
+      "biscuit": null,
+      "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом.",
+      "desc_source": "placeholder"
+    },
+    "fantaziya": {
+      "slug": "fantaziya",
+      "images": {
+        "whole": "./assets/webp/cakes/fantaziya-whole.webp",
+        "cut": "./assets/webp/cakes/fantaziya-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\фантазия-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\фантазия-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Фантазия",
+      "section": "other",
+      "biscuit": null,
+      "description": "Праздничный торт с авторским декором и нежным кремом.",
+      "desc_source": "placeholder"
+    },
+    "fiesta": {
+      "slug": "fiesta",
+      "images": {
+        "whole": "./assets/webp/cakes/fiesta-whole.webp",
+        "cut": "./assets/webp/cakes/fiesta-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\фиеста-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\фиеста-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Фиеста",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Коржи с натуральным мёдом прослоены сливочным кремом на основе варёного сгущённого молока. Оформлен белковым кремом.",
+      "desc_source": "mom"
+    },
+    "fistashkovyy": {
+      "slug": "fistashkovyy",
+      "images": {
+        "whole": "./assets/webp/cakes/fistashkovyy-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\фисташковый-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes2\\фисташковый_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Фисташковый",
+      "section": "other",
+      "biscuit": null,
+      "description": "Фисташковый бисквит со сливочным кремом.",
+      "desc_source": "pending"
+    },
+    "tsarskiy": {
+      "slug": "tsarskiy",
+      "images": {
+        "whole": "./assets/webp/cakes/tsarskiy-whole.webp",
+        "cut": "./assets/webp/cakes/tsarskiy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\царский-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\царский-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes2\\царский_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Царский",
+      "section": "other",
+      "biscuit": null,
+      "description": "Премиальный торт с богатым декором и насыщенным вкусом.",
+      "desc_source": "placeholder"
+    },
+    "charodeyka": {
+      "slug": "charodeyka",
+      "images": {
+        "whole": "./assets/webp/cakes/charodeyka-whole.webp",
+        "cut": "./assets/webp/cakes/charodeyka-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\чародейка-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\чародейка-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Чародейка",
+      "section": "homemade",
+      "biscuit": "b",
+      "description": "Слои белого бисквита на сметане прослоены сливочным кремом. Оформлен кокосовой стружкой и гелем.",
+      "desc_source": "mom"
+    },
+    "cheremukhovyy": {
+      "slug": "cheremukhovyy",
+      "images": {
+        "whole": "./assets/webp/cakes/cheremukhovyy-whole.webp",
+        "cut": "./assets/webp/cakes/cheremukhovyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\черемуховый-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\черемуховый-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Черемуховый",
+      "section": "homemade",
+      "biscuit": "b",
+      "description": "Белый бисквит на сметане с добавлением молотой черёмухи в сочетании со сливочным кремом.",
+      "desc_source": "mom"
+    },
+    "chernyy-lyuks": {
+      "slug": "chernyy-lyuks",
+      "images": {
+        "whole": "./assets/webp/cakes/chernyy-lyuks-whole.webp",
+        "cut": "./assets/webp/cakes/chernyy-lyuks-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\черный-люкс-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\черный-люкс-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Чёрный Люкс",
+      "section": "other",
+      "biscuit": null,
+      "description": "Изысканный шоколадный торт премиум-класса с насыщенным вкусом и благородным оформлением.",
+      "desc_source": "placeholder"
+    },
+    "shokoladnaya-devochka": {
+      "slug": "shokoladnaya-devochka",
+      "images": {
+        "whole": "./assets/webp/cakes/shokoladnaya-devochka-whole.webp",
+        "cut": "./assets/webp/cakes/shokoladnaya-devochka-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\шоколадная-девочка-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\шоколадная-девочка-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Шоколадная девочка",
+      "section": "homemade",
+      "biscuit": "g",
+      "description": "Слои масляного бисквита с какао прослоены взбитыми сливками с добавлением сливочно-сырного крема.",
+      "desc_source": "mom"
+    },
+    "elitnyy": {
+      "slug": "elitnyy",
+      "images": {
+        "whole": "./assets/webp/cakes/elitnyy-whole.webp",
+        "cut": "./assets/webp/cakes/elitnyy-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes\\элитный-общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes\\элитный-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Элитный",
+      "section": "other",
+      "biscuit": null,
+      "description": "Бисквитный торт премиального уровня с изысканным кремом и декором.",
+      "desc_source": "placeholder"
+    },
+    "klubnichnoe-chudo": {
+      "slug": "klubnichnoe-chudo",
+      "images": {
+        "whole": "./assets/webp/cakes/klubnichnoe-chudo-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\клубничное_чудо_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Клубничное чудо",
+      "section": "homemade",
+      "biscuit": "g",
+      "description": "Слои масляного бисквита в сочетании со взбитыми сливками с клубничным вкусом.",
+      "desc_source": "mom"
+    },
+    "krasnyy-barhat": {
+      "slug": "krasnyy-barhat",
+      "images": {
+        "cut": "./assets/webp/cakes/krasnyy-barhat-cut.webp",
+        "whole": "./assets/webp/cakes/krasnyy-barhat-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\краасный_бархат_разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes2\\красный-бархат_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Красный бархат",
+      "section": "other",
+      "biscuit": null,
+      "description": "Бисквит «Красный бархат» со сливочно-сырным кремом.",
+      "desc_source": "pending"
+    },
+    "grafskie-razvaliny": {
+      "slug": "grafskie-razvaliny",
+      "images": {
+        "whole": "./assets/webp/cakes/grafskie-razvaliny-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\пирожное_графские_развалины.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Графские развалины",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Крошка воздушного безе с орехом в сочетании со сливочным кремом с варёной сгущёнкой.",
+      "desc_source": "mom"
+    },
+    "kolco-zavarnoe": {
+      "slug": "kolco-zavarnoe",
+      "images": {
+        "whole": "./assets/webp/cakes/kolco-zavarnoe-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\пирожное_кольцо_заварное.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Кольцо заварное",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Заварное кольцо.",
+      "desc_source": "pending"
+    },
+    "korzinochka": {
+      "slug": "korzinochka",
+      "images": {
+        "whole": "./assets/webp/cakes/korzinochka-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\Пирожное_корзиночка.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Корзиночка",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Корзиночка из песочного теста, наполнена яблочным повидлом, украшена белковым кремом, консервированной вишней или желейной ягодой.",
+      "desc_source": "mom"
+    },
+    "eklery": {
+      "slug": "eklery",
+      "images": {
+        "whole": "./assets/webp/cakes/eklery-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\пирожное_эклеры.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Эклеры",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Заварное тесто с варёной сгущёнкой или белково-сливочным кремом.",
+      "desc_source": "mom"
+    },
+    "biskvitno-kremovoe": {
+      "slug": "biskvitno-kremovoe",
+      "images": {
+        "whole": "./assets/webp/cakes/biskvitno-kremovoe-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\пирожные_бисквитно_кремовые.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Бисквитно-кремовое",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Бисквитно-кремовое пирожное.",
+      "desc_source": "pending"
+    },
+    "biskvitno-kremovoe-sufle": {
+      "slug": "biskvitno-kremovoe-sufle",
+      "images": {
+        "whole": "./assets/webp/cakes/biskvitno-kremovoe-sufle-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\пирожные_бисквитно_кремовые_с_суфле.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Бисквитно-кремовое с суфле",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Бисквитно-кремовое пирожное с суфле.",
+      "desc_source": "pending"
+    },
+    "polet-premium": {
+      "slug": "polet-premium",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-premium-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\полет_премимум_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт-Премиум",
+      "section": "other",
+      "biscuit": null,
+      "description": "Воздушно-ореховое безе со сливочным кремом.",
+      "desc_source": "pending"
+    },
+    "polet-varenka": {
+      "slug": "polet-varenka",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-varenka-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\полет_с_варенным_сгущенным_молоком_общий_0.5.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes2\\полет_с_варенным_сгущенным_молоком_общий_1.0кг.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт с варёным сгущённым молоком",
+      "section": "other",
+      "biscuit": null,
+      "description": "Воздушно-ореховое безе со сливочным кремом на варёном сгущённом молоке.",
+      "desc_source": "pending"
+    },
+    "polet-kedrovyy": {
+      "slug": "polet-kedrovyy",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-kedrovyy-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\полет_с_кедровым_орехом_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт с кедровым орехом",
+      "section": "other",
+      "biscuit": null,
+      "description": "Воздушно-ореховое безе с кедровым орехом и сливочным кремом.",
+      "desc_source": "pending"
+    },
+    "polet-slivochnyy": {
+      "slug": "polet-slivochnyy",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-slivochnyy-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\полет_со_сливочным_кремом_0.5.jpg",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\new cakes2\\полет_со_со_сливочным_кремом_1.0кг.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт со сливочным кремом",
+      "section": "other",
+      "biscuit": null,
+      "description": "Воздушно-ореховое безе со сливочным кремом.",
+      "desc_source": "pending"
+    },
+    "slavutich": {
+      "slug": "slavutich",
+      "images": {
+        "whole": "./assets/webp/cakes/slavutich-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\славутич_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Славутич",
+      "section": "other",
+      "biscuit": null,
+      "description": "Медово-шоколадные коржи со сливочным кремом.",
+      "desc_source": "pending"
+    },
+    "zabaykalskaya-ptichka": {
+      "slug": "zabaykalskaya-ptichka",
+      "images": {
+        "whole": "./assets/webp/cakes/zabaykalskaya-ptichka-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\торт_суфле_забайкальская_птичка.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Забайкальская птичка",
+      "section": "classic",
+      "biscuit": null,
+      "description": "Ванильно-сливочное суфле в сочетании с классическим белым бисквитом. Оформлен шоколадной глазурью.",
+      "desc_source": "mom"
+    },
+    "tsarskiy-bananovyy": {
+      "slug": "tsarskiy-bananovyy",
+      "images": {
+        "whole": "./assets/webp/cakes/tsarskiy-bananovyy-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\царский_банановый_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Царский (банановый)",
+      "section": "other",
+      "biscuit": null,
+      "description": "Царский торт с банановой начинкой.",
+      "desc_source": "pending"
+    },
+    "chernosliv-v-shokolade": {
+      "slug": "chernosliv-v-shokolade",
+      "images": {
+        "whole": "./assets/webp/cakes/chernosliv-v-shokolade-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\чернослив_в_шоколаде_общий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Чернослив в шоколаде",
+      "section": "homemade",
+      "biscuit": "a",
+      "description": "Бисквит на сметане и сгущённом молоке.",
+      "desc_source": "pending"
+    },
+    "elbrus": {
+      "slug": "elbrus",
+      "images": {
+        "whole": "./assets/webp/cakes/elbrus-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\new cakes2\\эльбрус_оббщий.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Эльбрус",
+      "section": "other",
+      "biscuit": null,
+      "description": "Бисквитный торт со сливочным кремом и воздушным безе.",
+      "desc_source": "pending"
+    }
+  },
+  "products": {
+    "classic": [
+      {
+        "title": "Домашний",
+        "slug": "domashniy",
+        "description": "Классический белый бисквит в сочетании со взбитыми сливками.",
+        "weights": [
+          {
+            "label": "0,7 кг",
+            "price": "885 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Нежность",
+        "slug": "nezhnost",
+        "description": "Классический белый бисквит пропитан сахарным сиропом в сочетании с ванильно-сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "905 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Рафаэлло",
+        "slug": "rafaello",
+        "description": "Классический белый бисквит пропитан сиропом «Миндаль», прослоен взбитыми сливками с варёным сгущённым молоком. Оформлен кокосовой стружкой и вафельными шариками.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "970 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Каприз",
+        "slug": "kapriz",
+        "description": "Классический белый бисквит прослоен взбитыми сливками с клубничным вкусом. Оформлен воздушным рисом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "855 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Лавандовый",
+        "slug": "lavandovyy",
+        "description": "Лавандовый бисквит прослоен взбитыми сливками и конфитюром «Черника».",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 115 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Цветы",
+        "slug": "tsvety",
+        "description": "Классический белый бисквит в сочетании с яблочным повидлом и взбитыми сливками.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 085 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Крем-брюле",
+        "slug": "krem-bryule",
+        "description": "Классический белый бисквит пропитан сахарным сиропом, прослоен сливочным кремом на основе варёного сгущённого молока.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "925 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Клубничка",
+        "slug": "klubnichka",
+        "description": "Классический белый бисквит прослоен ванильно-сливочным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 145 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Север",
+        "slug": "sever",
+        "description": "Классический белый бисквит пропитан сиропом с десертным вином, прослоен фруктовым повидлом. Оформлен белковым кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "820 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Флирт",
+        "slug": "flirt",
+        "description": "Классический белый бисквит прослоен взбитыми сливками. Оформлен кокосовой стружкой.",
+        "weights": [
+          {
+            "label": "0,7 кг",
+            "price": "855 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "К чаю",
+        "slug": "k-chayu",
+        "description": "Классический шоколадный бисквит в сочетании с ванильно-сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "915 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Ёжик",
+        "slug": "yozhik",
+        "description": "Бисквитная крошка с добавлением какао и ванильно-сливочного крема.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "580 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Кармен",
+        "slug": "karmen",
+        "description": "Классический шоколадный бисквит в сочетании с шоколадно-сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "925 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Шоколадно-ореховый",
+        "slug": "shokoladno-orehovyy",
+        "description": "Классический бисквит на варёном сгущённом молоке прослоен взбитыми сливками с варёным сгущённым молоком, арахисом и солёной карамелью.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Подарочный",
+        "slug": "podarochnyy",
+        "description": "Классический белый бисквит прослоен сливочным кремом на основе варёного сгущённого молока. Оформлен жареным арахисом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 085 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Гороскоп",
+        "slug": "goroskop",
+        "description": "Песочные коржи в сочетании с шоколадным сливочно-белковым кремом.",
+        "weights": [
+          {
+            "label": "0,85 кг",
+            "price": "1 010 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Любимый",
+        "slug": "lyubimyy",
+        "description": "Песочные коржи в сочетании со сливочным кремом на основе варёного сгущённого молока.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "935 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 170 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Творожный счастливчик",
+        "slug": "tvorozhnyy-schastlivchik",
+        "description": "Классический белый бисквит с натуральным творогом в сочетании со взбитыми сливками.",
+        "weights": [
+          {
+            "label": "0,7 кг",
+            "price": "960 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Зимняя вишня",
+        "slug": "zimnyaya-vishnya",
+        "description": "Классический белый бисквит с натуральным творогом в сочетании с белковым кремом и кусочками вишни.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 170 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Медовый",
+        "slug": "medovyy",
+        "description": "Коржи с натуральным мёдом прослоены сливочно-йогуртовым кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 095 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Медовичок",
+        "slug": "medovichok",
+        "description": "Коржи с натуральным мёдом прослоены варёным сгущённым молоком.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "580 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Фиеста",
+        "slug": "fiesta",
+        "description": "Коржи с натуральным мёдом прослоены сливочным кремом на основе варёного сгущённого молока. Оформлен белковым кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 210 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Королевский",
+        "slug": "korolevskiy",
+        "description": "Классический белый бисквит прослоен взбитыми сливками с кусочками фруктов и грецким орехом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 030 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Наполеон",
+        "slug": "napoleon",
+        "description": "Тонкие коржи слоёного теста прослоены сгущённым молоком.",
+        "weights": [
+          {
+            "label": "0,4 кг",
+            "price": "420 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Забайкальская птичка",
+        "slug": "zabaykalskaya-ptichka",
+        "description": "Ванильно-сливочное суфле в сочетании с классическим белым бисквитом. Оформлен шоколадной глазурью.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "630 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      }
+    ],
+    "homemade": [
+      {
+        "title": "Восточная сказка",
+        "slug": "vostochnaya-skazka",
+        "description": "Слои шоколадного и белого бисквита на сметане и сгущённом молоке прослоены йогуртовым кремом и клубничным конфитюром.",
+        "weights": [
+          {
+            "label": "0,55 кг",
+            "price": "960 ₽"
+          },
+          {
+            "label": "1,1 кг",
+            "price": "1 515 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Оригинальный",
+        "slug": "originalnyy",
+        "description": "Слои шоколадного и белого бисквита на сметане и сгущённом молоке прослоены сметанным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 335 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Мокко",
+        "slug": "mokko",
+        "description": "Шоколадный бисквит на сметане и сгущённом молоке в сочетании со сливочно-шоколадным кремом.",
+        "weights": [
+          {
+            "label": "0,65 кг",
+            "price": "735 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Парижские тайны",
+        "slug": "parizhskie-tayny",
+        "description": "Белый бисквит на сметане и сгущённом молоке в сочетании со взбитыми сливками.",
+        "weights": [
+          {
+            "label": "0,55 кг",
+            "price": "725 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 260 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Росинка",
+        "slug": "rosinka",
+        "description": "Слои белого бисквита на сметане и сгущённом молоке с добавлением грецкого ореха прослоены сливочно-йогуртовым кремом.",
+        "weights": [
+          {
+            "label": "0,45 кг",
+            "price": "570 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Земляничный десерт",
+        "slug": "zemlenichnyy-desert",
+        "description": "Белый бисквит на сметане и сгущённом молоке в сочетании со взбитыми сливками с земляничным вкусом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 085 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Шанхай",
+        "slug": "shanhay",
+        "description": "Слои шоколадного бисквита на сметане и сгущённом молоке в сочетании со взбитыми сливками с апельсиновым джемом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 075 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false,
+        "note": "Новое оформление, фото на следующей неделе."
+      },
+      {
+        "title": "Тирамису",
+        "slug": "tiramisu",
+        "description": "Слои белого бисквита на сметане и сгущённом молоке прослоены взбитыми сливками со вкусом кофе.",
+        "weights": [
+          {
+            "label": "0,4 кг",
+            "price": "620 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Прага",
+        "slug": "praga",
+        "description": "Бисквит на сметане и сгущённом молоке.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "760 ₽"
+          },
+          {
+            "label": "1,1 кг",
+            "price": "1 575 ₽"
+          },
+          {
+            "label": "2,2 кг",
+            "price": "2 835 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём полное описание мамы (есть в другом письме)."
+      },
+      {
+        "title": "Сакура",
+        "slug": "sakura",
+        "description": "Бисквит на сметане и сгущённом молоке.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "770 ₽"
+          },
+          {
+            "label": "1,1 кг",
+            "price": "1 400 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём полное описание мамы."
+      },
+      {
+        "title": "Идиллия",
+        "slug": "idilliya",
+        "description": "Бисквит на сметане и сгущённом молоке.",
+        "weights": [
+          {
+            "label": "0,65 кг",
+            "price": "820 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём полное описание мамы."
+      },
+      {
+        "title": "Чернослив в шоколаде",
+        "slug": "chernosliv-v-shokolade",
+        "description": "Бисквит на сметане и сгущённом молоке.",
+        "weights": [
+          {
+            "label": "0,45 кг",
+            "price": "685 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание мамы."
+      },
+      {
+        "title": "С черносливом",
+        "slug": "s-chersnoslivym",
+        "description": "Бисквит на сметане и сгущённом молоке с черносливом.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "780 ₽"
+          },
+          {
+            "label": "1,1 кг",
+            "price": "1 460 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём полное описание мамы."
+      },
+      {
+        "title": "Чародейка",
+        "slug": "charodeyka",
+        "description": "Слои белого бисквита на сметане прослоены сливочным кремом. Оформлен кокосовой стружкой и гелем.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "735 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 285 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Черемуховый",
+        "slug": "cheremukhovyy",
+        "description": "Белый бисквит на сметане с добавлением молотой черёмухи в сочетании со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "760 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 260 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Вишневый",
+        "slug": "vishnevyy",
+        "description": "Шоколадный бисквит на сметане с добавлением молотой вишни прослоен сливочным кремом с вишнёвым конфитюром.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "925 ₽"
+          },
+          {
+            "label": "1,1 кг",
+            "price": "1 575 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Молочная девочка",
+        "slug": "molochnaya-devochka",
+        "description": "Слои белого бисквита на основе сгущённого молока прослоены взбитыми сливками с добавлением сливочно-сырного крема.",
+        "weights": [
+          {
+            "label": "0,7 кг",
+            "price": "1 050 ₽"
+          },
+          {
+            "label": "1,1 кг",
+            "price": "1 785 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Три желания",
+        "slug": "tri-zhelaniya",
+        "description": "Три разных бисквита на основе сгущённого молока с добавлением какао, грецкого ореха и мака в сочетании со сливочно-йогуртовым кремом.",
+        "weights": [
+          {
+            "label": "0,55 кг",
+            "price": "760 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 315 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Шоколадная девочка",
+        "slug": "shokoladnaya-devochka",
+        "description": "Слои масляного бисквита с какао прослоены взбитыми сливками с добавлением сливочно-сырного крема.",
+        "weights": [
+          {
+            "label": "0,65 кг",
+            "price": "1 050 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Клубничное чудо",
+        "slug": "klubnichnoe-chudo",
+        "description": "Слои масляного бисквита в сочетании со взбитыми сливками с клубничным вкусом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 135 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Эскимо",
+        "slug": "eskimo",
+        "description": "Слои масляного бисквита с ванильным суфле в сочетании со взбитыми сливками. Оформлен шоколадной глазурью.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 240 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": false
+      },
+      {
+        "title": "Изобилие",
+        "slug": "izobilie",
+        "description": "Масляный бисквит со сгущённым молоком с добавлением грецкого ореха прослоен сливочным кремом с кусочками чернослива.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "980 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 680 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      }
+    ],
+    "other": [
+      {
+        "title": "Красный бархат",
+        "slug": "krasnyy-barhat",
+        "description": "Бисквит «Красный бархат» со сливочно-сырным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "820 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 515 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём описание и вес от мамы."
+      },
+      {
+        "title": "Славутич",
+        "slug": "slavutich",
+        "description": "Медово-шоколадные коржи со сливочным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 230 ₽"
+          },
+          {
+            "label": "1,5 кг",
+            "price": "1 575 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Эльбрус",
+        "slug": "elbrus",
+        "description": "Бисквитный торт со сливочным кремом и воздушным безе.",
+        "weights": [
+          {
+            "label": "0,9 кг",
+            "price": "1 105 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Фисташковый",
+        "slug": "fistashkovyy",
+        "description": "Фисташковый бисквит со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 525 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Царский (банановый)",
+        "slug": "tsarskiy-bananovyy",
+        "description": "Царский торт с банановой начинкой.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "1 000 ₽"
+          },
+          {
+            "label": "1,2 кг",
+            "price": "1 705 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание и вес от мамы."
+      },
+      {
+        "title": "Полёт-Премиум",
+        "slug": "polet-premium",
+        "description": "Воздушно-ореховое безе со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "970 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 890 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт с кедровым орехом",
+        "slug": "polet-kedrovyy",
+        "description": "Воздушно-ореховое безе с кедровым орехом и сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "1 285 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт с варёным сгущённым молоком",
+        "slug": "polet-varenka",
+        "description": "Воздушно-ореховое безе со сливочным кремом на варёном сгущённом молоке.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "уточняйте"
+          },
+          {
+            "label": "1,0 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт со сливочным кремом",
+        "slug": "polet-slivochnyy",
+        "description": "Воздушно-ореховое безе со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "885 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 670 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Вишня со сливками",
+        "slug": "vishnya-so-slivkami",
+        "description": "Нежный бисквит с вишнёвой начинкой и воздушными сливками.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 030 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Курский",
+        "slug": "kurskiy",
+        "description": "Песочные коржи с нежной начинкой по традиционному рецепту.",
+        "weights": [
+          {
+            "label": "0,9 кг",
+            "price": "1 115 ₽"
+          },
+          {
+            "label": "1,4 кг",
+            "price": "1 725 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Элитный",
+        "slug": "elitnyy",
+        "description": "Бисквитный торт премиального уровня с изысканным кремом и декором.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 220 ₽"
+          },
+          {
+            "label": "1,5 кг",
+            "price": "1 785 ₽"
+          },
+          {
+            "label": "2 кг",
+            "price": "2 260 ₽"
+          },
+          {
+            "label": "2,5 кг",
+            "price": "2 835 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Чёрный Люкс",
+        "slug": "chernyy-lyuks",
+        "description": "Изысканный шоколадный торт премиум-класса с насыщенным вкусом и благородным оформлением.",
+        "weights": [
+          {
+            "label": "1.3 кг",
+            "price": "1 950 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Сникерс",
+        "slug": "snikers",
+        "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
+        "weights": [
+          {
+            "label": "0,9 кг",
+            "price": "1 170 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Трюфельный",
+        "slug": "tryufelnyy",
+        "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 040 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Праздничный",
+        "slug": "prazdnichnyy",
+        "description": "Яркий праздничный торт с праздничным декором для особых случаев.",
+        "weights": [
+          {
+            "label": "2 кг",
+            "price": "2 100 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Фантазия",
+        "slug": "fantaziya",
+        "description": "Праздничный торт с авторским декором и нежным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 170 ₽"
+          },
+          {
+            "label": "1,5 кг",
+            "price": "1 680 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Соблазн",
+        "slug": "soblazn",
+        "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 105 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Царский",
+        "slug": "tsarskiy",
+        "description": "Премиальный торт с богатым декором и насыщенным вкусом.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "1 000 ₽"
+          },
+          {
+            "label": "1,2 кг",
+            "price": "1 705 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Лакомка",
+        "slug": "lakomka",
+        "description": "Шоколадно-ореховый торт со сгущённым молоком.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 305 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём описание от мамы."
+      }
+    ],
+    "pastries": [
+      {
+        "title": "Графские развалины",
+        "slug": "grafskie-razvaliny",
+        "description": "Крошка воздушного безе с орехом в сочетании со сливочным кремом с варёной сгущёнкой.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "840 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Корзиночка",
+        "slug": "korzinochka",
+        "description": "Корзиночка из песочного теста, наполнена яблочным повидлом, украшена белковым кремом, консервированной вишней или желейной ягодой.",
+        "weights": [
+          {
+            "label": "160 гр",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Эклеры",
+        "slug": "eklery",
+        "description": "Заварное тесто с варёной сгущёнкой или белково-сливочным кремом.",
+        "weights": [
+          {
+            "label": "50 гр",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Кольцо заварное",
+        "slug": "kolco-zavarnoe",
+        "description": "Заварное кольцо.",
+        "weights": [
+          {
+            "label": "30 гр",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Бисквитно-кремовое",
+        "slug": "biskvitno-kremovoe",
+        "description": "Бисквитно-кремовое пирожное.",
+        "weights": [
+          {
+            "label": "0,375 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Бисквитно-кремовое с суфле",
+        "slug": "biskvitno-kremovoe-sufle",
+        "description": "Бисквитно-кремовое пирожное с суфле.",
+        "weights": [
+          {
+            "label": "0,450 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      }
+    ],
+    "cookies": []
+  },
+  "unmapped_sources": []
+}
