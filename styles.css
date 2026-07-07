@@ -479,7 +479,7 @@ body.is-footer-visible .header {
   padding: 200px 80px 88px;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.28) 100%),
-    url("./assets/webp/new_prime_hero.webp") no-repeat center / cover;
+    url("./assets/webp/finale_hero_background.webp") no-repeat center / cover;
   overflow: hidden;
 }
 
@@ -1977,7 +1977,7 @@ a.footer__contact:hover {
     justify-content: center;
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.28) 100%),
-      url("./assets/webp/prime_hero_mobile.webp") no-repeat center / cover;
+      url("./assets/webp/finale_hero_background_mob.webp") no-repeat center / cover;
   }
 
   .hero-content {
