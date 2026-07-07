@@ -23,6 +23,11 @@ const productTabs = [];
 
 let activeCategory = catalog.sections[0]?.id || "classic";
 let currentView = "home";
+// Состояние ИИ-чата (объявляем заранее: initChat может вызваться из router
+// при загрузке страницы на #/ai — иначе попадаем в «мёртвую зону» let).
+let chatInited = false;
+let chatBusy = false;
+const chatMessages = []; // { role, content }
 // Куда возвращает кнопка «назад» на странице торта: последняя открытая
 // «список»-страница (главная или каталог категории).
 let backHash = "#/";
@@ -721,10 +726,6 @@ const CHAT_SUGGESTIONS = [
   "Не очень сладкий торт",
   "Посоветуйте до 1000 ₽",
 ];
-
-let chatInited = false;
-let chatBusy = false;
-const chatMessages = []; // { role, content }
 
 function getSessionId() {
   let id = localStorage.getItem("vostok_ai_session");
