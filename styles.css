@@ -146,6 +146,13 @@ body.is-footer-visible .header {
   display: none;
 }
 
+/* Десктоп: в hero-состоянии (прозрачная шапка) лого скрыто, появляется при скролле */
+@media (min-width: 721px) {
+  .header:not(.is-scrolled) .logo {
+    display: none;
+  }
+}
+
 @media (max-width: 720px) {
   .logo-text {
     font-size: 25px;
