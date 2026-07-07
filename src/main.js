@@ -594,7 +594,6 @@ if (productsGrid) {
 
 updateProductTabsIndicator();
 renderProducts();
-router();
 initStoreMap();
 initReveal();
 
@@ -871,3 +870,7 @@ function initChat() {
   addBubble("assistant", escapeHtml(CHAT_WELCOME));
   renderSuggestions();
 }
+
+// Стартовый роутинг — в самом конце файла, когда все const/функции уже
+// объявлены (иначе initChat при загрузке на #/ai падает из-за TDZ).
+router();
