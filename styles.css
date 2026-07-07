@@ -953,16 +953,6 @@ body.is-footer-visible .header {
   gap: 32px;
 }
 
-.feed__eyebrow {
-  margin: 0 0 6px;
-  color: var(--brand-red);
-  font-family: Inter, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .feed__subtitle {
   margin: 14px 0 0;
   max-width: 46ch;
