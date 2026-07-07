@@ -210,9 +210,7 @@
 
     <footer class="footer">
       <div class="footer__top">
-        <div class="footer__intro">
-          <p class="footer__eyebrow">Кондитерская фабрика «Восток»</p>
-        </div>
+        <p class="footer__brandline">Кондитерская фабрика «Восток»</p>
         <a class="footer__cta" href="#products">
           <span>Смотреть каталог</span>
           <svg class="footer__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -223,44 +221,32 @@
       </div>
 
       <div class="footer__grid">
-        <div class="footer__brand">
+        <div class="footer__col footer__col--about">
           <p class="footer__tagline">Натуральные торты и пирожные ручной работы. Производим в Чите с 1910 года.</p>
         </div>
 
-        <div class="footer__column">
+        <nav class="footer__col" aria-label="Навигация в футере">
           <p class="footer__label">Навигация</p>
-          <nav class="footer__nav" aria-label="Навигация в футере">
-            <a class="footer__link" href="#factory">Фабрика</a>
-            <a class="footer__link" href="#shops">Магазины</a>
-            <a class="footer__link" href="#products">Продукция</a>
-            <a class="footer__link" href="#catalog">Каталог</a>
-          </nav>
-        </div>
+          <a class="footer__link" href="#factory">Фабрика</a>
+          <a class="footer__link" href="#shops">Магазины</a>
+          <a class="footer__link" href="#products">Продукция</a>
+          <a class="footer__link" href="#catalog">Каталог</a>
+        </nav>
 
-        <div class="footer__column">
+        <div class="footer__col">
           <p class="footer__label">Контакты</p>
           <a class="footer__contact footer__contact--strong" href="tel:+79143687045">+7 (914) 368-70-45</a>
           <p class="footer__contact">Чита, ул Комсомольская, 79</p>
-        </div>
-
-        <div class="footer__column">
-          <p class="footer__label">Часы работы</p>
-          <p class="footer__contact">Пн-Сб 09:00-20:00</p>
-          <p class="footer__contact">Вс 09:00-19:00</p>
-        </div>
-
-        <div class="footer__column">
-          <p class="footer__label">Мы в соцсетях</p>
-          <div class="footer__socials">
-            <a class="footer__social" href="#" aria-label="Одноклассники"><span class="social social--ok"></span></a>
-            <a class="footer__social" href="#" aria-label="ВКонтакте"><span class="social social--vk"></span></a>
-          </div>
+          <p class="footer__contact footer__contact--muted">Пн-Сб 09:00-20:00 · Вс 09:00-19:00</p>
         </div>
       </div>
 
       <div class="footer__bottom">
         <p class="footer__copy">© 2026 Кондитерская фабрика «Восток»</p>
-        <p class="footer__made">Чита · сделано с любовью</p>
+        <div class="footer__socials">
+          <a class="footer__social" href="#" aria-label="Одноклассники"><span class="social social--ok"></span></a>
+          <a class="footer__social" href="#" aria-label="ВКонтакте"><span class="social social--vk"></span></a>
+        </div>
       </div>
     </footer>
 
@@ -281,38 +267,42 @@
     <nav class="tabbar" data-tabbar aria-label="Навигация">
       <a class="tabbar__item" href="#/" data-tab="home">
         <span class="tabbar__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 10.5 12 4l9 6.5" />
-            <path d="M5 9.5V20h14V9.5" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9.8 12 3l9 6.8" />
+            <path d="M5 9v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9" />
+            <path d="M9.5 21v-6h5v6" />
           </svg>
         </span>
         <span class="tabbar__label">Главная</span>
       </a>
       <a class="tabbar__item" href="#products" data-tab="products">
         <span class="tabbar__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3.5" y="3.5" width="7" height="7" rx="1.6" />
-            <rect x="13.5" y="3.5" width="7" height="7" rx="1.6" />
-            <rect x="3.5" y="13.5" width="7" height="7" rx="1.6" />
-            <rect x="13.5" y="13.5" width="7" height="7" rx="1.6" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7" />
+            <path d="M4 16.4c1.2 0 1.2 1 2.4 1s1.2-1 2.4-1 1.2 1 2.4 1 1.2-1 2.4-1 1.2 1 2.4 1 1.2-1 2.4-1" />
+            <path d="M3 21h18" />
+            <path d="M8 9V7M12 9V7M16 9V7" />
           </svg>
         </span>
         <span class="tabbar__label">Продукция</span>
       </a>
       <a class="tabbar__item" href="#factory" data-tab="factory">
         <span class="tabbar__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3.5 20.5V10l6 3.5V10l6 3.5V6.5l4.5 2.4v11.6z" />
-            <path d="M3.5 20.5h17" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21V9.5l6 3.8V9.5l6 3.8V6a1 1 0 0 1 1.5-.87l3 1.7A1 1 0 0 1 20 7.7V21" />
+            <path d="M2 21h20" />
+            <path d="M7 17.5h.01M11.5 17.5h.01M16 17.5h.01" />
           </svg>
         </span>
         <span class="tabbar__label">Фабрика</span>
       </a>
       <a class="tabbar__item" href="#catalog" data-tab="catalog">
         <span class="tabbar__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 8h12l-1 12H7z" />
-            <path d="M9 8V6.5a3 3 0 0 1 6 0V8" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.6" />
+            <rect x="14" y="3" width="7" height="7" rx="1.6" />
+            <rect x="14" y="14" width="7" height="7" rx="1.6" />
+            <rect x="3" y="14" width="7" height="7" rx="1.6" />
           </svg>
         </span>
         <span class="tabbar__label">Каталог</span>

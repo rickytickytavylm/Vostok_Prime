@@ -59,21 +59,27 @@ const getProductImages = (product) => {
 
 const updateHeader = () => {
   const distanceToBottom = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
+  const isMobile = window.matchMedia("(max-width: 640px)").matches;
+  const isFooterVisible = currentView === "home" && distanceToBottom < 520;
 
   if (header) {
     const scrolled = currentView !== "home" || window.scrollY > 40;
     header.classList.toggle("is-scrolled", scrolled);
 
-    const isFooterVisible = currentView === "home" && distanceToBottom < 520;
-    header.classList.toggle("is-hidden", isFooterVisible);
+    // В мобе шапка видна только в самом верху главной; при начале скролла
+    // (и на подстраницах) — прячется, навигацию берёт нижний таббар.
+    let hideHeader = isFooterVisible;
+    if (isMobile) {
+      hideHeader = hideHeader || currentView !== "home" || window.scrollY > 8;
+    }
+    header.classList.toggle("is-hidden", hideHeader);
     document.body.classList.toggle("is-footer-visible", isFooterVisible);
   }
 
   if (tabbar) {
-    // На главной панель прячется в стартовой позиции и у самого низа (чтобы не закрывать футер),
-    // на подстраницах показываем сразу.
+    // Таббар появляется при начале скролла и прячется у самого низа (чтобы не закрывать футер).
     const nearBottom = distanceToBottom < 96;
-    const show = (currentView !== "home" || window.scrollY > 60) && !nearBottom;
+    const show = (currentView !== "home" || window.scrollY > 8) && !nearBottom;
     tabbar.classList.toggle("is-visible", show);
   }
 };
@@ -113,20 +119,11 @@ const createProductCard = (product, index) => {
           .join("")}</div>`
       : `<p class="product-card__single-weight">${weights[0].label}</p>`;
 
-  const { imageMain, imageCut, showSwitcher } = getProductImages(product);
+  const { imageMain } = getProductImages(product);
   const photoMarkup = imageMain
-    ? showSwitcher && imageCut
-      ? `<div class="product-card__photo" data-gallery>
-           <img class="product-card__img is-active" data-shot="0" src="${imageMain}" alt="${product.title}" loading="lazy" />
-           <img class="product-card__img" data-shot="1" src="${imageCut}" alt="${product.title} в разрезе" loading="lazy" />
-           <div class="product-card__dots" data-dots>
-             <button class="product-card__dot is-active" type="button" data-shot="0" aria-label="Целый"></button>
-             <button class="product-card__dot" type="button" data-shot="1" aria-label="В разрезе"></button>
-           </div>
-         </div>`
-      : `<div class="product-card__photo">
-           <img class="product-card__img is-active" src="${imageMain}" alt="${product.title}" loading="lazy" />
-         </div>`
+    ? `<div class="product-card__photo">
+         <img class="product-card__img is-active" src="${imageMain}" alt="${product.title}" loading="lazy" />
+       </div>`
     : `<div class="product-card__photo product-card__photo--empty" aria-hidden="true"></div>`;
 
   return `<article class="product-card" data-product-index="${index}" tabindex="0" role="link" aria-label="Подробнее о ${product.title}">
@@ -307,22 +304,6 @@ const bindProductInteractions = () => {
         if (price) price.textContent = weight.dataset.price || "";
       });
     });
-
-    const shots = Array.from(card.querySelectorAll(".product-card__img[data-shot]"));
-    const dotEls = Array.from(card.querySelectorAll(".product-card__dot[data-shot]"));
-    if (shots.length > 1 && dotEls.length > 1) {
-      const showShot = (shotIndex) => {
-        shots.forEach((img) => img.classList.toggle("is-active", img.dataset.shot === String(shotIndex)));
-        dotEls.forEach((dot) => dot.classList.toggle("is-active", dot.dataset.shot === String(shotIndex)));
-      };
-
-      dotEls.forEach((dot) => {
-        dot.addEventListener("click", (event) => {
-          event.stopPropagation();
-          showShot(dot.dataset.shot);
-        });
-      });
-    }
   });
 };
 
@@ -522,6 +503,62 @@ renderProducts();
 router();
 renderFeed();
 initStoreMap();
+initReveal();
+
+function initReveal() {
+  const selector = [
+    ".page-title",
+    ".hero-eyebrow",
+    ".hero-title",
+    ".hero-button",
+    ".factory-brief__eyebrow",
+    ".factory-brief__title",
+    ".factory-brief__text",
+    ".factory-brief__stat",
+    ".factory-title",
+    ".factory-text",
+    ".factory-stat-item",
+    ".factory-link",
+    ".advantage-card",
+    ".purchase-order__item",
+    ".footer__top",
+    ".footer__col",
+    ".footer__bottom",
+  ].join(",");
+
+  const els = Array.from(document.querySelectorAll(selector));
+  if (!els.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    els.forEach((el) => el.classList.add("reveal", "is-visible"));
+    return;
+  }
+
+  // Ступенчатая задержка для соседних элементов одного родителя.
+  const perParent = new Map();
+  els.forEach((el) => {
+    el.classList.add("reveal");
+    const parent = el.parentElement;
+    const index = perParent.get(parent) || 0;
+    perParent.set(parent, index + 1);
+    el.style.setProperty("--reveal-delay", `${Math.min(index, 6) * 70}ms`);
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  els.forEach((el) => observer.observe(el));
+}
 
 async function initStoreMap() {
   const frame = document.querySelector("[data-map-frame]");
