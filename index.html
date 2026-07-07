@@ -142,8 +142,8 @@
             <a class="nav__link" href="#factory">Фабрика</a>
             <a class="nav__link" href="#shops">Магазины</a>
             <a class="nav__link" href="#products">Продукция</a>
+            <a class="nav__link nav__link--ai" href="#/ai">Нейропомощник</a>
           </nav>
-          <a class="catalog-button" href="#catalog">Перейти в каталог</a>
           <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
             <span></span>
             <span></span>
@@ -394,10 +394,12 @@
         <a class="subpage__back" data-catalog-back href="#/">
           <span class="subpage__back-icon" aria-hidden="true"></span>На главную
         </a>
+        <div class="catalog-switcher" data-catalog-switcher role="tablist" aria-label="Категории"></div>
         <header class="subpage__head">
           <h1 class="subpage__title" data-catalog-title>Каталог</h1>
         </header>
         <div class="subpage__catalog" data-catalog-list></div>
+        <a class="contact-cta" href="tel:+79143687045">Связаться с нами</a>
       </div>
     </main>
 
@@ -405,16 +407,45 @@
       <div data-product-body></div>
     </main>
 
+    <main class="view-chat" data-view="chat" hidden>
+      <div class="chat">
+        <header class="chat__bar">
+          <a class="chat__back" data-chat-back href="#/" aria-label="Назад">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </a>
+          <div class="chat__id">
+            <span class="chat__avatar" aria-hidden="true">
+              <img src="./assets/webp/logo_prime.webp" alt="" />
+            </span>
+            <div class="chat__who">
+              <p class="chat__name">Нейропомощник</p>
+              <p class="chat__status"><span class="chat__dot" aria-hidden="true"></span>Знает всю продукцию · подберёт торт</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="chat__thread" data-chat-thread aria-live="polite"></div>
+
+        <form class="chat__composer" data-chat-form autocomplete="off">
+          <div class="chat__field">
+            <textarea class="chat__input" data-chat-input rows="1" placeholder="Спросите про торт, повод, вкус или бюджет..." aria-label="Сообщение"></textarea>
+            <button class="chat__send" type="submit" aria-label="Отправить" data-chat-send>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 19V5" />
+                <path d="M5 12l7-7 7 7" />
+              </svg>
+            </button>
+          </div>
+          <p class="chat__disclaimer">Нейропомощник фабрики «Восток». Может ошибаться - точные цены и заказ по телефону +7 (914) 368-70-45.</p>
+        </form>
+      </div>
+    </main>
+
     <footer class="footer">
       <div class="footer__top">
         <p class="footer__brandline">Кондитерская фабрика «Восток»</p>
-        <a class="footer__cta" href="#products">
-          <span>Смотреть каталог</span>
-          <svg class="footer__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14" />
-            <path d="M13 6l6 6-6 6" />
-          </svg>
-        </a>
       </div>
 
       <div class="footer__grid">
@@ -427,7 +458,7 @@
           <a class="footer__link" href="#factory">Фабрика</a>
           <a class="footer__link" href="#shops">Магазины</a>
           <a class="footer__link" href="#products">Продукция</a>
-          <a class="footer__link" href="#catalog">Каталог</a>
+          <a class="footer__link" href="#/ai">Нейропомощник</a>
         </nav>
 
         <div class="footer__col">
@@ -457,7 +488,7 @@
         <a class="nav-drawer__link" href="#factory" data-nav-close>Фабрика</a>
         <a class="nav-drawer__link" href="#shops" data-nav-close>Магазины</a>
         <a class="nav-drawer__link" href="#products" data-nav-close>Продукция</a>
-        <a class="nav-drawer__link nav-drawer__link--accent" href="#catalog" data-nav-close>Перейти в каталог</a>
+        <a class="nav-drawer__link nav-drawer__link--accent" href="#/ai" data-nav-close>Нейропомощник</a>
       </nav>
     </div>
 
@@ -493,20 +524,26 @@
         </span>
         <span class="tabbar__label">Фабрика</span>
       </a>
-      <a class="tabbar__item" href="#catalog" data-tab="catalog">
-        <span class="tabbar__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="7" height="7" rx="1.6" />
-            <rect x="14" y="3" width="7" height="7" rx="1.6" />
-            <rect x="14" y="14" width="7" height="7" rx="1.6" />
-            <rect x="3" y="14" width="7" height="7" rx="1.6" />
-          </svg>
-        </span>
-        <span class="tabbar__label">Каталог</span>
-      </a>
     </nav>
 
+    <a class="ai-fab" href="#/ai" data-ai-fab aria-label="Открыть нейропомощник">
+      <span class="ai-fab__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 9 9 0 0 1-3.9-.9L3 21l1.9-5.1a9 9 0 0 1-.9-3.9A8.38 8.38 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z" />
+          <path d="M12 8.2l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9.9-2z" />
+        </svg>
+      </span>
+      <span class="ai-fab__text">Нейропомощник</span>
+    </a>
+
     <script src="./src/products-data.js"></script>
+    <!--
+      Адрес backend-сервера (Railway) для ИИ-консультанта.
+      После деплоя сервера на Railway впиши сюда его публичный URL, например:
+      window.VOSTOK_API = "https://vostok-server-production.up.railway.app";
+      Пустая строка = сервер на том же домене (локальная разработка на :4000).
+    -->
+    <script>window.VOSTOK_API = "";</script>
     <script src="./src/main.js"></script>
   </body>
 </html>

@@ -11,9 +11,11 @@ const views = {
   home: document.querySelector('[data-view="home"]'),
   catalog: document.querySelector('[data-view="catalog"]'),
   product: document.querySelector('[data-view="product"]'),
+  chat: document.querySelector('[data-view="chat"]'),
 };
 const catalogTitleEl = document.querySelector("[data-catalog-title]");
 const catalogListEl = document.querySelector("[data-catalog-list]");
+const catalogSwitcherEl = document.querySelector("[data-catalog-switcher]");
 const productBodyEl = document.querySelector("[data-product-body]");
 
 const catalog = window.PRODUCTS_DATA || { sections: [], products: {} };
@@ -59,6 +61,15 @@ const updateHeader = () => {
   const isMobile = window.matchMedia("(max-width: 640px)").matches;
   const isFooterVisible = currentView === "home" && distanceToBottom < 520;
 
+  // Экран чата — иммерсивный оверлей: скрываем шапку, таббар и футер через CSS,
+  // здесь просто выходим, чтобы скролл-логика их не трогала.
+  if (currentView === "chat") {
+    header?.classList.remove("is-hidden");
+    tabbar?.classList.remove("is-visible");
+    document.body.classList.remove("is-footer-visible");
+    return;
+  }
+
   if (header) {
     const scrolled = currentView !== "home" || window.scrollY > 40;
     header.classList.toggle("is-scrolled", scrolled);
@@ -85,9 +96,7 @@ const setActiveTab = () => {
   if (!tabbar) return;
   const hash = window.location.hash;
   let active = "home";
-  if (currentView === "catalog" || currentView === "product" || hash.startsWith("#catalog") || hash.startsWith("#/c/") || hash.startsWith("#/p/")) {
-    active = "catalog";
-  } else if (hash.startsWith("#products")) {
+  if (currentView === "catalog" || currentView === "product" || hash.startsWith("#/c/") || hash.startsWith("#/p/") || hash.startsWith("#products")) {
     active = "products";
   } else if (hash.startsWith("#factory")) {
     active = "factory";
@@ -207,6 +216,7 @@ const buildProductDetail = (product, categoryId) => {
             ${buyMarkup}
           </div>
           <p class="product-page__note">Всегда в наличии в нашем фирменном магазине</p>
+          <a class="contact-cta" href="tel:+79143687045">Связаться с нами</a>
         </div>
       </div>
     </div>`;
@@ -399,8 +409,35 @@ const showView = (name) => {
   });
   document.body.classList.toggle("is-subpage", name !== "home");
   document.body.classList.toggle("is-product-view", name === "product");
+  document.body.classList.toggle("is-chat-view", name === "chat");
   updateHeader();
   setActiveTab();
+};
+
+let catalogSwitcherBuilt = false;
+
+const buildCatalogSwitcher = (activeId) => {
+  if (!catalogSwitcherEl) return;
+  if (!catalogSwitcherBuilt) {
+    catalogSwitcherEl.innerHTML = catalog.sections
+      .map(
+        (section) =>
+          `<button class="catalog-switcher__item" type="button" role="tab" data-category="${section.id}" aria-selected="false">${section.label}</button>`
+      )
+      .join("");
+    catalogSwitcherEl.querySelectorAll(".catalog-switcher__item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.category;
+        if (id) location.hash = `#/c/${id}`;
+      });
+    });
+    catalogSwitcherBuilt = true;
+  }
+  catalogSwitcherEl.querySelectorAll(".catalog-switcher__item").forEach((btn) => {
+    const on = btn.dataset.category === activeId;
+    btn.classList.toggle("catalog-switcher__item--active", on);
+    btn.setAttribute("aria-selected", on ? "true" : "false");
+  });
 };
 
 const renderCatalogPage = (categoryId) => {
@@ -409,6 +446,7 @@ const renderCatalogPage = (categoryId) => {
 
   const items = catalog.products[categoryId] || [];
   if (catalogTitleEl) catalogTitleEl.textContent = section.label;
+  buildCatalogSwitcher(categoryId);
   if (catalogListEl) {
     catalogListEl.innerHTML = `<div class="catalog-grid">${items
       .map((product, index) => buildCatalogTile(product, categoryId, index))
@@ -458,6 +496,14 @@ const router = () => {
     showView("product");
     const { product } = findProduct(parts[1], parts[2]);
     setTitle(product ? product.title : "");
+    scrollTop();
+    return;
+  }
+
+  if (parts[0] === "ai") {
+    showView("chat");
+    setTitle("Нейропомощник");
+    initChat();
     scrollTop();
     return;
   }
@@ -591,4 +637,200 @@ async function initStoreMap() {
   } finally {
     window.clearTimeout(timeout);
   }
+}
+
+/* ==================== ИИ-консультант ==================== */
+const AI_API = (window.VOSTOK_API || "").replace(/\/$/, "");
+
+// Индекс «название торта -> категория/slug» для распознавания ссылок.
+const productTitleIndex = (() => {
+  const map = new Map();
+  Object.entries(catalog.products || {}).forEach(([cat, items]) => {
+    (items || []).forEach((p) => {
+      if (p.slug && p.title) map.set(p.title.trim().toLowerCase(), { cat, slug: p.slug });
+    });
+  });
+  return map;
+})();
+
+const productHrefExists = (cat, slug) =>
+  (catalog.products[cat] || []).some((p) => p.slug === slug);
+
+const escapeHtml = (str) =>
+  str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+// Превращаем текст ответа ИИ в HTML: [[Название|кат/slug]] -> ссылка на товар.
+function formatAssistant(text) {
+  let out = escapeHtml(text || "");
+  out = out.replace(/\[\[([^\]|]+)\|([a-z0-9-]+)\/([a-z0-9-]+)\]\]/gi, (m, title, cat, slug) => {
+    const label = title.trim();
+    return productHrefExists(cat, slug)
+      ? `<a class="chat-link" href="#/p/${cat}/${slug}">${label}</a>`
+      : label;
+  });
+  out = out.replace(/\[\[([^\]]+)\]\]/g, (m, title) => {
+    const hit = productTitleIndex.get(title.trim().toLowerCase());
+    return hit ? `<a class="chat-link" href="#/p/${hit.cat}/${hit.slug}">${title.trim()}</a>` : title.trim();
+  });
+  out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  out = out.replace(/\n/g, "<br>");
+  return out;
+}
+
+const CHAT_WELCOME =
+  "Здравствуйте! Я нейропомощник фабрики «Восток». Знаю всю нашу продукцию и помогу подобрать торт под повод, вкус и бюджет. Что планируете отметить?";
+const CHAT_SUGGESTIONS = [
+  "Торт на день рождения",
+  "Что-то шоколадное",
+  "Не очень сладкий торт",
+  "Посоветуйте до 1000 ₽",
+];
+
+let chatInited = false;
+let chatBusy = false;
+const chatMessages = []; // { role, content }
+
+function getSessionId() {
+  let id = localStorage.getItem("vostok_ai_session");
+  if (!id) {
+    id = (crypto.randomUUID?.() || String(Date.now()) + Math.random().toString(16).slice(2));
+    localStorage.setItem("vostok_ai_session", id);
+  }
+  return id;
+}
+
+function initChat() {
+  if (chatInited) return;
+  chatInited = true;
+
+  const thread = document.querySelector("[data-chat-thread]");
+  const form = document.querySelector("[data-chat-form]");
+  const input = document.querySelector("[data-chat-input]");
+  const back = document.querySelector("[data-chat-back]");
+  if (!thread || !form || !input) return;
+
+  // Кнопка «назад» ведёт туда, откуда пришли (или на главную).
+  if (back) {
+    back.addEventListener("click", (e) => {
+      if (userNavigated && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  }
+
+  const scrollToBottom = () => {
+    thread.scrollTop = thread.scrollHeight;
+  };
+
+  const addBubble = (role, html, extraClass = "") => {
+    const wrap = document.createElement("div");
+    wrap.className = `chat-msg chat-msg--${role} ${extraClass}`.trim();
+    const bubble = document.createElement("div");
+    bubble.className = "chat-msg__bubble";
+    bubble.innerHTML = html;
+    wrap.appendChild(bubble);
+    thread.appendChild(wrap);
+    scrollToBottom();
+    return wrap;
+  };
+
+  const renderSuggestions = () => {
+    const wrap = document.createElement("div");
+    wrap.className = "chat-suggestions";
+    CHAT_SUGGESTIONS.forEach((text) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "chat-chip";
+      chip.textContent = text;
+      chip.addEventListener("click", () => {
+        wrap.remove();
+        send(text);
+      });
+      wrap.appendChild(chip);
+    });
+    thread.appendChild(wrap);
+    scrollToBottom();
+  };
+
+  const showTyping = () => {
+    const el = document.createElement("div");
+    el.className = "chat-msg chat-msg--assistant chat-typing";
+    el.innerHTML =
+      '<div class="chat-msg__bubble"><span class="chat-typing__dots"><i></i><i></i><i></i></span></div>';
+    thread.appendChild(el);
+    scrollToBottom();
+    return el;
+  };
+
+  async function send(text) {
+    const message = (text || "").trim();
+    if (!message || chatBusy) return;
+
+    chatBusy = true;
+    form.classList.add("is-busy");
+    input.value = "";
+    autoGrow();
+
+    chatMessages.push({ role: "user", content: message });
+    addBubble("user", escapeHtml(message));
+
+    const typing = showTyping();
+
+    try {
+      const res = await fetch(`${AI_API}/api/ai/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: chatMessages, sessionId: getSessionId() }),
+      });
+      const data = await res.json().catch(() => ({}));
+      typing.remove();
+
+      if (!res.ok) {
+        const msg =
+          res.status === 503
+            ? "Извините, консультант сейчас недоступен. Позвоните нам: +7 (914) 368-70-45."
+            : "Не удалось получить ответ. Попробуйте ещё раз или позвоните: +7 (914) 368-70-45.";
+        addBubble("assistant", escapeHtml(msg), "chat-msg--error");
+        return;
+      }
+
+      const reply = data.text || "Извините, не удалось сформировать ответ.";
+      chatMessages.push({ role: "assistant", content: reply });
+      addBubble("assistant", formatAssistant(reply));
+    } catch {
+      typing.remove();
+      addBubble(
+        "assistant",
+        escapeHtml("Нет связи с сервером. Проверьте интернет или позвоните: +7 (914) 368-70-45."),
+        "chat-msg--error"
+      );
+    } finally {
+      chatBusy = false;
+      form.classList.remove("is-busy");
+      input.focus();
+    }
+  }
+
+  const autoGrow = () => {
+    input.style.height = "auto";
+    input.style.height = `${Math.min(input.scrollHeight, 132)}px`;
+  };
+
+  input.addEventListener("input", autoGrow);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send(input.value);
+    }
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    send(input.value);
+  });
+
+  // Приветствие + подсказки.
+  addBubble("assistant", escapeHtml(CHAT_WELCOME));
+  renderSuggestions();
 }
