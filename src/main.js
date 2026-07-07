@@ -13,7 +13,6 @@ const views = {
   product: document.querySelector('[data-view="product"]'),
 };
 const catalogTitleEl = document.querySelector("[data-catalog-title]");
-const catalogCountEl = document.querySelector("[data-catalog-count]");
 const catalogListEl = document.querySelector("[data-catalog-list]");
 const productBodyEl = document.querySelector("[data-product-body]");
 
@@ -25,13 +24,14 @@ const API_BASE = window.VOSTOK_API || "http://localhost:4000";
 
 let activeCategory = catalog.sections[0]?.id || "classic";
 let currentView = "home";
+// Куда возвращает кнопка «назад» на странице торта: последняя открытая
+// «список»-страница (главная или каталог категории).
+let backHash = "#/";
+// Была ли навигация внутри приложения (чтобы использовать history.back и
+// сохранять позицию скролла списка, а не прыгать наверх).
+let userNavigated = false;
 
 const sectionLabel = (id) => catalog.sections.find((s) => s.id === id)?.label || id;
-
-const pluralPositions = (n) => {
-  const word = n === 1 ? "позиция" : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? "позиции" : "позиций";
-  return `${n} ${word}`;
-};
 
 const productKey = (product, index) => product.slug || String(index);
 
@@ -117,20 +117,15 @@ const createProductCard = (product, index) => {
   const photoMarkup = imageMain
     ? showSwitcher && imageCut
       ? `<div class="product-card__photo" data-gallery>
-           <div class="product-card__track" data-track>
-             <div class="product-card__cell"><img class="product-card__img" src="${imageMain}" alt="${product.title}" loading="lazy" /></div>
-             <div class="product-card__cell"><img class="product-card__img" src="${imageCut}" alt="${product.title} в разрезе" loading="lazy" /></div>
+           <img class="product-card__img is-active" data-shot="0" src="${imageMain}" alt="${product.title}" loading="lazy" />
+           <img class="product-card__img" data-shot="1" src="${imageCut}" alt="${product.title} в разрезе" loading="lazy" />
+           <div class="product-card__dots" data-dots>
+             <button class="product-card__dot is-active" type="button" data-shot="0" aria-label="Целый"></button>
+             <button class="product-card__dot" type="button" data-shot="1" aria-label="В разрезе"></button>
            </div>
-           <div class="product-card__dots" data-dots aria-hidden="true">
-             <span class="product-card__dot product-card__dot--active"></span>
-             <span class="product-card__dot"></span>
-           </div>
-           <button class="product-card__peek" type="button" data-peek>Разрез</button>
          </div>`
       : `<div class="product-card__photo">
-           <div class="product-card__track">
-             <div class="product-card__cell"><img class="product-card__img" src="${imageMain}" alt="${product.title}" loading="lazy" /></div>
-           </div>
+           <img class="product-card__img is-active" src="${imageMain}" alt="${product.title}" loading="lazy" />
          </div>`
     : `<div class="product-card__photo product-card__photo--empty" aria-hidden="true"></div>`;
 
@@ -200,8 +195,10 @@ const buildProductDetail = (product, categoryId) => {
   return `
     <div class="product-hero">
       <div class="product-hero__media">
-        <a class="product-hero__back" href="#/c/${categoryId}" aria-label="Назад">
-          <span class="product-hero__back-icon" aria-hidden="true"></span>
+        <a class="product-hero__back" href="${backHash}" data-back aria-label="Назад">
+          <svg class="product-hero__back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 5 8 12l7 7" />
+          </svg>
         </a>
         ${stageMarkup}
         ${thumbsMarkup}
@@ -237,6 +234,16 @@ const buildCatalogTile = (product, categoryId, index) => {
 
 const bindProductDetailInteractions = (container) => {
   if (!container) return;
+
+  const back = container.querySelector("[data-back]");
+  back?.addEventListener("click", (event) => {
+    // Если пришли навигацией внутри сайта — возвращаемся назад по истории,
+    // это сохраняет позицию скролла списка (главная/каталог).
+    if (userNavigated && window.history.length > 1) {
+      event.preventDefault();
+      window.history.back();
+    }
+  });
 
   const thumbs = Array.from(container.querySelectorAll("[data-gallery-thumb]"));
   const images = Array.from(container.querySelectorAll("[data-gallery-img]"));
@@ -301,40 +308,20 @@ const bindProductInteractions = () => {
       });
     });
 
-    const track = card.querySelector("[data-track]");
-    const cells = track ? Array.from(track.children) : [];
-    if (track && cells.length > 1) {
-      const dotEls = Array.from(card.querySelectorAll(".product-card__dot"));
-      const peek = card.querySelector("[data-peek]");
-      const canHover = window.matchMedia("(hover: hover)").matches;
-
-      const syncTo = (index) => {
-        dotEls.forEach((dot, di) => dot.classList.toggle("product-card__dot--active", di === index));
-        if (peek) peek.textContent = index === 0 ? "Разрез" : "Целый";
+    const shots = Array.from(card.querySelectorAll(".product-card__img[data-shot]"));
+    const dotEls = Array.from(card.querySelectorAll(".product-card__dot[data-shot]"));
+    if (shots.length > 1 && dotEls.length > 1) {
+      const showShot = (shotIndex) => {
+        shots.forEach((img) => img.classList.toggle("is-active", img.dataset.shot === String(shotIndex)));
+        dotEls.forEach((dot) => dot.classList.toggle("is-active", dot.dataset.shot === String(shotIndex)));
       };
 
-      let raf = 0;
-      track.addEventListener(
-        "scroll",
-        () => {
-          if (raf) return;
-          raf = requestAnimationFrame(() => {
-            raf = 0;
-            syncTo(Math.round(track.scrollLeft / track.clientWidth));
-          });
-        },
-        { passive: true }
-      );
-
-      const toggle = (event) => {
-        event.stopPropagation();
-        const current = Math.round(track.scrollLeft / track.clientWidth);
-        track.scrollTo({ left: current === 0 ? track.clientWidth : 0, behavior: "smooth" });
-      };
-
-      peek?.addEventListener("click", toggle);
-      // На десктопе клик по фото листает целый/разрез; на тач-устройствах — свайп.
-      if (canHover) track.addEventListener("click", toggle);
+      dotEls.forEach((dot) => {
+        dot.addEventListener("click", (event) => {
+          event.stopPropagation();
+          showShot(dot.dataset.shot);
+        });
+      });
     }
   });
 };
@@ -444,7 +431,6 @@ const renderCatalogPage = (categoryId) => {
 
   const items = catalog.products[categoryId] || [];
   if (catalogTitleEl) catalogTitleEl.textContent = section.label;
-  if (catalogCountEl) catalogCountEl.textContent = pluralPositions(items.length);
   if (catalogListEl) {
     catalogListEl.innerHTML = `<div class="catalog-grid">${items
       .map((product, index) => buildCatalogTile(product, categoryId, index))
@@ -464,6 +450,12 @@ const renderProductPage = (categoryId, key) => {
   return true;
 };
 
+const scrollTop = () => {
+  // Мгновенно наверх, игнорируя scroll-behavior: smooth, чтобы внутренние
+  // страницы всегда открывались с верха, а не «снизу».
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+};
+
 const router = () => {
   closeMenu();
 
@@ -472,24 +464,31 @@ const router = () => {
 
   if (parts[0] === "c" && parts[1] && renderCatalogPage(parts[1])) {
     showView("catalog");
-    window.scrollTo(0, 0);
+    backHash = location.hash;
+    scrollTop();
     return;
   }
 
   if (parts[0] === "p" && parts[1] && parts[2] && renderProductPage(parts[1], parts[2])) {
     showView("product");
-    window.scrollTo(0, 0);
+    scrollTop();
     return;
   }
 
   showView("home");
+  backHash = location.hash || "#/";
 
   if (parts[0]) {
     const target = document.getElementById(parts[0]);
     if (target) requestAnimationFrame(() => target.scrollIntoView());
+  } else {
+    scrollTop();
   }
 };
 
+window.addEventListener("hashchange", () => {
+  userNavigated = true;
+});
 window.addEventListener("hashchange", router);
 window.addEventListener("hashchange", setActiveTab);
 window.addEventListener("scroll", updateHeader, { passive: true });

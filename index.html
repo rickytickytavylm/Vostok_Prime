@@ -87,15 +87,6 @@
         <div class="products-grid"></div>
         <a class="products-more" href="#catalog" data-open-catalog>Смотреть всё</a>
       </section>
-      <section class="ingredients-scene" aria-label="Натуральные ингредиенты">
-        <div class="ingredients-scene__stage">
-          <div class="ingredients-scene__content">
-            <img class="ingredients-scene__logo" src="./assets/icons/LogoVostok.svg" alt="Восток" />
-            <p class="ingredients-scene__text">В идеальном десерте не должно быть ничего лишнего, поэтому выбираем только натуральные ингредиенты и полностью ручную сборку</p>
-            <p class="ingredients-scene__year">1910</p>
-          </div>
-        </div>
-      </section>
       <section class="section section--factory" id="factory">
         <h2 class="page-title">О производстве</h2>
         <div class="factory-intro">
@@ -211,7 +202,6 @@
         </a>
         <header class="subpage__head">
           <h1 class="subpage__title" data-catalog-title>Каталог</h1>
-          <p class="subpage__count" data-catalog-count></p>
         </header>
         <div class="subpage__catalog" data-catalog-list></div>
       </div>
@@ -222,10 +212,26 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__hero">
-        <img class="footer__logo" src="./assets/webp/logo_prime.webp" alt="Кондитерское объединение «Восток»" />
+      <div class="footer__top">
+        <div class="footer__intro">
+          <p class="footer__eyebrow">Кондитерская фабрика «Восток»</p>
+          <h2 class="footer__headline">Дарим сладкое настроение с 1910 года</h2>
+        </div>
+        <a class="footer__cta" href="#products">
+          <span>Смотреть каталог</span>
+          <svg class="footer__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="M13 6l6 6-6 6" />
+          </svg>
+        </a>
       </div>
-      <div class="footer__content">
+
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img class="footer__logo" src="./assets/webp/logo_prime.webp" alt="Кондитерское объединение «Восток»" />
+          <p class="footer__tagline">Натуральные торты и пирожные ручной работы. Производим в Чите с 1910 года.</p>
+        </div>
+
         <div class="footer__column">
           <p class="footer__label">Навигация</p>
           <nav class="footer__nav" aria-label="Навигация в футере">
@@ -235,22 +241,31 @@
             <a class="footer__link" href="#catalog">Каталог</a>
           </nav>
         </div>
+
         <div class="footer__column">
           <p class="footer__label">Контакты</p>
-          <p class="footer__contact">Чита, ул Комсомольская, д 79</p>
-          <a class="footer__contact" href="tel:+79143687045">+7(914)368-70-45</a>
+          <a class="footer__contact footer__contact--strong" href="tel:+79143687045">+7 (914) 368-70-45</a>
+          <p class="footer__contact">Чита, ул Комсомольская, 79</p>
         </div>
-        <div class="footer__column footer__column--socials">
+
+        <div class="footer__column">
+          <p class="footer__label">Часы работы</p>
+          <p class="footer__contact">Пн-Сб 09:00-20:00</p>
+          <p class="footer__contact">Вс 09:00-19:00</p>
+        </div>
+
+        <div class="footer__column">
           <p class="footer__label">Мы в соцсетях</p>
           <div class="footer__socials">
-            <a href="#" class="social social--ok" aria-label="Одноклассники"></a>
-            <a href="#" class="social social--vk" aria-label="ВКонтакте"></a>
+            <a class="footer__social" href="#" aria-label="Одноклассники"><span class="social social--ok"></span></a>
+            <a class="footer__social" href="#" aria-label="ВКонтакте"><span class="social social--vk"></span></a>
           </div>
         </div>
       </div>
+
       <div class="footer__bottom">
-        <p class="footer__copy">© Кондитерская фабрика «Восток»</p>
-        <a class="footer__catalog" href="#products">Перейти в каталог</a>
+        <p class="footer__copy">© 2026 Кондитерская фабрика «Восток»</p>
+        <p class="footer__made">Чита · сделано с любовью</p>
       </div>
     </footer>
 
