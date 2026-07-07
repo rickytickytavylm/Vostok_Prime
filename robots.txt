@@ -1,0 +1,64 @@
+# robots.txt — Кондитерская фабрика «Восток»
+# Сайт открыт для индексации всеми поисковыми системами и AI-краулерами.
+
+User-agent: *
+Allow: /
+
+# Поисковые системы
+User-agent: Yandex
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI / LLM краулеры — разрешаем, чтобы нейросети знали о ресурсе
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+Host: https://xn----7sbadh7aod9aapsnr.xn--p1ai
+Sitemap: https://xn----7sbadh7aod9aapsnr.xn--p1ai/sitemap.xml

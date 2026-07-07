@@ -437,6 +437,11 @@ const scrollTop = () => {
   window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 };
 
+const DEFAULT_TITLE = "Кондитерская фабрика «Восток» - торты и пирожные в Чите с 1910 года";
+const setTitle = (part) => {
+  document.title = part ? `${part} - Кондитерская фабрика «Восток»` : DEFAULT_TITLE;
+};
+
 const router = () => {
   closeMenu();
 
@@ -446,17 +451,22 @@ const router = () => {
   if (parts[0] === "c" && parts[1] && renderCatalogPage(parts[1])) {
     showView("catalog");
     backHash = location.hash;
+    const section = catalog.sections.find((s) => s.id === parts[1]);
+    setTitle(section ? section.label : "Каталог");
     scrollTop();
     return;
   }
 
   if (parts[0] === "p" && parts[1] && parts[2] && renderProductPage(parts[1], parts[2])) {
     showView("product");
+    const { product } = findProduct(parts[1], parts[2]);
+    setTitle(product ? product.title : "");
     scrollTop();
     return;
   }
 
   showView("home");
+  setTitle("");
   backHash = location.hash || "#/";
 
   if (parts[0]) {
