@@ -122,18 +122,12 @@
     "domashniy": {
       "slug": "domashniy",
       "images": {
-        "whole": "./assets/webp/cakes/domashniy-whole.webp",
-        "cut": "./assets/webp/cakes/domashniy-cut.webp"
+        "whole": "./assets/webp/cakes/domashniy-whole.webp"
       },
       "sources": [
         {
-          "file": "assets\\new cakes\\домашний-общий.jpg",
+          "file": "assets\\home_cake.png",
           "view": "whole",
-          "origin": "new"
-        },
-        {
-          "file": "assets\\new cakes\\домашний-разрез.jpg",
-          "view": "cut",
           "origin": "new"
         }
       ],
