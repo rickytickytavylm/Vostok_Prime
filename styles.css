@@ -596,13 +596,67 @@ body.is-footer-visible .header {
   margin-top: 14px;
 }
 
-.factory-brief__stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin: 32px 0 0;
+/* Горизонтальный таймлайн вместо сетки карточек */
+.factory-timeline {
+  display: flex;
+  gap: 0;
+  margin: 40px 0 0;
   padding: 0;
   list-style: none;
+  position: relative;
+}
+
+.factory-timeline::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.08), rgba(27, 27, 27, 0.18) 20%, rgba(27, 27, 27, 0.18) 80%, rgba(27, 27, 27, 0.08));
+}
+
+.factory-timeline__item {
+  flex: 1 1 0;
+  position: relative;
+  padding: 32px 16px 0 0;
+  min-width: 0;
+}
+
+.factory-timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.factory-timeline__year {
+  display: block;
+  color: #1b1b1b;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.factory-timeline__label {
+  display: block;
+  margin-top: 8px;
+  max-width: 12ch;
+  color: #6f6f6f;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.factory-brief__stats {
+  display: none;
 }
 
 .factory-brief__stat {
@@ -997,13 +1051,15 @@ body.is-footer-visible .header {
 }
 
 .feed__track {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: stretch;
   gap: 24px;
   margin-top: 44px;
 }
 
 .ig-card {
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(27, 27, 27, 0.08);
@@ -1018,6 +1074,49 @@ body.is-footer-visible .header {
 .ig-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Карточка «Ещё» в конце ленты */
+.feed-more-card {
+  flex: 0 0 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 200px;
+  border: 1px dashed rgba(27, 27, 27, 0.16);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #1b1b1b;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.feed-more-card:hover {
+  background: #111113;
+  border-color: #111113;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.feed-more-card__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(17, 17, 19, 0.06);
+  font-size: 20px;
+  line-height: 1;
+  transition: background 0.2s ease;
+}
+.feed-more-card:hover .feed-more-card__icon {
+  background: rgba(255, 255, 255, 0.14);
+}
+.feed-more-card__label {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .ig-card__head {
@@ -1138,22 +1237,16 @@ body.is-footer-visible .header {
     padding: 0 20px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    gap: 0;
   }
 
   .feed__subtitle {
     max-width: none;
   }
 
-  .feed__more {
-    align-self: stretch;
-    justify-content: center;
-  }
-
   /* iOS-style горизонтальная лента со снапом */
   .feed__track {
     display: flex;
-    grid-template-columns: none;
     gap: 14px;
     margin-top: 26px;
     padding: 4px 20px 8px;
@@ -1171,6 +1264,14 @@ body.is-footer-visible .header {
     flex: 0 0 82%;
     scroll-snap-align: center;
   }
+
+  .feed-more-card {
+    flex: 0 0 88px;
+    min-height: auto;
+    align-self: stretch;
+    scroll-snap-align: end;
+    border-radius: 20px;
+  }
 }
 
 .purchase-order {
@@ -1181,7 +1282,7 @@ body.is-footer-visible .header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 10px;
-  margin-top: 64px;
+  margin-top: 48px;
 }
 
 .purchase-order__content {
@@ -1478,7 +1579,7 @@ body.is-footer-visible .header {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.3fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 40px;
   padding: 44px 0;
 }
@@ -1833,6 +1934,10 @@ a.footer__contact:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-card__price {
@@ -1920,8 +2025,12 @@ a.footer__contact:hover {
     padding: 64px 40px;
   }
 
-  .factory-brief__stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .factory-timeline {
+    gap: 0;
+  }
+
+  .factory-timeline__item {
+    padding-right: 8px;
   }
 
   .section,
@@ -2186,9 +2295,27 @@ a.footer__contact:hover {
   }
 
   .factory-brief__stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 24px;
+    display: none;
+  }
+
+  .factory-timeline {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-top: 28px;
+    padding-bottom: 4px;
+  }
+
+  .factory-timeline::-webkit-scrollbar {
+    display: none;
+  }
+
+  .factory-timeline__item {
+    flex: 0 0 44%;
+    min-width: 132px;
+    scroll-snap-align: start;
+    padding-right: 12px;
   }
 
   .factory-brief__stat {
@@ -2238,12 +2365,19 @@ a.footer__contact:hover {
     width: 100%;
     max-width: none;
     height: auto;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 8px;
     padding: 0;
     background: transparent;
-    overflow: visible;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .products-switcher::-webkit-scrollbar {
+    display: none;
   }
 
   .products-switcher__indicator {
@@ -2255,14 +2389,14 @@ a.footer__contact:hover {
     height: auto;
     padding: 9px 15px;
     border-radius: 999px;
-    background: rgba(27, 27, 27, 0.06);
-    color: rgba(27, 27, 27, 0.6);
+    background: #f2f2f4;
+    color: #1c1c1e;
     font-size: 13px;
     line-height: 18px;
   }
 
   .products-switcher__item--active {
-    background: var(--brand-red);
+    background: #111113;
     color: #ffffff;
   }
 
@@ -3115,6 +3249,27 @@ body.is-product-view .header {
   }
   .tabbar__item.is-active .tabbar__icon { transform: translateY(-1px); }
 
+  /* Нейропомощник выделен в навигации */
+  .tabbar__item--ai .tabbar__icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: -2px;
+    border-radius: 50%;
+    background: #111113;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .tabbar__item--ai .tabbar__icon svg { width: 21px; height: 21px; }
+  .tabbar__item--ai.is-active {
+    color: #111113;
+  }
+  .tabbar__item--ai.is-active .tabbar__icon {
+    transform: translateY(-1px) scale(1.04);
+  }
+
   .tabbar__icon {
     display: block;
     width: 24px;
@@ -3152,45 +3307,6 @@ body.is-product-view .header {
   color: #fff;
   border-color: #111113;
 }
-
-/* Плавающая кнопка запуска чата */
-.ai-fab {
-  position: fixed;
-  right: 22px;
-  bottom: 24px;
-  z-index: 40;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 20px 13px 15px;
-  border-radius: 999px;
-  background: #111113;
-  color: #fff;
-  text-decoration: none;
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
-  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, opacity 0.25s ease;
-}
-.ai-fab:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.34);
-}
-.ai-fab__icon {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.14);
-}
-.ai-fab__icon svg { width: 18px; height: 18px; }
-.ai-fab__text { white-space: nowrap; }
-
-/* Прячем FAB на самом экране чата */
-body.is-chat-view .ai-fab { opacity: 0; pointer-events: none; }
 
 /* Экран чата — иммерсивный оверлей */
 body.is-chat-view { overflow: hidden; }
@@ -3438,9 +3554,6 @@ body.is-chat-view .footer { display: none !important; }
 }
 
 @media (max-width: 640px) {
-  .ai-fab__text { display: none; }
-  .ai-fab { right: 16px; bottom: 84px; padding: 13px; }
-  .ai-fab__icon { width: 24px; height: 24px; background: transparent; }
   .chat-msg { max-width: 86%; }
   .subpage__inner--catalog { padding-top: 40px; }
   .catalog-switcher { margin-top: 10px; }

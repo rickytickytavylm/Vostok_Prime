@@ -96,7 +96,9 @@ const setActiveTab = () => {
   if (!tabbar) return;
   const hash = window.location.hash;
   let active = "home";
-  if (currentView === "catalog" || currentView === "product" || hash.startsWith("#/c/") || hash.startsWith("#/p/") || hash.startsWith("#products")) {
+  if (currentView === "chat" || hash.startsWith("#/ai")) {
+    active = "ai";
+  } else if (currentView === "catalog" || currentView === "product" || hash.startsWith("#/c/") || hash.startsWith("#/p/") || hash.startsWith("#products")) {
     active = "products";
   } else if (hash.startsWith("#factory")) {
     active = "factory";
@@ -566,7 +568,7 @@ function initReveal() {
     ".factory-brief__eyebrow",
     ".factory-brief__title",
     ".factory-brief__text",
-    ".factory-brief__stat",
+    ".factory-timeline__item",
     ".factory-title",
     ".factory-text",
     ".factory-stat-item",
