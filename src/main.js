@@ -19,9 +19,6 @@ const productBodyEl = document.querySelector("[data-product-body]");
 const catalog = window.PRODUCTS_DATA || { sections: [], products: {} };
 const productTabs = [];
 
-// Адрес сервера с API/лентой. Меняй тут (или задай window.VOSTOK_API до подключения main.js).
-const API_BASE = window.VOSTOK_API || "http://localhost:4000";
-
 let activeCategory = catalog.sections[0]?.id || "classic";
 let currentView = "home";
 // Куда возвращает кнопка «назад» на странице торта: последняя открытая
@@ -511,7 +508,6 @@ if (productsGrid) {
 updateProductTabsIndicator();
 renderProducts();
 router();
-renderFeed();
 initStoreMap();
 initReveal();
 
@@ -531,6 +527,7 @@ function initReveal() {
     ".factory-link",
     ".advantage-card",
     ".purchase-order__item",
+    ".feed__intro",
     ".footer__top",
     ".footer__col",
     ".footer__bottom",
@@ -593,55 +590,5 @@ async function initStoreMap() {
     showFallback();
   } finally {
     window.clearTimeout(timeout);
-  }
-}
-
-async function renderFeed() {
-  const section = document.querySelector("[data-feed]");
-  const list = document.querySelector("[data-feed-list]");
-  if (!section || !list) return;
-
-  const escapeHtml = (str) =>
-    String(str || "").replace(/[&<>"']/g, (ch) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch])
-    );
-  const mediaSrc = (image) =>
-    image && image.startsWith("/") ? `${API_BASE}${image}` : image;
-  const formatDate = (ts) => {
-    if (!ts) return "";
-    try {
-      return new Date(ts).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" });
-    } catch {
-      return "";
-    }
-  };
-
-  try {
-    const res = await fetch(`${API_BASE}/api/posts`);
-    if (!res.ok) throw new Error("no feed");
-    const posts = (await res.json()).filter((p) => p.published);
-    if (!posts.length) return;
-
-    list.innerHTML = posts
-      .map((post) => {
-        const img = mediaSrc(post.image);
-        const media = img
-          ? `<div class="feed-card__media" style="background-image:url('${escapeHtml(img)}')"></div>`
-          : "";
-        const date = formatDate(post.createdAt);
-        return `
-          <article class="feed-card">
-            ${media}
-            <div class="feed-card__body">
-              ${date ? `<span class="feed-card__date">${escapeHtml(date)}</span>` : ""}
-              <h3 class="feed-card__title">${escapeHtml(post.title)}</h3>
-              <p class="feed-card__text">${escapeHtml(post.body)}</p>
-            </div>
-          </article>`;
-      })
-      .join("");
-    section.hidden = false;
-  } catch {
-    // Сервер не запущен или лента пуста - секцию просто не показываем.
   }
 }
