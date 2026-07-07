@@ -478,7 +478,8 @@ body.is-footer-visible .header {
   min-height: 0;
   padding: 200px 80px 88px;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.28) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.16) 42%, rgba(0, 0, 0, 0) 68%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.24) 100%),
     url("./assets/webp/again_hero_desktop.webp") no-repeat center / cover;
   overflow: hidden;
 }
@@ -499,6 +500,10 @@ body.is-footer-visible .header {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-eyebrow__line {
+  display: inline;
 }
 
 .hero-title {
@@ -598,10 +603,11 @@ body.is-footer-visible .header {
 
 /* Горизонтальный таймлайн вместо сетки карточек */
 .factory-timeline {
-  display: flex;
-  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
   margin: 40px 0 0;
-  padding: 0;
+  padding: 14px 0 0;
   list-style: none;
   position: relative;
 }
@@ -609,24 +615,23 @@ body.is-footer-visible .header {
 .factory-timeline::before {
   content: "";
   position: absolute;
-  top: 11px;
-  left: 0;
-  right: 0;
+  top: 5px;
+  left: 5px;
+  right: 5px;
   height: 1px;
-  background: linear-gradient(90deg, rgba(27, 27, 27, 0.08), rgba(27, 27, 27, 0.18) 20%, rgba(27, 27, 27, 0.18) 80%, rgba(27, 27, 27, 0.08));
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.08), rgba(27, 27, 27, 0.18) 15%, rgba(27, 27, 27, 0.18) 85%, rgba(27, 27, 27, 0.08));
 }
 
 .factory-timeline__item {
-  flex: 1 1 0;
   position: relative;
-  padding: 32px 16px 0 0;
+  padding: 26px 8px 0 0;
   min-width: 0;
 }
 
 .factory-timeline__item::before {
   content: "";
   position: absolute;
-  top: 6px;
+  top: 0;
   left: 0;
   width: 10px;
   height: 10px;
@@ -639,7 +644,7 @@ body.is-footer-visible .header {
   display: block;
   color: #1b1b1b;
   font-family: var(--font-display);
-  font-size: clamp(28px, 3.2vw, 38px);
+  font-size: clamp(26px, 3vw, 36px);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -648,7 +653,6 @@ body.is-footer-visible .header {
 .factory-timeline__label {
   display: block;
   margin-top: 8px;
-  max-width: 12ch;
   color: #6f6f6f;
   font-family: Inter, sans-serif;
   font-size: 14px;
@@ -723,7 +727,11 @@ body.is-footer-visible .header {
 .section--factory {
   margin-top: 0;
   min-height: 640px;
-  padding-top: 0;
+  padding-top: 80px;
+  background-image: url("./assets/webp/special_block_desktop.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .factory-intro {
@@ -1050,15 +1058,21 @@ body.is-footer-visible .header {
   transform: translateX(3px);
 }
 
-.feed__track {
+.feed__footer {
   display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.feed__track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: stretch;
   gap: 24px;
   margin-top: 44px;
 }
 
 .ig-card {
-  flex: 1 1 0;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -1074,49 +1088,6 @@ body.is-footer-visible .header {
 .ig-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Карточка «Ещё» в конце ленты */
-.feed-more-card {
-  flex: 0 0 108px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 200px;
-  border: 1px dashed rgba(27, 27, 27, 0.16);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.72);
-  color: #1b1b1b;
-  text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-.feed-more-card:hover {
-  background: #111113;
-  border-color: #111113;
-  color: #fff;
-  transform: translateY(-2px);
-}
-.feed-more-card__icon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(17, 17, 19, 0.06);
-  font-size: 20px;
-  line-height: 1;
-  transition: background 0.2s ease;
-}
-.feed-more-card:hover .feed-more-card__icon {
-  background: rgba(255, 255, 255, 0.14);
-}
-.feed-more-card__label {
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
 }
 
 .ig-card__head {
@@ -1167,14 +1138,14 @@ body.is-footer-visible .header {
 }
 
 .ig-card__media {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background: #f2f2f4;
 }
 
 .ig-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -1203,6 +1174,10 @@ body.is-footer-visible .header {
   font-size: 14px;
   line-height: 1.55;
   color: #4a4a4a;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .ig-card__text strong {
@@ -1265,12 +1240,14 @@ body.is-footer-visible .header {
     scroll-snap-align: center;
   }
 
-  .feed-more-card {
-    flex: 0 0 88px;
-    min-height: auto;
-    align-self: stretch;
-    scroll-snap-align: end;
-    border-radius: 20px;
+  .feed__footer {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .feed__more {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -1280,7 +1257,7 @@ body.is-footer-visible .header {
 
 .purchase-order__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 10px;
   margin-top: 48px;
 }
@@ -1365,7 +1342,7 @@ body.is-footer-visible .header {
 
 .purchase-order__media {
   position: relative;
-  min-height: 640px;
+  min-height: 440px;
   border-radius: 0 24px 24px 0;
   overflow: hidden;
   background: #ececec;
@@ -2025,14 +2002,6 @@ a.footer__contact:hover {
     padding: 64px 40px;
   }
 
-  .factory-timeline {
-    gap: 0;
-  }
-
-  .factory-timeline__item {
-    padding-right: 8px;
-  }
-
   .section,
   .advantages {
     padding-left: 40px;
@@ -2248,7 +2217,7 @@ a.footer__contact:hover {
     align-items: center;
     justify-content: center;
     background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.28) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.3) 100%),
       url("./assets/webp/again_hero_mobile.webp") no-repeat center / cover;
   }
 
@@ -2259,6 +2228,19 @@ a.footer__contact:hover {
     text-align: center;
     padding-top: 8px;
     transform: translateY(-10%);
+  }
+
+  .hero-eyebrow {
+    max-width: 22ch;
+    line-height: 1.5;
+  }
+
+  .hero-eyebrow__line {
+    display: block;
+  }
+
+  .hero-eyebrow__sep {
+    display: none;
   }
 
   .hero-title {
@@ -2299,23 +2281,34 @@ a.footer__contact:hover {
   }
 
   .factory-timeline {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    margin-top: 28px;
-    padding-bottom: 4px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 16px;
+    margin-top: 26px;
+    padding-top: 0;
   }
 
-  .factory-timeline::-webkit-scrollbar {
+  .factory-timeline::before {
     display: none;
   }
 
   .factory-timeline__item {
-    flex: 0 0 44%;
-    min-width: 132px;
-    scroll-snap-align: start;
-    padding-right: 12px;
+    padding: 16px 14px;
+    border-radius: 14px;
+    background: #f6f6f6;
+    border: 1px solid rgba(27, 27, 27, 0.06);
+  }
+
+  .factory-timeline__item::before {
+    display: none;
+  }
+
+  .factory-timeline__year {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+
+  .factory-timeline__label {
+    margin-top: 6px;
+    font-size: 13px;
   }
 
   .factory-brief__stat {
@@ -2438,6 +2431,11 @@ a.footer__contact:hover {
   .products-more {
     margin-top: 52px;
     font-size: 17px;
+  }
+
+  .section--factory {
+    padding-top: 56px;
+    background-image: url("./assets/webp/special_block_mob.webp");
   }
 
   .factory-intro {
@@ -3025,7 +3023,7 @@ body.is-sheet-open {
 
 .subpage__inner--catalog {
   max-width: 1200px;
-  padding-top: 56px;
+  padding-top: 120px;
 }
 
 body.is-product-view .header {
@@ -3113,12 +3111,12 @@ body.is-product-view .header {
 
 /* Кнопка «Связаться» на внутренних экранах */
 .contact-cta {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   margin-top: 24px;
-  padding: 16px 24px;
+  padding: 15px 30px;
   border-radius: 999px;
   background: #111113;
   color: #ffffff;
@@ -3248,27 +3246,6 @@ body.is-product-view .header {
     color: #111113;
   }
   .tabbar__item.is-active .tabbar__icon { transform: translateY(-1px); }
-
-  /* Нейропомощник выделен в навигации */
-  .tabbar__item--ai .tabbar__icon {
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
-    margin-bottom: -2px;
-    border-radius: 50%;
-    background: #111113;
-    color: #fff;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .tabbar__item--ai .tabbar__icon svg { width: 21px; height: 21px; }
-  .tabbar__item--ai.is-active {
-    color: #111113;
-  }
-  .tabbar__item--ai.is-active .tabbar__icon {
-    transform: translateY(-1px) scale(1.04);
-  }
 
   .tabbar__icon {
     display: block;
@@ -3557,4 +3534,8 @@ body.is-chat-view .footer { display: none !important; }
   .chat-msg { max-width: 86%; }
   .subpage__inner--catalog { padding-top: 40px; }
   .catalog-switcher { margin-top: 10px; }
+  .contact-cta {
+    display: flex;
+    width: 100%;
+  }
 }

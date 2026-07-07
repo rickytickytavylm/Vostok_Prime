@@ -29,6 +29,15 @@ let backHash = "#/";
 // Была ли навигация внутри приложения (чтобы использовать history.back и
 // сохранять позицию скролла списка, а не прыгать наверх).
 let userNavigated = false;
+// Запоминаем позицию скролла для каждой «списочной» страницы (главная/каталог),
+// чтобы при возврате с карточки товара попадать на ленту, а не в самый верх.
+const scrollMemory = new Map();
+let prevHash = location.hash || "#/";
+let isPopNavigation = false;
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 
 const sectionLabel = (id) => catalog.sections.find((s) => s.id === id)?.label || id;
 
@@ -130,7 +139,7 @@ const createProductCard = (product, index) => {
   const { imageMain } = getProductImages(product);
   const photoMarkup = imageMain
     ? `<div class="product-card__photo">
-         <img class="product-card__img is-active" src="${imageMain}" alt="${product.title}" loading="lazy" />
+         <img class="product-card__img is-active" src="${imageMain}" alt="${product.title}" loading="eager" fetchpriority="high" decoding="async" />
        </div>`
     : `<div class="product-card__photo product-card__photo--empty" aria-hidden="true"></div>`;
 
@@ -227,7 +236,7 @@ const buildProductDetail = (product, categoryId) => {
 const buildCatalogTile = (product, categoryId, index) => {
   const { imageMain } = getProductImages(product);
   const media = imageMain
-    ? `<img class="catalog-tile__img" src="${imageMain}" alt="${product.title}" loading="lazy" />`
+    ? `<img class="catalog-tile__img" src="${imageMain}" alt="${product.title}" loading="eager" decoding="async" />`
     : `<span class="catalog-tile__img catalog-tile__img--empty" aria-hidden="true"></span>`;
 
   return `
@@ -479,6 +488,17 @@ const setTitle = (part) => {
   document.title = part ? `${part} - Кондитерская фабрика «Восток»` : DEFAULT_TITLE;
 };
 
+// Восстановить сохранённую позицию скролла списка (при возврате «назад»)
+// либо перейти наверх. Возвращает true, если позиция восстановлена.
+const restoreListScroll = (hash) => {
+  if (isPopNavigation && scrollMemory.has(hash)) {
+    const y = scrollMemory.get(hash);
+    requestAnimationFrame(() => window.scrollTo({ top: y, left: 0, behavior: "instant" }));
+    return true;
+  }
+  return false;
+};
+
 const router = () => {
   closeMenu();
 
@@ -490,7 +510,7 @@ const router = () => {
     backHash = location.hash;
     const section = catalog.sections.find((s) => s.id === parts[1]);
     setTitle(section ? section.label : "Каталог");
-    scrollTop();
+    if (!restoreListScroll(location.hash)) scrollTop();
     return;
   }
 
@@ -514,6 +534,10 @@ const router = () => {
   setTitle("");
   backHash = location.hash || "#/";
 
+  if (restoreListScroll(location.hash)) {
+    return;
+  }
+
   if (parts[0]) {
     const target = document.getElementById(parts[0]);
     if (target) requestAnimationFrame(() => target.scrollIntoView());
@@ -522,11 +546,21 @@ const router = () => {
   }
 };
 
+// popstate срабатывает при переходе «назад/вперёд» (в т.ч. по кнопке назад) —
+// именно тогда нужно восстановить прежнюю позицию скролла списка.
+window.addEventListener("popstate", () => {
+  isPopNavigation = true;
+});
+
 window.addEventListener("hashchange", () => {
   userNavigated = true;
+  // Сохраняем позицию страницы, которую покидаем.
+  scrollMemory.set(prevHash, window.scrollY);
+  router();
+  setActiveTab();
+  prevHash = location.hash || "#/";
+  isPopNavigation = false;
 });
-window.addEventListener("hashchange", router);
-window.addEventListener("hashchange", setActiveTab);
 window.addEventListener("scroll", updateHeader, { passive: true });
 
 buildProductTabs();
