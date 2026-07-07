@@ -22,6 +22,7 @@ img {
   --brand-red: #f31d04;
   --brand-red-dark: #d41808;
   --brand-red-deep: #b0140a;
+  --font-display: "Playfair Display", "PT Sans", Georgia, serif;
 }
 
 .header {
@@ -52,9 +53,11 @@ img {
 }
 
 .header.is-scrolled {
-  background: #ffffff;
-  border-bottom-color: rgba(27, 27, 27, 0.08);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom-color: rgba(27, 27, 27, 0.1);
+  box-shadow: none;
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
 }
 
 .header.is-scrolled::before {
@@ -87,11 +90,11 @@ body.is-footer-visible .header {
 }
 
 .header.is-scrolled .nav__link:hover {
-  color: var(--brand-red);
+  color: rgba(27, 27, 27, 0.55);
 }
 
 .header.is-scrolled .catalog-button {
-  color: var(--brand-red);
+  color: #1b1b1b;
 }
 
 .brand {
@@ -390,11 +393,14 @@ body.is-footer-visible .header {
 
 .nav__link {
   font-family: Inter, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 24px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .header-main__actions {
@@ -407,18 +413,32 @@ body.is-footer-visible .header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  border-radius: 0;
+  gap: 7px;
+  padding: 9px 20px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
   background: transparent;
   color: #ffffff;
   font-family: Inter, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 20px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.catalog-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.header.is-scrolled .catalog-button:hover {
+  background: #1b1b1b;
+  color: #ffffff;
+  border-color: #1b1b1b;
 }
 
 .page {
@@ -441,107 +461,68 @@ body.is-footer-visible .header {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(720px, 100%);
+  width: min(640px, 100%);
   transform: translateY(-4%);
+}
+
+.hero-eyebrow {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title {
   color: #ffffff;
-  font-family: "PT Sans", sans-serif;
-  font-size: 74px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 88px;
-  letter-spacing: -0.74px;
-  text-shadow: 0 2px 18px rgba(120, 10, 8, 0.28);
-}
-
-.hero-button {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 34px;
-  height: 58px;
-  padding: 16px 40px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(18px) saturate(180%) brightness(1.12);
-  -webkit-backdrop-filter: blur(18px) saturate(180%) brightness(1.12);
-  color: #ffffff;
-  font-family: Inter, sans-serif;
-  font-size: 18px;
+  font-family: var(--font-display);
+  font-size: 72px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Сдержанный editorial-CTA в духе Pierre Hermé: тонкий контур, прописные, стрелка */
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 38px;
+  padding: 15px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-decoration: none;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.28);
-  /* Refractive rim: яркая верхняя кромка + мягкие боковые (эффект «толщины» стекла) */
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.28),
-    inset 0 1px 1px rgba(255, 255, 255, 0.65),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.25),
-    inset 1px 0 1px rgba(255, 255, 255, 0.18),
-    inset -1px 0 1px rgba(255, 255, 255, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Диагональный глянец (глазурь стекла) */
-.hero-button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0.08) 26%,
-    transparent 55%
-  );
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-/* Световой блик, проходящий по стеклу при наведении */
-.hero-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -60%;
-  width: 45%;
-  z-index: -1;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
-  transform: skewX(-18deg);
-  transition: left 0.6s ease;
-  pointer-events: none;
-}
-
-.hero-button:hover::before {
-  left: 120%;
+.hero-button__arrow {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 0.25s ease;
 }
 
 .hero-button:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.34),
-    inset 0 1px 1px rgba(255, 255, 255, 0.8),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.3),
-    inset 1px 0 1px rgba(255, 255, 255, 0.2),
-    inset -1px 0 1px rgba(255, 255, 255, 0.2);
+  background: #ffffff;
+  color: #1b1b1b;
+  border-color: #ffffff;
 }
 
-.hero-button:active {
-  transform: translateY(0);
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.3),
-    inset 0 2px 6px rgba(0, 0, 0, 0.22),
-    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+.hero-button:hover .hero-button__arrow {
+  transform: translateX(4px);
 }
 
 .factory-brief {
@@ -569,9 +550,9 @@ body.is-footer-visible .header {
 .factory-brief__title {
   margin-top: 12px;
   color: #1b1b1b;
-  font-family: "PT Sans", sans-serif;
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 600;
   line-height: 1.12;
   letter-spacing: -0.4px;
 }
@@ -677,12 +658,12 @@ body.is-footer-visible .header {
 .factory-title {
   flex: 0 0 auto;
   color: #1b1b1b;
-  font-family: "PT Sans", sans-serif;
-  font-size: 58px;
+  font-family: var(--font-display);
+  font-size: 56px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 68px;
-  letter-spacing: -0.58px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
 }
 
 .factory-info {
@@ -2069,15 +2050,11 @@ a.footer__contact:hover {
   }
 
   .hero-button {
+    justify-content: center;
     width: 100%;
     max-width: 280px;
-    height: 54px;
-    margin-top: 32px;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(18px) saturate(180%) brightness(1.12);
-    -webkit-backdrop-filter: blur(18px) saturate(180%) brightness(1.12);
+    margin-top: 30px;
+    padding: 16px 30px;
   }
 
   .factory-brief {
@@ -2591,9 +2568,9 @@ body.is-sheet-open {
 .product-page__title {
   margin: 0;
   color: #1c1c1e;
-  font-family: Inter, sans-serif;
-  font-size: clamp(30px, 4vw, 42px);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
@@ -2864,9 +2841,9 @@ body.is-product-view .header {
 .subpage__title {
   margin: 0;
   color: #1c1c1e;
-  font-family: Inter, sans-serif;
-  font-size: clamp(30px, 5vw, 40px);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
