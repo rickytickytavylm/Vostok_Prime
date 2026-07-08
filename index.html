@@ -79,6 +79,11 @@
         "foundingDate": "1910",
         "priceRange": "₽₽",
         "currenciesAccepted": "RUB",
+        "paymentAccepted": "Наличные, банковские карты",
+        "openingHours": ["Mo-Sa 09:00-20:00", "Su 09:00-19:00"],
+        "hasMap": "https://yandex.ru/maps/?ll=113.495075%2C52.036972&z=17&pt=113.495075%2C52.036972%2Cpm2rdm",
+        "sameAs": ["https://vk.com/eastbakery"],
+        "keywords": "торты Чита, купить торт Чита, торты на заказ Чита, пирожные Чита, кондитерская фабрика Восток",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "ул. Курнатовского, 18",
@@ -127,7 +132,69 @@
         "url": "https://xn----7sbadh7aod9aapsnr.xn--p1ai/",
         "name": "Кондитерская фабрика «Восток»",
         "inLanguage": "ru-RU",
-        "publisher": { "@id": "https://xn----7sbadh7aod9aapsnr.xn--p1ai/#business" }
+        "publisher": { "@id": "https://xn----7sbadh7aod9aapsnr.xn--p1ai/#business" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".faq__q", ".faq__a"]
+        }
+      }
+    </script>
+
+    <!-- FAQ: вопросы-ответы для нейровыдачи Яндекса, Алисы и голосового поиска -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Где купить торт в Чите?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Торты и пирожные фабрики «Восток» продаются в фирменном магазине по адресу г. Чита, ул. Курнатовского, 18. Магазин работает Пн–Сб с 09:00 до 20:00, Вс с 09:00 до 19:00. Ассортимент обновляется каждый день."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Сколько стоит торт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Готовые торты стоят примерно от 630 ₽ до 2000 ₽ — цена зависит от вида, состава и веса. Уточнить стоимость и наличие можно по телефону магазина +7 (914) 368-70-45."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как заказать торт на заказ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Торт на заказ оформляется в фирменном магазине: можно выбрать вкус и обсудить оформление. Заказ изготавливается за 3–5 рабочих дней, срок зависит от сложности. Декор из мастики оплачивается отдельно."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие торты и пирожные есть в ассортименте?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "В ассортименте классические, медовые, шоколадные и сметанные торты, а также пирожные — корзиночки, эклеры и другие. Вся продукция ручной работы, собственного производства."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как давно работает фабрика «Восток»?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Кондитерское производство в Чите ведётся с 1910 года. Фабрика «Восток» — одно из старейших кондитерских предприятий Забайкальского края."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "По какому телефону можно связаться?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Телефон фирменного магазина — +7 (914) 368-70-45. Многоканальный телефон фабрики — +7 (3022) 21-74-88. Электронная почта — vostokfab@mail.ru."
+            }
+          }
+        ]
       }
     </script>
   </head>
@@ -218,7 +285,7 @@
                 <p class="factory-stat-caption">Кондитерских позиций в производстве</p>
               </div>
               <div class="factory-stat-item">
-                <p class="factory-stat">60+</p>
+                <p class="factory-stat">100+</p>
                 <p class="factory-stat-caption">Лет радуем вас и ваших близких</p>
               </div>
             </div>
@@ -308,6 +375,40 @@
                 >Открыть в Яндекс.Картах</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="faq__inner">
+          <div class="faq__intro">
+            <h2 class="page-title" id="faq-title">Вопросы и ответы</h2>
+            <p class="faq__subtitle">Коротко о том, где купить торт в Чите, сколько он стоит и как оформить заказ.</p>
+          </div>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__q">Где купить торт в Чите?</summary>
+              <div class="faq__a"><p>Торты и пирожные фабрики «Восток» продаются в фирменном магазине по адресу г. Чита, ул. Курнатовского, 18. Магазин работает с понедельника по субботу с 09:00 до 20:00 и в воскресенье с 09:00 до 19:00. Ассортимент обновляется каждый день, в наличии всегда свежие изделия.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__q">Сколько стоит торт?</summary>
+              <div class="faq__a"><p>Готовые торты стоят примерно от 630 ₽ до 2 000 ₽ — цена зависит от вида, состава и веса. Уточнить актуальную стоимость и наличие можно по телефону магазина +7 (914) 368-70-45.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__q">Как заказать торт на заказ?</summary>
+              <div class="faq__a"><p>Торт на заказ оформляется в фирменном магазине: можно выбрать вкус и обсудить оформление. Заказ изготавливается за 3–5 рабочих дней, срок зависит от сложности. Декор из мастики оплачивается отдельно.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__q">Какие торты и пирожные есть в ассортименте?</summary>
+              <div class="faq__a"><p>В ассортименте классические, медовые, шоколадные и сметанные торты, а также пирожные — корзиночки, эклеры и другие. Вся продукция — ручной работы, собственного производства.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__q">Как давно работает фабрика «Восток»?</summary>
+              <div class="faq__a"><p>Кондитерское производство в Чите ведётся с 1910 года — фабрика «Восток» одно из старейших кондитерских предприятий Забайкальского края.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__q">По какому телефону можно связаться?</summary>
+              <div class="faq__a"><p>Телефон фирменного магазина — +7 (914) 368-70-45. Многоканальный телефон фабрики — +7 (3022) 21-74-88. Электронная почта — vostokfab@mail.ru.</p></div>
+            </details>
           </div>
         </div>
       </section>
@@ -462,7 +563,7 @@
           <p class="footer__label">Контакты</p>
           <a class="footer__contact footer__contact--strong" href="tel:+73022217488">+7 (3022) 21-74-88</a>
           <a class="footer__contact" href="mailto:vostokfab@mail.ru">vostokfab@mail.ru</a>
-          <p class="footer__contact" x-apple-data-detectors="false">г. Чита, ул. Курнатовского, 18</p>
+          <p class="footer__contact" x-apple-data-detectors="false">672000, Забайкальский край,<br>г. Чита, ул. Курнатовского, 18</p>
           <p class="footer__contact footer__contact--muted">Пн-Сб 09:00-20:00 · Вс 09:00-19:00</p>
         </div>
       </div>

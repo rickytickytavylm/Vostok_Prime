@@ -66,9 +66,9 @@ NEW_CAKES2_MAP: dict[str, tuple[str, str]] = {
 # --- разделы на сайте (мамина структура) ---
 SECTIONS = [
     {"id": "classic", "label": "Классические"},
-    {"id": "homemade", "label": "Домашние торты"},
-    {"id": "other", "label": "Другие торты"},
-    {"id": "pastries", "label": "Пирожное"},
+    {"id": "homemade", "label": "Домашние"},
+    {"id": "other", "label": "Другие"},
+    {"id": "pastries", "label": "Пирожные"},
     {"id": "cookies", "label": "Печенье"},
 ]
 

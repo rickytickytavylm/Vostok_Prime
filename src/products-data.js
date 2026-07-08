@@ -8,15 +8,15 @@ window.PRODUCTS_DATA = {
     },
     {
       "id": "homemade",
-      "label": "Домашние торты"
+      "label": "Домашние"
     },
     {
       "id": "other",
-      "label": "Другие торты"
+      "label": "Другие"
     },
     {
       "id": "pastries",
-      "label": "Пирожное"
+      "label": "Пирожные"
     }
   ],
   "products": {
