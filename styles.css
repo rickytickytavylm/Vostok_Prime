@@ -1390,13 +1390,22 @@ body.is-footer-visible .header {
 
 .purchase-order__note {
   max-width: 340px;
-  margin-top: 36px;
+  margin-top: 12px;
   color: #1b1b1b;
   font-family: "PT Sans", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 24px;
+}
+
+.purchase-order__phone {
+  color: inherit;
+  text-decoration: none;
+}
+
+.purchase-order__phone:hover {
+  text-decoration: underline;
 }
 
 .purchase-order__media {
