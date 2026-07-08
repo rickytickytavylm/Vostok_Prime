@@ -1057,7 +1057,8 @@ body.is-footer-visible .header {
   font-size: 22px;
   font-weight: 600;
   line-height: 1.3;
-  transition: color 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .faq__q::-webkit-details-marker {
@@ -1079,8 +1080,15 @@ body.is-footer-visible .header {
   transform: rotate(-135deg);
 }
 
-.faq__q:hover {
-  color: #6a6a6f;
+@media (hover: hover) {
+  .faq__q:hover {
+    color: #6a6a6f;
+  }
+}
+
+.faq__q:focus-visible {
+  outline: 2px solid #1b1b1b;
+  outline-offset: 4px;
 }
 
 .faq__a {
