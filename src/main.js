@@ -232,7 +232,6 @@ const buildProductDetail = (product, categoryId) => {
             ${buyMarkup}
           </div>
           <p class="product-page__note">Всегда в наличии в нашем фирменном магазине</p>
-          <a class="contact-cta" href="tel:+79143687045">Связаться с нами</a>
         </div>
       </div>
     </div>`;

@@ -1263,6 +1263,7 @@ body.is-footer-visible .header {
 }
 
 .purchase-order__banner {
+  display: none; /* на десктопе баннер не показываем — не вписывается в структуру */
   margin-bottom: 40px;
   border-radius: 24px;
   overflow: hidden;
@@ -2623,6 +2624,7 @@ a.footer__contact:hover {
   }
 
   .purchase-order__banner {
+    display: block;
     margin-bottom: 24px;
     border-radius: 18px;
     aspect-ratio: 4 / 3;
