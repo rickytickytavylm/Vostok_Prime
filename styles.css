@@ -487,7 +487,7 @@ body.is-footer-visible .header {
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.16) 42%, rgba(0, 0, 0, 0) 68%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.24) 100%),
-    url("./assets/webp/again_hero_desktop.webp") no-repeat center / cover;
+    url("./assets/webp/prefinale_hero_desktop.webp") no-repeat center / cover;
   overflow: hidden;
 }
 
@@ -2388,7 +2388,7 @@ a.footer__contact:hover {
     justify-content: center;
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.3) 100%),
-      url("./assets/webp/again_hero_mobile.webp") no-repeat center / cover;
+      url("./assets/webp/prefinale_hero_mobile.webp") no-repeat center / cover;
   }
 
   .hero-content {
