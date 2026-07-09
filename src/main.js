@@ -873,3 +873,10 @@ function initChat() {
 // Стартовый роутинг — в самом конце файла, когда все const/функции уже
 // объявлены (иначе initChat при загрузке на #/ai падает из-за TDZ).
 router();
+
+// PWA: регистрируем сервис-воркер (офлайн-кэш, установка на домашний экран).
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  });
+}
