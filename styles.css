@@ -1668,7 +1668,9 @@ body.is-footer-visible .header {
   margin: 0;
   padding: 76px 80px 40px;
   border-radius: 0;
-  background: #0a0a0b;
+  background:
+    radial-gradient(140% 120% at 15% 0%, rgba(122, 78, 48, 0.55) 0%, rgba(122, 78, 48, 0) 55%),
+    linear-gradient(180deg, #3a241a 0%, #2a1710 48%, #1c0f0a 100%);
   color: #ffffff;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   overflow: hidden;
