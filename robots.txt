@@ -60,5 +60,5 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Host: https://xn----7sbadh7aod9aapsnr.xn--p1ai
-Sitemap: https://xn----7sbadh7aod9aapsnr.xn--p1ai/sitemap.xml
+Host: https://фабрика-восток.рф
+Sitemap: https://фабрика-восток.рф/sitemap.xml
