@@ -7,15 +7,19 @@
     },
     {
       "id": "homemade",
-      "label": "Домашние торты"
+      "label": "Домашние"
     },
     {
       "id": "other",
-      "label": "Другие торты"
+      "label": "Другие"
     },
     {
       "id": "pastries",
-      "label": "Пирожное"
+      "label": "Пирожные"
+    },
+    {
+      "id": "candies",
+      "label": "Конфеты"
     },
     {
       "id": "cookies",
@@ -126,7 +130,7 @@
       },
       "sources": [
         {
-          "file": "assets\\home_cake.png",
+          "file": "assets\\new cakes\\домашний-общий.jpg",
           "view": "whole",
           "origin": "new"
         }
@@ -223,6 +227,11 @@
         },
         {
           "file": "assets\\new cakes\\каприз-разрез.jpg",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\catalog-source\\kapriz-cut.png",
           "view": "cut",
           "origin": "new"
         }
@@ -1229,6 +1238,126 @@
       "biscuit": null,
       "description": "Бисквитный торт со сливочным кремом и воздушным безе.",
       "desc_source": "pending"
+    },
+    "kartoshka": {
+      "slug": "kartoshka",
+      "images": {
+        "whole": "./assets/webp/cakes/kartoshka-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\kartoshka-whole.png",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Картошка",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Пирожное из шоколадной бисквитной крошки с кремом.",
+      "desc_source": "mom"
+    },
+    "napoleon-pirozhnoe": {
+      "slug": "napoleon-pirozhnoe",
+      "images": {
+        "whole": "./assets/webp/cakes/napoleon-pirozhnoe-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\napoleon-pastry-whole.png",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Наполеон",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Тонкие слои слоёного теста в сочетании с белковым кремом.",
+      "desc_source": "mom"
+    },
+    "shu": {
+      "slug": "shu",
+      "images": {
+        "whole": "./assets/webp/cakes/shu-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\shu-whole.png",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Шу",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Заварное тесто с хрустящей корочкой (кракелин) с начинкой из заварного крема.",
+      "desc_source": "mom"
+    },
+    "zabaykalskaya-ptichka-konfety": {
+      "slug": "zabaykalskaya-ptichka-konfety",
+      "images": {
+        "cut": "./assets/webp/cakes/zabaykalskaya-ptichka-konfety-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\zabaykalskaya-ptichka-box-cut.png",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Забайкальская птичка",
+      "section": "candies",
+      "biscuit": null,
+      "description": "Конфеты с воздушным ванильно-сливочным суфле в шоколадной глазури.",
+      "desc_source": "pending"
+    },
+    "zabaykalskiy-bagulnik": {
+      "slug": "zabaykalskiy-bagulnik",
+      "images": {
+        "whole": "./assets/webp/cakes/zabaykalskiy-bagulnik-whole.webp",
+        "cut": "./assets/webp/cakes/zabaykalskiy-bagulnik-cut.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\zabaykalskiy-bagulnik-box.png",
+          "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\catalog-source\\zabaykalskiy-bagulnik-cut.png",
+          "view": "cut",
+          "origin": "new"
+        }
+      ],
+      "title": "Забайкальский багульник",
+      "section": "candies",
+      "biscuit": null,
+      "description": "Конфеты в шоколадной глазури с ягодной начинкой.",
+      "desc_source": "pending"
+    },
+    "zefir-assorti": {
+      "slug": "zefir-assorti",
+      "images": {
+        "cut": "./assets/webp/cakes/zefir-assorti-cut.webp",
+        "whole": "./assets/webp/cakes/zefir-assorti-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\zefir-assorti-cut.png",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\catalog-source\\zefir-assorti.png",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Зефир ассорти",
+      "section": "candies",
+      "biscuit": null,
+      "description": "Ассорти воздушного зефира с нежной текстурой.",
+      "desc_source": "pending"
     }
   },
   "products": {
@@ -1244,7 +1373,7 @@
           }
         ],
         "hasWhole": true,
-        "hasCut": true
+        "hasCut": false
       },
       {
         "title": "Нежность",
@@ -2246,7 +2375,7 @@
         "weights": [
           {
             "label": "160 гр",
-            "price": "уточняйте"
+            "price": "265 ₽"
           }
         ],
         "hasWhole": true,
@@ -2259,7 +2388,7 @@
         "weights": [
           {
             "label": "50 гр",
-            "price": "уточняйте"
+            "price": "80-90 ₽"
           }
         ],
         "hasWhole": true,
@@ -2272,7 +2401,7 @@
         "weights": [
           {
             "label": "30 гр",
-            "price": "уточняйте"
+            "price": "55 ₽"
           }
         ],
         "hasWhole": true,
@@ -2286,7 +2415,7 @@
         "weights": [
           {
             "label": "0,375 кг",
-            "price": "уточняйте"
+            "price": "445 ₽"
           }
         ],
         "hasWhole": true,
@@ -2300,15 +2429,101 @@
         "weights": [
           {
             "label": "0,450 кг",
-            "price": "уточняйте"
+            "price": "600 ₽"
           }
         ],
         "hasWhole": true,
         "hasCut": false,
         "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Шу",
+        "slug": "shu",
+        "description": "Заварное тесто с хрустящей корочкой (кракелин) с начинкой из заварного крема.",
+        "weights": [
+          {
+            "label": "0,06 кг",
+            "price": "85 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Картошка",
+        "slug": "kartoshka",
+        "description": "Пирожное из шоколадной бисквитной крошки с кремом.",
+        "weights": [
+          {
+            "label": "0,42 кг / уп.",
+            "price": "350 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Наполеон",
+        "slug": "napoleon-pirozhnoe",
+        "description": "Тонкие слои слоёного теста в сочетании с белковым кремом.",
+        "weights": [
+          {
+            "label": "0,4 кг",
+            "price": "420 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      }
+    ],
+    "candies": [
+      {
+        "title": "Зефир ассорти",
+        "slug": "zefir-assorti",
+        "description": "Ассорти воздушного зефира с нежной текстурой.",
+        "weights": [
+          {
+            "label": "Цена",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Точное описание и вес - по сообщению заказчицы."
+      },
+      {
+        "title": "Забайкальский багульник",
+        "slug": "zabaykalskiy-bagulnik",
+        "description": "Конфеты в шоколадной глазури с ягодной начинкой.",
+        "weights": [
+          {
+            "label": "Цена",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Точное описание и вес - по сообщению заказчицы."
+      },
+      {
+        "title": "Забайкальская птичка",
+        "slug": "zabaykalskaya-ptichka-konfety",
+        "description": "Конфеты с воздушным ванильно-сливочным суфле в шоколадной глазури.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "630 ₽"
+          }
+        ],
+        "hasWhole": false,
+        "hasCut": true,
+        "note": "Цена уточняется."
       }
     ],
     "cookies": []
   },
-  "unmapped_sources": []
+  "unmapped_sources": [
+    "assets\\new cakes2\\desktop_hero.jpg",
+    "assets\\new cakes2\\mobile_hero.jpg"
+  ]
 }

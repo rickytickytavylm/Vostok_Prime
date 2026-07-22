@@ -69,6 +69,7 @@ SECTIONS = [
     {"id": "homemade", "label": "Домашние"},
     {"id": "other", "label": "Другие"},
     {"id": "pastries", "label": "Пирожные"},
+    {"id": "candies", "label": "Конфеты"},
     {"id": "cookies", "label": "Печенье"},
 ]
 
@@ -280,6 +281,31 @@ CAKE_META: dict[str, dict] = {
         "description": "Шоколадно-ореховый торт со сгущённым молоком.",
         "weights": [{"label": "1,0 кг", "price": "уточняйте"}],
         "note": "Ждём описание от мамы."},
+
+    # ========== КОНФЕТЫ ==========
+    "zefir-assorti": {"title": "Зефир ассорти", "section": "candies", "desc_source": "pending",
+        "description": "Ассорти воздушного зефира с нежной текстурой.",
+        "weights": [{"label": "Цена", "price": "уточняйте"}],
+        "note": "Точное описание и вес - по сообщению заказчицы."},
+    "zabaykalskiy-bagulnik": {"title": "Забайкальский багульник", "section": "candies", "desc_source": "pending",
+        "description": "Конфеты в шоколадной глазури с ягодной начинкой.",
+        "weights": [{"label": "Цена", "price": "уточняйте"}],
+        "note": "Точное описание и вес - по сообщению заказчицы."},
+    "zabaykalskaya-ptichka-konfety": {"title": "Забайкальская птичка", "section": "candies", "desc_source": "pending",
+        "description": "Конфеты с воздушным ванильно-сливочным суфле в шоколадной глазури.",
+        "weights": [{"label": "220 г", "price": "уточняйте"}, {"label": "300 г", "price": "уточняйте"}],
+        "note": "Цена уточняется."},
+
+    # ========== ПИРОЖНЫЕ ==========
+    "shu": {"title": "Шу", "section": "pastries", "desc_source": "mom",
+        "description": "Заварное тесто с хрустящей корочкой (кракелин) с начинкой из заварного крема.",
+        "weights": [{"label": "0,06 кг", "price": "85 ₽"}]},
+    "kartoshka": {"title": "Картошка", "section": "pastries", "desc_source": "mom",
+        "description": "Пирожное из шоколадной бисквитной крошки с кремом.",
+        "weights": [{"label": "0,42 кг / уп.", "price": "350 ₽"}]},
+    "napoleon-pirozhnoe": {"title": "Наполеон", "section": "pastries", "desc_source": "mom",
+        "description": "Тонкие слои слоёного теста в сочетании с белковым кремом.",
+        "weights": [{"label": "0,2 кг / уп. 2 шт.", "price": "255 ₽"}]},
 }
 
 DEFAULT_WEIGHTS = [{"label": "1 кг", "price": "уточняйте"}]
@@ -288,6 +314,24 @@ DEFAULT_WEIGHTS = [{"label": "1 кг", "price": "уточняйте"}]
 # Пустые списки оставлены для совместимости импортов (status_report.py).
 PASTRIES: list[dict] = []
 COOKIES: list[dict] = []
+
+# Ретушированные изображения для каталога. Исходники лежат в assets/catalog-source,
+# чтобы повторный запуск сборки не терял внесённые правки.
+CATALOG_SOURCE = ASSETS / "catalog-source"
+CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
+    "kapriz-cut.png": ("kapriz", "cut"),
+    "zefir-assorti.png": ("zefir-assorti", "whole"),
+    "zefir-assorti-cut.png": ("zefir-assorti", "cut"),
+    "zabaykalskiy-bagulnik-box.png": ("zabaykalskiy-bagulnik", "whole"),
+    "zabaykalskiy-bagulnik-cut.png": ("zabaykalskiy-bagulnik", "cut"),
+    "zabaykalskaya-ptichka-box-cut.png": ("zabaykalskaya-ptichka-konfety", "cut"),
+    "shu-whole.png": ("shu", "whole"),
+    "kartoshka-whole.png": ("kartoshka", "whole"),
+    "napoleon-pastry-whole.png": ("napoleon-pirozhnoe", "whole"),
+}
+
+# В «Домашнем» по согласованию используется только общий вид.
+EXCLUDED_IMAGE_VIEWS = {("domashniy", "cut")}
 
 
 def parse_new_cake_name_fixed(filename: str) -> tuple[str, str] | None:
@@ -322,6 +366,8 @@ def collect_image_jobs() -> tuple[list[tuple], dict, list[str]]:
 
     def add_job(src: Path, dst: Path, slug: str, view: str, kind: str, force: bool = False) -> None:
         key = (slug, view)
+        if key in EXCLUDED_IMAGE_VIEWS:
+            return
         if slug.startswith("_"):
             jobs.append((src, dst, slug, view, kind))
             return
@@ -376,6 +422,15 @@ def collect_image_jobs() -> tuple[list[tuple], dict, list[str]]:
             else:
                 dst = WEBP_ROOT / "cakes" / f"{slug}-{view}.webp"
             add_job(src, dst, slug, view, "old")
+
+    if CATALOG_SOURCE.exists():
+        for src in sorted(CATALOG_SOURCE.iterdir()):
+            mapping = CATALOG_SOURCE_MAP.get(src.name)
+            if not mapping:
+                continue
+            slug, view = mapping
+            dst = WEBP_ROOT / "cakes" / f"{slug}-{view}.webp"
+            add_job(src, dst, slug, view, "new")
 
     hero = ASSETS / "hero.png"
     if hero.exists():
