@@ -5,17 +5,12 @@ const productTabsIndicator = document.querySelector(".products-switcher__indicat
 const productsGrid = document.querySelector(".products-grid");
 const productsPrev = document.querySelector(".products-arrow--prev");
 const productsNext = document.querySelector(".products-arrow--next");
-const productsMore = document.querySelector("[data-open-catalog]");
 
 const views = {
   home: document.querySelector('[data-view="home"]'),
-  catalog: document.querySelector('[data-view="catalog"]'),
   product: document.querySelector('[data-view="product"]'),
   chat: document.querySelector('[data-view="chat"]'),
 };
-const catalogTitleEl = document.querySelector("[data-catalog-title]");
-const catalogListEl = document.querySelector("[data-catalog-list]");
-const catalogSwitcherEl = document.querySelector("[data-catalog-switcher]");
 const productBodyEl = document.querySelector("[data-product-body]");
 
 const catalog = window.PRODUCTS_DATA || { sections: [], products: {} };
@@ -28,11 +23,8 @@ let currentView = "home";
 let chatInited = false;
 let chatBusy = false;
 const chatMessages = []; // { role, content }
-// Куда возвращает кнопка «назад» на странице торта: последняя открытая
-// «список»-страница (главная или каталог категории).
-let backHash = "#/";
-// Была ли навигация внутри приложения (чтобы использовать history.back и
-// сохранять позицию скролла списка, а не прыгать наверх).
+// Карточка товара всегда возвращает к ленте продукции на главной.
+const backHash = "#products";
 let userNavigated = false;
 // Запоминаем позицию скролла для каждой «списочной» страницы (главная/каталог),
 // чтобы при возврате с карточки товара попадать на ленту, а не в самый верх.
@@ -112,7 +104,7 @@ const setActiveTab = () => {
   let active = "home";
   if (currentView === "chat" || hash.startsWith("#/ai")) {
     active = "ai";
-  } else if (currentView === "catalog" || currentView === "product" || hash.startsWith("#/c/") || hash.startsWith("#/p/") || hash.startsWith("#products")) {
+  } else if (currentView === "product" || hash.startsWith("#/p/") || hash.startsWith("#products")) {
     active = "products";
   } else if (hash.startsWith("#factory")) {
     active = "factory";
@@ -237,32 +229,8 @@ const buildProductDetail = (product, categoryId) => {
     </div>`;
 };
 
-const buildCatalogTile = (product, categoryId, index) => {
-  const { imageMain } = getProductImages(product);
-  const media = imageMain
-    ? `<img class="catalog-tile__img" src="${imageMain}" alt="${product.title}" loading="eager" decoding="async" />`
-    : `<span class="catalog-tile__img catalog-tile__img--empty" aria-hidden="true"></span>`;
-
-  return `
-    <a class="catalog-tile" href="#/p/${categoryId}/${productKey(product, index)}">
-      <span class="catalog-tile__media">${media}</span>
-      <span class="catalog-tile__title">${product.title}</span>
-      <span class="catalog-tile__price">${product.weights[0].price}</span>
-    </a>`;
-};
-
 const bindProductDetailInteractions = (container) => {
   if (!container) return;
-
-  const back = container.querySelector("[data-back]");
-  back?.addEventListener("click", (event) => {
-    // Если пришли навигацией внутри сайта — возвращаемся назад по истории,
-    // это сохраняет позицию скролла списка (главная/каталог).
-    if (userNavigated && window.history.length > 1) {
-      event.preventDefault();
-      window.history.back();
-    }
-  });
 
   const thumbs = Array.from(container.querySelectorAll("[data-gallery-thumb]"));
   const images = Array.from(container.querySelectorAll("[data-gallery-img]"));
@@ -342,7 +310,6 @@ const renderProducts = () => {
 
   productsGrid.innerHTML = categoryProducts.map(createProductCard).join("");
   productsGrid.scrollLeft = 0;
-  if (productsMore) productsMore.setAttribute("href", `#/c/${activeCategory}`);
   bindProductInteractions();
   updateArrowState();
 };
@@ -429,47 +396,6 @@ const showView = (name) => {
   setActiveTab();
 };
 
-let catalogSwitcherBuilt = false;
-
-const buildCatalogSwitcher = (activeId) => {
-  if (!catalogSwitcherEl) return;
-  if (!catalogSwitcherBuilt) {
-    catalogSwitcherEl.innerHTML = catalog.sections
-      .map(
-        (section) =>
-          `<button class="catalog-switcher__item" type="button" role="tab" data-category="${section.id}" aria-selected="false">${section.label}</button>`
-      )
-      .join("");
-    catalogSwitcherEl.querySelectorAll(".catalog-switcher__item").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const id = btn.dataset.category;
-        if (id) location.hash = `#/c/${id}`;
-      });
-    });
-    catalogSwitcherBuilt = true;
-  }
-  catalogSwitcherEl.querySelectorAll(".catalog-switcher__item").forEach((btn) => {
-    const on = btn.dataset.category === activeId;
-    btn.classList.toggle("catalog-switcher__item--active", on);
-    btn.setAttribute("aria-selected", on ? "true" : "false");
-  });
-};
-
-const renderCatalogPage = (categoryId) => {
-  const section = catalog.sections.find((s) => s.id === categoryId);
-  if (!section) return false;
-
-  const items = catalog.products[categoryId] || [];
-  if (catalogTitleEl) catalogTitleEl.textContent = section.label;
-  buildCatalogSwitcher(categoryId);
-  if (catalogListEl) {
-    catalogListEl.innerHTML = `<div class="catalog-grid">${items
-      .map((product, index) => buildCatalogTile(product, categoryId, index))
-      .join("")}</div>`;
-  }
-  return true;
-};
-
 const renderProductPage = (categoryId, key) => {
   const { product } = findProduct(categoryId, key);
   if (!product) return false;
@@ -487,7 +413,7 @@ const scrollTop = () => {
   window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 };
 
-const DEFAULT_TITLE = "Кондитерская фабрика «Восток» - торты и пирожные в Чите с 1910 года";
+const DEFAULT_TITLE = "Кондитерская фабрика «Восток» - торты, пирожные и конфеты в Чите";
 const setTitle = (part) => {
   document.title = part ? `${part} - Кондитерская фабрика «Восток»` : DEFAULT_TITLE;
 };
@@ -509,15 +435,6 @@ const router = () => {
   const raw = location.hash.replace(/^#\/?/, "");
   const parts = raw.split("/").filter(Boolean);
 
-  if (parts[0] === "c" && parts[1] && renderCatalogPage(parts[1])) {
-    showView("catalog");
-    backHash = location.hash;
-    const section = catalog.sections.find((s) => s.id === parts[1]);
-    setTitle(section ? section.label : "Каталог");
-    if (!restoreListScroll(location.hash)) scrollTop();
-    return;
-  }
-
   if (parts[0] === "p" && parts[1] && parts[2] && renderProductPage(parts[1], parts[2])) {
     showView("product");
     const { product } = findProduct(parts[1], parts[2]);
@@ -536,7 +453,6 @@ const router = () => {
 
   showView("home");
   setTitle("");
-  backHash = location.hash || "#/";
 
   if (restoreListScroll(location.hash)) {
     return;

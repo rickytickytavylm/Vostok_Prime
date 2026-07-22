@@ -1,5 +1,5 @@
 /* Service Worker — Кондитерская фабрика «Восток» (PWA) */
-const VERSION = "vostok-v3";
+const VERSION = "vostok-v4";
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 

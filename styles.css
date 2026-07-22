@@ -2571,17 +2571,19 @@ a.footer__contact:hover {
   }
 
   .products-grid {
-    gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 14px;
     margin-top: 28px;
     margin-left: 0;
-    margin-right: -18px;
-    padding-left: 0;
-    padding-right: 18px;
-    scroll-padding-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
   }
 
   .product-card {
-    flex-basis: min(66vw, 250px);
+    min-width: 0;
   }
 
   .product-card__content {
@@ -3160,7 +3162,7 @@ body.is-sheet-open {
   }
 
   .product-hero__back {
-    top: 18px;
+    top: calc(18px + env(safe-area-inset-top));
     left: 16px;
   }
 
