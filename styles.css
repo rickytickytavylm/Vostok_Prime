@@ -897,7 +897,7 @@ body.is-footer-visible .header {
 .advantage-card + .advantage-card {
   margin-top: 56px;
   padding-top: 56px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #d9d3ce;
 }
 
 .advantage-card__media {
@@ -1361,7 +1361,8 @@ body.is-footer-visible .header {
 }
 
 .purchase-order {
-  padding: 0 80px 112px;
+  padding: 56px 80px 112px;
+  border-top: 1px solid #d9d3ce;
 }
 
 .purchase-order__banner {
@@ -2385,7 +2386,7 @@ a.footer__contact:hover {
   .hero-photo {
     aspect-ratio: auto;
     min-height: max(520px, 78svh);
-    padding: 140px 20px 80px;
+    padding: calc(140px + env(safe-area-inset-top)) 20px 80px;
     align-items: center;
     justify-content: center;
     background:

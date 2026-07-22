@@ -1,7 +1,7 @@
 {
   "name": "Кондитерская фабрика «Восток»",
   "short_name": "Восток",
-  "description": "Торты и пирожные ручной работы в Чите с 1910 года. Классические, медовые, шоколадные торты и торты на заказ.",
+  "description": "Торты, пирожные и конфеты собственного производства в Чите с 1910 года.",
   "lang": "ru-RU",
   "dir": "ltr",
   "id": "/",
@@ -15,25 +15,25 @@
   "categories": ["food", "shopping", "lifestyle"],
   "icons": [
     {
-      "src": "assets/icon-192.png?v=2",
+      "src": "assets/icon-192.png?v=3",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "assets/icon-512.png?v=2",
+      "src": "assets/icon-512.png?v=3",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "assets/icon-192.png?v=2",
+      "src": "assets/icon-192.png?v=3",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "assets/icon-512.png?v=2",
+      "src": "assets/icon-512.png?v=3",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
