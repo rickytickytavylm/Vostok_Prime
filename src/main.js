@@ -793,6 +793,9 @@ router();
 // PWA: регистрируем сервис-воркер (офлайн-кэш, установка на домашний экран).
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js").catch(() => {});
+    navigator.serviceWorker
+      .register("./sw.js?v=5", { updateViaCache: "none" })
+      .then((reg) => reg.update())
+      .catch(() => {});
   });
 }

@@ -1,5 +1,5 @@
 /* Service Worker — Кондитерская фабрика «Восток» (PWA) */
-const VERSION = "vostok-v4";
+const VERSION = "vostok-v5";
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 
@@ -15,6 +15,9 @@ const APP_SHELL = [
   "./assets/icon-512.png",
   "./assets/apple-touch-icon.png",
 ];
+
+const isShellAsset = (pathname) =>
+  /\.(?:html|css|js|webmanifest)$/i.test(pathname) || pathname.endsWith("/");
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -44,21 +47,21 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const { request } = event;
 
-  // Обрабатываем только GET.
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
-
-  // Только свой домен — сторонние (API, карты, шрифты, VK) не трогаем.
   if (url.origin !== self.location.origin) return;
 
-  // Навигация (открытие страницы): сеть, при офлайне — кэшированный index.html.
-  if (request.mode === "navigate") {
+  // Навигация и shell (html/css/js): сеть первая, иначе обновления не доезжают.
+  if (request.mode === "navigate" || isShellAsset(url.pathname)) {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          const copy = response.clone();
-          caches.open(RUNTIME_CACHE).then((cache) => cache.put("./index.html", copy));
+          if (response && response.status === 200 && response.type === "basic") {
+            const copy = response.clone();
+            const key = request.mode === "navigate" ? "./index.html" : request;
+            caches.open(RUNTIME_CACHE).then((cache) => cache.put(key, copy));
+          }
           return response;
         })
         .catch(() =>
@@ -68,7 +71,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Остальные ассеты: stale-while-revalidate.
+  // Картинки и прочее: stale-while-revalidate.
   event.respondWith(
     caches.match(request).then((cached) => {
       const network = fetch(request)
