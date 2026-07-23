@@ -620,12 +620,10 @@
 
     <script src="./src/products-data.js"></script>
     <!--
-      Адрес backend-сервера (Railway) для ИИ-консультанта.
-      После деплоя сервера на Railway впиши сюда его публичный URL, например:
-      window.VOSTOK_API = "https://vostok-server-production.up.railway.app";
-      Пустая строка = сервер на том же домене (локальная разработка на :4000).
+      API через RU-прокси (Timeweb → Railway), чтобы ИИ работал из РФ без VPN.
+      Прямой Railway: https://vostokbackendprime-production.up.railway.app
     -->
-    <script>window.VOSTOK_API = "https://vostokbackendprime-production.up.railway.app";</script>
+    <script>window.VOSTOK_API = "https://api.фабрика-восток.рф";</script>
     <script src="./src/main.js"></script>
   </body>
 </html>
