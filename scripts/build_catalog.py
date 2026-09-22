@@ -265,7 +265,7 @@ CAKE_META: dict[str, dict] = {
     "chernyy-lyuks": {"title": "Чёрный Люкс", "section": "other", "desc_source": "placeholder",
         "description": "Изысканный шоколадный торт премиум-класса с насыщенным вкусом и благородным оформлением.",
         "weights": [{"label": "1.3 кг", "price": "1 950 ₽"}]},
-    "snikers": {"title": "Сникерс", "section": "other", "desc_source": "placeholder",
+    "snikers": {"title": "Шоколадно-ореховый", "section": "other", "desc_source": "placeholder",
         "description": "Шоколадный торт с карамелью, арахисом и нежным кремом."},
     "tryufelnyy": {"title": "Трюфельный", "section": "other", "desc_source": "placeholder",
         "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом."},

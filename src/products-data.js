@@ -665,7 +665,7 @@ window.PRODUCTS_DATA = {
         "hasCut": true
       },
       {
-        "title": "Сникерс",
+        "title": "Шоколадно-ореховый",
         "slug": "snikers",
         "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
         "weights": [
