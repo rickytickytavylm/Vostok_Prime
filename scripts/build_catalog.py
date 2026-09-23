@@ -283,18 +283,15 @@ CAKE_META: dict[str, dict] = {
         "note": "Ждём описание от мамы."},
 
     # ========== КОНФЕТЫ ==========
-    "zefir-assorti": {"title": "Зефир ассорти", "section": "candies", "desc_source": "pending",
-        "description": "Ассорти воздушного зефира с нежной текстурой.",
-        "weights": [{"label": "Цена", "price": "уточняйте"}],
-        "note": "Точное описание и вес - по сообщению заказчицы."},
-    "zabaykalskiy-bagulnik": {"title": "Забайкальский багульник", "section": "candies", "desc_source": "pending",
-        "description": "Конфеты в шоколадной глазури с ягодной начинкой.",
-        "weights": [{"label": "Цена", "price": "уточняйте"}],
-        "note": "Точное описание и вес - по сообщению заказчицы."},
-    "zabaykalskaya-ptichka-konfety": {"title": "Забайкальская птичка", "section": "candies", "desc_source": "pending",
+    "zefir-assorti": {"title": "Зефир", "section": "candies", "desc_source": "mom",
+        "description": "Воздушный зефир с нежной текстурой со вкусами ванили, манго, клубники, малины, банана, дыни, апельсина.",
+        "weights": [{"label": "1 кг", "price": "440-450 ₽"}]},
+    "zabaykalskiy-bagulnik": {"title": "Забайкальский багульник", "section": "candies", "desc_source": "mom",
+        "description": "Конфеты в шоколадной глазури с ягодной желейной начинкой.",
+        "weights": [{"label": "250 гр", "price": "350 ₽"}, {"label": "370 гр", "price": "450 ₽"}]},
+    "zabaykalskaya-ptichka-konfety": {"title": "Забайкальская птичка", "section": "candies", "desc_source": "mom",
         "description": "Конфеты с воздушным ванильно-сливочным суфле в шоколадной глазури.",
-        "weights": [{"label": "220 г", "price": "уточняйте"}, {"label": "300 г", "price": "уточняйте"}],
-        "note": "Цена уточняется."},
+        "weights": [{"label": "220 гр", "price": "290 ₽"}, {"label": "300 гр", "price": "360 ₽"}, {"label": "500 гр", "price": "670 ₽"}]},
 
     # ========== ПИРОЖНЫЕ ==========
     "shu": {"title": "Шу", "section": "pastries", "desc_source": "mom",

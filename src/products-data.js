@@ -889,32 +889,34 @@ window.PRODUCTS_DATA = {
     ],
     "candies": [
       {
-        "title": "Зефир ассорти",
+        "title": "Зефир",
         "slug": "zefir-assorti",
-        "description": "Ассорти воздушного зефира с нежной текстурой.",
+        "description": "Воздушный зефир с нежной текстурой со вкусами ванили, манго, клубники, малины, банана, дыни, апельсина.",
         "weights": [
           {
-            "label": "Цена",
-            "price": "уточняйте"
+            "label": "1 кг",
+            "price": "440-450 ₽"
           }
         ],
         "hasWhole": true,
-        "hasCut": true,
-        "note": "Точное описание и вес - по сообщению заказчицы."
+        "hasCut": true
       },
       {
         "title": "Забайкальский багульник",
         "slug": "zabaykalskiy-bagulnik",
-        "description": "Конфеты в шоколадной глазури с ягодной начинкой.",
+        "description": "Конфеты в шоколадной глазури с ягодной желейной начинкой.",
         "weights": [
           {
-            "label": "Цена",
-            "price": "уточняйте"
+            "label": "250 гр",
+            "price": "350 ₽"
+          },
+          {
+            "label": "370 гр",
+            "price": "450 ₽"
           }
         ],
         "hasWhole": true,
-        "hasCut": true,
-        "note": "Точное описание и вес - по сообщению заказчицы."
+        "hasCut": true
       },
       {
         "title": "Забайкальская птичка",
@@ -922,13 +924,20 @@ window.PRODUCTS_DATA = {
         "description": "Конфеты с воздушным ванильно-сливочным суфле в шоколадной глазури.",
         "weights": [
           {
-            "label": "0,5 кг",
-            "price": "630 ₽"
+            "label": "220 гр",
+            "price": "290 ₽"
+          },
+          {
+            "label": "300 гр",
+            "price": "360 ₽"
+          },
+          {
+            "label": "500 гр",
+            "price": "670 ₽"
           }
         ],
         "hasWhole": false,
-        "hasCut": true,
-        "note": "Цена уточняется."
+        "hasCut": true
       }
     ],
     "cookies": []
