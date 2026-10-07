@@ -13,7 +13,7 @@ const views = {
 };
 const productBodyEl = document.querySelector("[data-product-body]");
 
-const catalog = window.PRODUCTS_DATA || { sections: [], products: {} };
+let catalog = window.PRODUCTS_DATA || { sections: [], products: {} };
 const productTabs = [];
 
 let activeCategory = catalog.sections[0]?.id || "classic";
@@ -48,10 +48,10 @@ const findProduct = (categoryId, key) => {
 };
 
 const getProductImages = (product) => {
-  const hasWhole = Boolean(product.hasWhole && product.slug);
-  const hasCut = Boolean(product.hasCut && product.slug);
-  const imageWhole = hasWhole ? `./assets/webp/cakes/${product.slug}-whole.webp` : "";
-  const imageCut = hasCut ? `./assets/webp/cakes/${product.slug}-cut.webp` : "";
+  const imageWhole = product.images?.whole || (product.hasWhole && product.slug ? `./assets/webp/cakes/${product.slug}-whole.webp` : "");
+  const imageCut = product.images?.cut || (product.hasCut && product.slug ? `./assets/webp/cakes/${product.slug}-cut.webp` : "");
+  const hasWhole = Boolean(imageWhole);
+  const hasCut = Boolean(imageCut);
   return {
     hasWhole,
     hasCut,
@@ -484,6 +484,32 @@ window.addEventListener("hashchange", () => {
 window.addEventListener("scroll", updateHeader, { passive: true });
 
 buildProductTabs();
+
+const refreshLiveCatalog = async () => {
+  const api = (window.VOSTOK_API || "").replace(/\/$/, "");
+  if (!api) return;
+  try {
+    const res = await fetch(`${api}/api/catalog`, { cache: "no-store" });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.source !== "live") return;
+    const count = Object.values(data.products || {}).reduce((sum, items) => sum + (items?.length || 0), 0);
+    if (!count) return;
+    catalog = data;
+    if (!catalog.sections.some((section) => section.id === activeCategory)) {
+      activeCategory = catalog.sections[0]?.id || activeCategory;
+    }
+    productsSwitcher?.querySelectorAll(".products-switcher__item").forEach((node) => node.remove());
+    productTabs.length = 0;
+    buildProductTabs();
+    if (currentView === "product") router();
+    else renderProducts();
+    updateProductTabsIndicator();
+  } catch {
+    // Сайт остаётся на вшитом каталоге, если сервер недоступен.
+  }
+};
+refreshLiveCatalog();
 
 if (productsPrev) {
   productsPrev.addEventListener("click", () => {
