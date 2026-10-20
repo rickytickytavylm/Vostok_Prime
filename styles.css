@@ -2002,10 +2002,9 @@ a.footer__contact:hover {
   margin-right: -80px;
   padding-left: 80px;
   padding-right: 80px;
-  scroll-padding-left: 80px;
   overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+  scroll-behavior: auto;
   scrollbar-width: none;
   transition: opacity 0.18s ease;
 }
@@ -2035,7 +2034,6 @@ a.footer__contact:hover {
   padding: 0 0 2px;
   border-radius: 24px;
   background: #ffffff;
-  scroll-snap-align: start;
   cursor: pointer;
 }
 
