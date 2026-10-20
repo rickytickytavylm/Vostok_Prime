@@ -2037,11 +2037,6 @@ a.footer__contact:hover {
   background: #ffffff;
   scroll-snap-align: start;
   cursor: pointer;
-  transition: transform 0.22s ease, filter 0.22s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
 }
 
 .product-card__photo {
