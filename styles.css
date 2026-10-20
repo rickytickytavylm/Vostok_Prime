@@ -1363,6 +1363,7 @@ body.is-footer-visible .header {
 .purchase-order {
   padding: 56px 80px 112px;
   border-top: 1px solid #d9d3ce;
+  scroll-margin-top: 96px;
 }
 
 .purchase-order__banner {
@@ -2011,6 +2012,18 @@ a.footer__contact:hover {
 
 .products-grid::-webkit-scrollbar {
   display: none;
+}
+
+@media (min-width: 641px) {
+  .products-grid {
+    cursor: grab;
+  }
+
+  .products-grid.is-dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+    user-select: none;
+  }
 }
 
 .product-card {

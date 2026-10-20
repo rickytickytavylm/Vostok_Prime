@@ -275,6 +275,7 @@ const bindProductInteractions = () => {
     const weights = Array.from(card.querySelectorAll(".product-card__weight"));
 
     const openFromCard = () => {
+      if (productsGrid?.dataset.suppressClick) return;
       if (product) location.hash = `#/p/${activeCategory}/${productKey(product, index)}`;
     };
 
@@ -524,6 +525,56 @@ if (productsNext) {
     productsGrid.scrollBy({ left: getProductScrollStep(), behavior: "smooth" });
   });
 }
+
+const bindProductStrip = () => {
+  if (!productsGrid || productsGrid.dataset.stripBound) return;
+  productsGrid.dataset.stripBound = "1";
+
+  productsGrid.addEventListener("wheel", (event) => {
+    const max = productsGrid.scrollWidth - productsGrid.clientWidth;
+    if (max <= 1 || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+    const delta = event.deltaMode === 1 ? event.deltaY * 18 : event.deltaY;
+    const atStart = productsGrid.scrollLeft <= 0 && delta < 0;
+    const atEnd = productsGrid.scrollLeft >= max - 1 && delta > 0;
+    if (atStart || atEnd) return;
+    event.preventDefault();
+    productsGrid.scrollLeft += delta;
+  }, { passive: false });
+
+  let drag = null;
+  const endDrag = (event) => {
+    if (!drag || drag.id !== event.pointerId) return;
+    const moved = drag.moved;
+    drag = null;
+    productsGrid.classList.remove("is-dragging");
+    if (!moved) return;
+    productsGrid.dataset.suppressClick = "1";
+    window.setTimeout(() => {
+      delete productsGrid.dataset.suppressClick;
+    }, 50);
+  };
+
+  productsGrid.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "touch" || event.button !== 0) return;
+    if (productsGrid.scrollWidth <= productsGrid.clientWidth + 1) return;
+    drag = { x: event.clientX, left: productsGrid.scrollLeft, moved: false, id: event.pointerId };
+  });
+
+  productsGrid.addEventListener("pointermove", (event) => {
+    if (!drag || drag.id !== event.pointerId) return;
+    const dx = event.clientX - drag.x;
+    if (Math.abs(dx) > 6) {
+      drag.moved = true;
+      productsGrid.classList.add("is-dragging");
+    }
+    if (drag.moved) productsGrid.scrollLeft = drag.left - dx;
+  });
+
+  productsGrid.addEventListener("pointerup", endDrag);
+  productsGrid.addEventListener("pointercancel", endDrag);
+};
+
+bindProductStrip();
 
 if (productsGrid) {
   productsGrid.addEventListener("scroll", updateArrowState, { passive: true });
