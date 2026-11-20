@@ -52,8 +52,7 @@ NEW_CAKES2_MAP: dict[str, tuple[str, str]] = {
     "полет_с_варенным_сгущенным_молоком_общий_0.5.jpg": ("polet-varenka", "whole"),
     "полет_с_варенным_сгущенным_молоком_общий_1.0кг.jpg": ("polet-varenka", "whole"),
     "полет_с_кедровым_орехом_общий.jpg": ("polet-kedrovyy", "whole"),
-    "полет_со_сливочным_кремом_0.5.jpg": ("polet-slivochnyy", "whole"),
-    "полет_со_со_сливочным_кремом_1.0кг.jpg": ("polet-slivochnyy", "whole"),
+    "полет_со_со_сливочным_кремом_1.0кг.jpg": ("polet-slivochnyy", "cut"),
     "славутич_общий.jpg": ("slavutich", "whole"),
     "торт_суфле_забайкальская_птичка.jpg": ("zabaykalskaya-ptichka", "whole"),
     "фисташковый_общий.jpg": ("fistashkovyy", "whole"),
@@ -342,6 +341,7 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "tsarskiy-klubnichnyy-cut.jpg": ("tsarskiy-klubnichnyy", "cut"),
     "tsarskiy-bananovyy-cut.jpg": ("tsarskiy-bananovyy", "cut"),
     "muraviynaya-gorka.jpg": ("muraviynaya-gorka", "whole"),
+    "polet-slivochnyy.jpg": ("polet-slivochnyy", "whole"),
     "kievskiy.jpg": ("kievskiy", "whole"),
     "kievskiy-cut.jpg": ("kievskiy", "cut"),
 }
