@@ -38,7 +38,7 @@ from price_list import weights_for_title as price_weights_for_title  # noqa: E40
 NEW_CAKES2 = ASSETS / "new cakes2"
 NEW_CAKES2_MAP: dict[str, tuple[str, str]] = {
     "клубничное_чудо_общий.jpg": ("klubnichnoe-chudo", "whole"),
-    "краасный_бархат_разрез.jpg": ("krasnyy-barhat", "cut"),
+
     "красный-бархат_общий.jpg": ("krasnyy-barhat", "whole"),
     "лакомка_общийjpg.jpg": ("lakomka", "whole"),
     "лакоммка_разрез.jpg": ("lakomka", "cut"),
@@ -358,6 +358,7 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "podsolnukh.jpg": ("podsolnukh", "whole"),
     "polet-bez-oreha.jpg": ("polet-bez-oreha", "whole"),
     "polet-bez-oreha-slivki.jpg": ("polet-bez-oreha-slivki", "whole"),
+    "krasnyy-barhat-cut.jpg": ("krasnyy-barhat", "cut"),
     "kievskiy.jpg": ("kievskiy", "whole"),
     "kievskiy-cut.jpg": ("kievskiy", "cut"),
 }
