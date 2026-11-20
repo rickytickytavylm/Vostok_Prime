@@ -3,6 +3,14 @@
 window.PRODUCTS_DATA = {
   "sections": [
     {
+      "id": "airnut",
+      "label": "Воздушно-ореховые"
+    },
+    {
+      "id": "other",
+      "label": "Праздничные"
+    },
+    {
       "id": "classic",
       "label": "Классические"
     },
@@ -11,23 +19,337 @@ window.PRODUCTS_DATA = {
       "label": "Домашние"
     },
     {
-      "id": "other",
-      "label": "Праздничные"
-    },
-    {
       "id": "pastries",
       "label": "Пирожные"
     },
     {
       "id": "candies",
       "label": "Конфеты"
-    },
-    {
-      "id": "airnut",
-      "label": "Воздушно-ореховые"
     }
   ],
   "products": {
+    "airnut": [
+      {
+        "title": "Полёт-Премиум",
+        "slug": "polet-premium",
+        "description": "Воздушно-ореховое безе со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "970 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 890 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт с кедровым орехом",
+        "slug": "polet-kedrovyy",
+        "description": "Воздушно-ореховое безе с кедровым орехом и сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "1 285 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт с варёным сгущённым молоком",
+        "slug": "polet-varenka",
+        "description": "Воздушно-ореховое безе со сливочным кремом на варёном сгущённом молоке.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "уточняйте"
+          },
+          {
+            "label": "1,0 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт со сливочным кремом",
+        "slug": "polet-slivochnyy",
+        "description": "Воздушно-ореховое безе со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "885 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 670 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      }
+    ],
+    "other": [
+      {
+        "title": "Красный бархат",
+        "slug": "krasnyy-barhat",
+        "description": "Бисквит «Красный бархат» со сливочно-сырным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "820 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 515 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём описание и вес от мамы."
+      },
+      {
+        "title": "Славутич",
+        "slug": "slavutich",
+        "description": "Медово-шоколадные коржи со сливочным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 230 ₽"
+          },
+          {
+            "label": "1,5 кг",
+            "price": "1 575 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Эльбрус",
+        "slug": "elbrus",
+        "description": "Бисквитный торт со сливочным кремом и воздушным безе.",
+        "weights": [
+          {
+            "label": "0,9 кг",
+            "price": "1 105 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Фисташковый",
+        "slug": "fistashkovyy",
+        "description": "Фисташковый бисквит со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 525 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Царский (банановый)",
+        "slug": "tsarskiy-bananovyy",
+        "description": "Царский торт с банановой начинкой.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "1 000 ₽"
+          },
+          {
+            "label": "1,2 кг",
+            "price": "1 705 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание и вес от мамы."
+      },
+      {
+        "title": "Вишня со сливками",
+        "slug": "vishnya-so-slivkami",
+        "description": "Нежный бисквит с вишнёвой начинкой и воздушными сливками.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 030 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Курский",
+        "slug": "kurskiy",
+        "description": "Песочные коржи с нежной начинкой по традиционному рецепту.",
+        "weights": [
+          {
+            "label": "0,9 кг",
+            "price": "1 115 ₽"
+          },
+          {
+            "label": "1,4 кг",
+            "price": "1 725 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Элитный",
+        "slug": "elitnyy",
+        "description": "Бисквитный торт премиального уровня с изысканным кремом и декором.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 220 ₽"
+          },
+          {
+            "label": "1,5 кг",
+            "price": "1 785 ₽"
+          },
+          {
+            "label": "2 кг",
+            "price": "2 260 ₽"
+          },
+          {
+            "label": "2,5 кг",
+            "price": "2 835 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Чёрный Люкс",
+        "slug": "chernyy-lyuks",
+        "description": "Изысканный шоколадный торт премиум-класса с насыщенным вкусом и благородным оформлением.",
+        "weights": [
+          {
+            "label": "1.3 кг",
+            "price": "1 950 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Шоколадно-ореховый",
+        "slug": "snikers",
+        "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Трюфельный",
+        "slug": "tryufelnyy",
+        "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 040 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Праздничный",
+        "slug": "prazdnichnyy",
+        "description": "Яркий праздничный торт с праздничным декором для особых случаев.",
+        "weights": [
+          {
+            "label": "2 кг",
+            "price": "2 100 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Фантазия",
+        "slug": "fantaziya",
+        "description": "Праздничный торт с авторским декором и нежным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 170 ₽"
+          },
+          {
+            "label": "1,5 кг",
+            "price": "1 680 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Соблазн",
+        "slug": "soblazn",
+        "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 105 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Царский (вареная сгущёнка)",
+        "slug": "tsarskiy",
+        "description": "Премиальный торт с богатым декором и насыщенным вкусом.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "1 000 ₽"
+          },
+          {
+            "label": "1,2 кг",
+            "price": "1 705 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      },
+      {
+        "title": "Лакомка",
+        "slug": "lakomka",
+        "description": "Шоколадно-ореховый торт со сгущённым молоком.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "1 305 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём описание от мамы."
+      }
+    ],
     "classic": [
       {
         "title": "Домашний",
@@ -449,258 +771,6 @@ window.PRODUCTS_DATA = {
         "hasCut": true
       }
     ],
-    "other": [
-      {
-        "title": "Красный бархат",
-        "slug": "krasnyy-barhat",
-        "description": "Бисквит «Красный бархат» со сливочно-сырным кремом.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "820 ₽"
-          },
-          {
-            "label": "1 кг",
-            "price": "1 515 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true,
-        "note": "Ждём описание и вес от мамы."
-      },
-      {
-        "title": "Славутич",
-        "slug": "slavutich",
-        "description": "Медово-шоколадные коржи со сливочным кремом.",
-        "weights": [
-          {
-            "label": "1 кг",
-            "price": "1 230 ₽"
-          },
-          {
-            "label": "1,5 кг",
-            "price": "1 575 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём описание от мамы."
-      },
-      {
-        "title": "Эльбрус",
-        "slug": "elbrus",
-        "description": "Бисквитный торт со сливочным кремом и воздушным безе.",
-        "weights": [
-          {
-            "label": "0,9 кг",
-            "price": "1 105 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём описание от мамы."
-      },
-      {
-        "title": "Фисташковый",
-        "slug": "fistashkovyy",
-        "description": "Фисташковый бисквит со сливочным кремом.",
-        "weights": [
-          {
-            "label": "0,8 кг",
-            "price": "1 525 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём описание от мамы."
-      },
-      {
-        "title": "Царский (банановый)",
-        "slug": "tsarskiy-bananovyy",
-        "description": "Царский торт с банановой начинкой.",
-        "weights": [
-          {
-            "label": "0,6 кг",
-            "price": "1 000 ₽"
-          },
-          {
-            "label": "1,2 кг",
-            "price": "1 705 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём описание и вес от мамы."
-      },
-      {
-        "title": "Вишня со сливками",
-        "slug": "vishnya-so-slivkami",
-        "description": "Нежный бисквит с вишнёвой начинкой и воздушными сливками.",
-        "weights": [
-          {
-            "label": "0,8 кг",
-            "price": "1 030 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Курский",
-        "slug": "kurskiy",
-        "description": "Песочные коржи с нежной начинкой по традиционному рецепту.",
-        "weights": [
-          {
-            "label": "0,9 кг",
-            "price": "1 115 ₽"
-          },
-          {
-            "label": "1,4 кг",
-            "price": "1 725 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Элитный",
-        "slug": "elitnyy",
-        "description": "Бисквитный торт премиального уровня с изысканным кремом и декором.",
-        "weights": [
-          {
-            "label": "1 кг",
-            "price": "1 220 ₽"
-          },
-          {
-            "label": "1,5 кг",
-            "price": "1 785 ₽"
-          },
-          {
-            "label": "2 кг",
-            "price": "2 260 ₽"
-          },
-          {
-            "label": "2,5 кг",
-            "price": "2 835 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Чёрный Люкс",
-        "slug": "chernyy-lyuks",
-        "description": "Изысканный шоколадный торт премиум-класса с насыщенным вкусом и благородным оформлением.",
-        "weights": [
-          {
-            "label": "1.3 кг",
-            "price": "1 950 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Шоколадно-ореховый",
-        "slug": "snikers",
-        "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
-        "weights": [
-          {
-            "label": "1 кг",
-            "price": "уточняйте"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Трюфельный",
-        "slug": "tryufelnyy",
-        "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом.",
-        "weights": [
-          {
-            "label": "0,8 кг",
-            "price": "1 040 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Праздничный",
-        "slug": "prazdnichnyy",
-        "description": "Яркий праздничный торт с праздничным декором для особых случаев.",
-        "weights": [
-          {
-            "label": "2 кг",
-            "price": "2 100 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Фантазия",
-        "slug": "fantaziya",
-        "description": "Праздничный торт с авторским декором и нежным кремом.",
-        "weights": [
-          {
-            "label": "1 кг",
-            "price": "1 170 ₽"
-          },
-          {
-            "label": "1,5 кг",
-            "price": "1 680 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Соблазн",
-        "slug": "soblazn",
-        "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением.",
-        "weights": [
-          {
-            "label": "0,8 кг",
-            "price": "1 105 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false
-      },
-      {
-        "title": "Царский (вареная сгущёнка)",
-        "slug": "tsarskiy",
-        "description": "Премиальный торт с богатым декором и насыщенным вкусом.",
-        "weights": [
-          {
-            "label": "0,6 кг",
-            "price": "1 000 ₽"
-          },
-          {
-            "label": "1,2 кг",
-            "price": "1 705 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
-        "title": "Лакомка",
-        "slug": "lakomka",
-        "description": "Шоколадно-ореховый торт со сгущённым молоком.",
-        "weights": [
-          {
-            "label": "1 кг",
-            "price": "1 305 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true,
-        "note": "Ждём описание от мамы."
-      }
-    ],
     "pastries": [
       {
         "title": "Графские развалины",
@@ -866,76 +936,6 @@ window.PRODUCTS_DATA = {
         ],
         "hasWhole": false,
         "hasCut": true
-      }
-    ],
-    "airnut": [
-      {
-        "title": "Полёт-Премиум",
-        "slug": "polet-premium",
-        "description": "Воздушно-ореховое безе со сливочным кремом.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "970 ₽"
-          },
-          {
-            "label": "1 кг",
-            "price": "1 890 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
-      },
-      {
-        "title": "Полёт с кедровым орехом",
-        "slug": "polet-kedrovyy",
-        "description": "Воздушно-ореховое безе с кедровым орехом и сливочным кремом.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "1 285 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
-      },
-      {
-        "title": "Полёт с варёным сгущённым молоком",
-        "slug": "polet-varenka",
-        "description": "Воздушно-ореховое безе со сливочным кремом на варёном сгущённом молоке.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "уточняйте"
-          },
-          {
-            "label": "1,0 кг",
-            "price": "уточняйте"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
-      },
-      {
-        "title": "Полёт со сливочным кремом",
-        "slug": "polet-slivochnyy",
-        "description": "Воздушно-ореховое безе со сливочным кремом.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "885 ₽"
-          },
-          {
-            "label": "1 кг",
-            "price": "1 670 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
       }
     ],
     "cookies": []
