@@ -123,17 +123,17 @@ tabbar?.querySelectorAll(".tabbar__item").forEach((item) => {
 
 const createProductCard = (product, index) => {
   const weights = product.weights;
+  const { imageMain, imageWhole, imageCut } = getProductImages(product);
+  const weightImages = [imageWhole, imageCut];
   const weightMarkup =
     weights.length > 1
       ? `<div class="product-card__weights">${weights
           .map(
             (weight, weightIndex) =>
-              `<button class="product-card__weight${weightIndex === 0 ? " product-card__weight--active" : ""}" type="button" data-price="${weight.price}">${weight.label}</button>`
+              `<button class="product-card__weight${weightIndex === 0 ? " product-card__weight--active" : ""}" type="button" data-price="${weight.price}" data-img="${weightImages[weightIndex] || ""}">${weight.label}</button>`
           )
           .join("")}</div>`
       : `<p class="product-card__single-weight">${weights[0].label}</p>`;
-
-  const { imageMain } = getProductImages(product);
   const photoMarkup = imageMain
     ? `<div class="product-card__photo">
          <img class="product-card__img is-active" src="${imageMain}" alt="${product.title}" loading="eager" fetchpriority="high" decoding="async" />
@@ -247,12 +247,17 @@ const bindProductDetailInteractions = (container) => {
   const priceValue = container.querySelector("[data-price-value]");
   const priceWeight = container.querySelector("[data-price-weight]");
 
-  weightButtons.forEach((button) => {
+  weightButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
       weightButtons.forEach((item) => item.classList.remove("is-active"));
       button.classList.add("is-active");
       if (priceValue) priceValue.textContent = button.dataset.price || "";
       if (priceWeight) priceWeight.textContent = `за ${button.dataset.label || ""}`;
+      const galleryImage = images[index];
+      if (galleryImage) {
+        images.forEach((image) => image.classList.toggle("is-active", image === galleryImage));
+        thumbs.forEach((thumb) => thumb.classList.toggle("is-active", thumb.dataset.galleryThumb === String(index)));
+      }
     });
   });
 };
@@ -293,6 +298,8 @@ const bindProductInteractions = () => {
         weights.forEach((item) => item.classList.remove("product-card__weight--active"));
         weight.classList.add("product-card__weight--active");
         if (price) price.textContent = weight.dataset.price || "";
+        const img = card.querySelector(".product-card__img");
+        if (img && weight.dataset.img) img.src = weight.dataset.img;
       });
     });
   });
