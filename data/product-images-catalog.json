@@ -775,18 +775,12 @@
     "tsarskiy": {
       "slug": "tsarskiy",
       "images": {
-        "whole": "./assets/webp/cakes/tsarskiy-whole.webp",
-        "cut": "./assets/webp/cakes/tsarskiy-cut.webp"
+        "whole": "./assets/webp/cakes/tsarskiy-whole.webp"
       },
       "sources": [
         {
           "file": "assets\\new cakes\\царский-общий.jpg",
           "view": "whole",
-          "origin": "new"
-        },
-        {
-          "file": "assets\\new cakes\\царский-разрез.jpg",
-          "view": "cut",
           "origin": "new"
         },
         {
@@ -1202,7 +1196,7 @@
           "origin": "new"
         },
         {
-          "file": "assetscatalog-source\tsarskiy-bananovyy-cut.jpg",
+          "file": "assets\\catalog-source\\tsarskiy-bananovyy-cut.jpg",
           "view": "cut",
           "origin": "new"
         }
@@ -1714,7 +1708,7 @@
           }
         ],
         "hasWhole": true,
-        "hasCut": true
+        "hasCut": false
       },
       {
         "title": "Царский (клубничный)",

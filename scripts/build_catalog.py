@@ -336,7 +336,8 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
 }
 
 # В «Домашнем» по согласованию используется только общий вид.
-EXCLUDED_IMAGE_VIEWS = {("domashniy", "cut")}
+# У «Царского (вареная сгущёнка)» разрез отключён — фото не того торта.
+EXCLUDED_IMAGE_VIEWS = {("domashniy", "cut"), ("tsarskiy", "cut")}
 
 
 def parse_new_cake_name_fixed(filename: str) -> tuple[str, str] | None:

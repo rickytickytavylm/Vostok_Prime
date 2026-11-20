@@ -347,7 +347,7 @@ window.PRODUCTS_DATA = {
           }
         ],
         "hasWhole": true,
-        "hasCut": true
+        "hasCut": false
       },
       {
         "title": "Царский (клубничный)",
