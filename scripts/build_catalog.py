@@ -237,6 +237,10 @@ CAKE_META: dict[str, dict] = {
         "description": "Бисквитно-кремовое пирожное с суфле.",
         "weights": [{"label": "0,450 кг", "price": "600 ₽"}],
         "note": "Ждём описание от мамы."},
+    "muraviynaya-gorka": {"title": "Муравьиная горка", "section": "pastries", "desc_source": "pending",
+        "description": "Шарики из песочной крошки в карамельном креме со сгущёнкой, орехом и маком.",
+        "weights": [{"label": "0,4 кг", "price": "435 ₽"}],
+        "note": "Ждём описание от мамы."},
 
     # ========== ПРАЗДНИЧНЫЕ ==========
     "elitnyy": {"title": "Элитный", "section": "other", "desc_source": "placeholder",
@@ -333,6 +337,7 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "tsarskiy-klubnichnyy.jpg": ("tsarskiy-klubnichnyy", "whole"),
     "tsarskiy-klubnichnyy-cut.jpg": ("tsarskiy-klubnichnyy", "cut"),
     "tsarskiy-bananovyy-cut.jpg": ("tsarskiy-bananovyy", "cut"),
+    "muraviynaya-gorka.jpg": ("muraviynaya-gorka", "whole"),
 }
 
 # В «Домашнем» по согласованию используется только общий вид.

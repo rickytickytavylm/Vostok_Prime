@@ -1386,6 +1386,24 @@
       "biscuit": null,
       "description": "Воздушный зефир с нежной текстурой со вкусами ванили, манго, клубники, малины, банана, дыни, апельсина.",
       "desc_source": "mom"
+    },
+    "muraviynaya-gorka": {
+      "slug": "muraviynaya-gorka",
+      "images": {
+        "whole": "./assets/webp/cakes/muraviynaya-gorka-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assetscatalog-sourcemuraviynaya-gorka.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Муравьиная горка",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "Шарики из песочной крошки в карамельном креме со сгущёнкой, орехом и маком.",
+      "desc_source": "pending"
     }
   },
   "products": {
@@ -2478,6 +2496,20 @@
           {
             "label": "0,450 кг",
             "price": "600 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Муравьиная горка",
+        "slug": "muraviynaya-gorka",
+        "description": "Шарики из песочной крошки в карамельном креме со сгущёнкой, орехом и маком.",
+        "weights": [
+          {
+            "label": "0,4 кг",
+            "price": "435 ₽"
           }
         ],
         "hasWhole": true,
