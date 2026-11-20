@@ -160,7 +160,7 @@ body.is-footer-visible .header {
     display: block;
   }
 
-  .header .logo--mobile {
+  .header.is-scrolled .logo--mobile {
     display: none;
   }
 }
