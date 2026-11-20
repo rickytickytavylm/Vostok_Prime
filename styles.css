@@ -2926,7 +2926,8 @@ body.is-sheet-open {
 .product-hero__media {
   position: sticky;
   top: 0;
-  height: 100vh;
+  align-self: start;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: #f2f1ee;
 }
