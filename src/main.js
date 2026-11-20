@@ -576,6 +576,24 @@ const bindProductStrip = () => {
 
 bindProductStrip();
 
+document.querySelectorAll(".advantage-slider").forEach((slider) => {
+  const track = slider.querySelector(".advantage-slider__track");
+  const prev = slider.querySelector(".advantage-slider__arrow--prev");
+  const next = slider.querySelector(".advantage-slider__arrow--next");
+  if (!track || !prev || !next) return;
+
+  const update = () => {
+    const max = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft >= max - 1;
+  };
+
+  prev.addEventListener("click", () => track.scrollBy({ left: -track.clientWidth, behavior: "smooth" }));
+  next.addEventListener("click", () => track.scrollBy({ left: track.clientWidth, behavior: "smooth" }));
+  track.addEventListener("scroll", update, { passive: true });
+  update();
+});
+
 if (productsGrid) {
   productsGrid.addEventListener("scroll", updateArrowState, { passive: true });
   window.addEventListener("resize", () => {
