@@ -214,6 +214,10 @@ CAKE_META: dict[str, dict] = {
         "description": "Воздушно-ореховое безе со сливочным кремом.",
         "weights": [{"label": "0,5 кг", "price": "уточняйте"}, {"label": "1,0 кг", "price": "уточняйте"}],
         "note": "Ждём полное описание от мамы."},
+    "kievskiy": {"title": "Киевский", "section": "airnut", "desc_source": "pending",
+        "description": "",
+        "weights": [{"label": "0,55 кг", "price": "800 ₽"}, {"label": "1,1 кг", "price": "1 640 ₽"}],
+        "note": "Ждём полное описание от мамы."},
 
     # ========== ПИРОЖНОЕ (фото из new cakes2) ==========
     "grafskie-razvaliny": {"title": "Графские развалины", "section": "pastries", "desc_source": "mom",
@@ -338,6 +342,8 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "tsarskiy-klubnichnyy-cut.jpg": ("tsarskiy-klubnichnyy", "cut"),
     "tsarskiy-bananovyy-cut.jpg": ("tsarskiy-bananovyy", "cut"),
     "muraviynaya-gorka.jpg": ("muraviynaya-gorka", "whole"),
+    "kievskiy.jpg": ("kievskiy", "whole"),
+    "kievskiy-cut.jpg": ("kievskiy", "cut"),
 }
 
 # В «Домашнем» по согласованию используется только общий вид.

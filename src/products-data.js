@@ -96,6 +96,24 @@ window.PRODUCTS_DATA = {
         "hasWhole": true,
         "hasCut": false,
         "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Киевский",
+        "slug": "kievskiy",
+        "description": "",
+        "weights": [
+          {
+            "label": "0,55 кг",
+            "price": "800 ₽"
+          },
+          {
+            "label": "1,1 кг",
+            "price": "1 640 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём полное описание от мамы."
       }
     ],
     "other": [
