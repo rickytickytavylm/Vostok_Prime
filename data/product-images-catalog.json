@@ -1448,6 +1448,24 @@
       "biscuit": null,
       "description": "Воздушные коржи-безе с абрикосовыми косточками в сочетании с белково-сливочным кремом.",
       "desc_source": "mom"
+    },
+    "podsolnukh": {
+      "slug": "podsolnukh",
+      "images": {
+        "whole": "./assets/webp/cakes/podsolnukh-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assetscatalog-sourcepodsolnukh.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Подсолнух",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "Воздушные коржи-безе с жареными ядрами подсолнечника прослоены кремом из взбитых сливок с халвой.",
+      "desc_source": "mom"
     }
   },
   "products": {
@@ -1546,6 +1564,19 @@
           {
             "label": "0,8 кг",
             "price": "1 230 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Подсолнух",
+        "slug": "podsolnukh",
+        "description": "Воздушные коржи-безе с жареными ядрами подсолнечника прослоены кремом из взбитых сливок с халвой.",
+        "weights": [
+          {
+            "label": "0,9 кг",
+            "price": "1 115 ₽"
           }
         ],
         "hasWhole": true,

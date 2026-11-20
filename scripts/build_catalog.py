@@ -219,6 +219,9 @@ CAKE_META: dict[str, dict] = {
     "polet-melodiya": {"title": "Полёт-Мелодия", "section": "airnut", "desc_source": "mom",
         "description": "Воздушные коржи-безе с абрикосовыми косточками в сочетании с белково-сливочным кремом.",
         "weights": [{"label": "0,8 кг", "price": "1 230 ₽"}]},
+    "podsolnukh": {"title": "Подсолнух", "section": "airnut", "desc_source": "mom",
+        "description": "Воздушные коржи-безе с жареными ядрами подсолнечника прослоены кремом из взбитых сливок с халвой.",
+        "weights": [{"label": "0,9 кг", "price": "1 115 ₽"}]},
 
     # ========== ПИРОЖНОЕ (фото из new cakes2) ==========
     "grafskie-razvaliny": {"title": "Графские развалины", "section": "pastries", "desc_source": "mom",
@@ -346,6 +349,7 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "polet-slivochnyy.jpg": ("polet-slivochnyy", "whole"),
     "polet-varenka.jpg": ("polet-varenka", "whole"),
     "polet-melodiya.jpg": ("polet-melodiya", "whole"),
+    "podsolnukh.jpg": ("podsolnukh", "whole"),
     "kievskiy.jpg": ("kievskiy", "whole"),
     "kievskiy-cut.jpg": ("kievskiy", "cut"),
 }

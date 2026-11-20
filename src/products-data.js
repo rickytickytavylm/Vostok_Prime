@@ -127,6 +127,19 @@ window.PRODUCTS_DATA = {
         ],
         "hasWhole": true,
         "hasCut": false
+      },
+      {
+        "title": "Подсолнух",
+        "slug": "podsolnukh",
+        "description": "Воздушные коржи-безе с жареными ядрами подсолнечника прослоены кремом из взбитых сливок с халвой.",
+        "weights": [
+          {
+            "label": "0,9 кг",
+            "price": "1 115 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "other": [
