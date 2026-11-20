@@ -914,11 +914,11 @@ body.is-footer-visible .header {
   object-fit: cover;
 }
 
-.advantage-slider {
+.photo-slider {
   position: relative;
 }
 
-.advantage-slider__track {
+.photo-slider__track {
   display: flex;
   width: 100%;
   height: 100%;
@@ -930,31 +930,35 @@ body.is-footer-visible .header {
   -webkit-overflow-scrolling: touch;
 }
 
-.advantage-slider__track::-webkit-scrollbar {
+.photo-slider__track::-webkit-scrollbar {
   display: none;
 }
 
-.advantage-slider__track .advantage-card__img {
+.photo-slider__track > img {
   flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   scroll-snap-align: start;
 }
 
-.advantage-slider__arrow {
+.photo-slider__arrow {
   position: absolute;
   top: 50%;
   z-index: 2;
   transform: translateY(-50%);
 }
 
-.advantage-slider__arrow:active {
+.photo-slider__arrow:active {
   transform: translateY(-50%) scale(0.96);
 }
 
-.advantage-slider__arrow--prev {
+.photo-slider__arrow--prev {
   left: 14px;
 }
 
-.advantage-slider__arrow--next {
+.photo-slider__arrow--next {
   right: 14px;
 }
 

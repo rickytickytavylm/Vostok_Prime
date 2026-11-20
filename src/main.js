@@ -576,10 +576,10 @@ const bindProductStrip = () => {
 
 bindProductStrip();
 
-document.querySelectorAll(".advantage-slider").forEach((slider) => {
-  const track = slider.querySelector(".advantage-slider__track");
-  const prev = slider.querySelector(".advantage-slider__arrow--prev");
-  const next = slider.querySelector(".advantage-slider__arrow--next");
+document.querySelectorAll(".photo-slider").forEach((slider) => {
+  const track = slider.querySelector(".photo-slider__track");
+  const prev = slider.querySelector(".photo-slider__arrow--prev");
+  const next = slider.querySelector(".photo-slider__arrow--next");
   if (!track || !prev || !next) return;
 
   const update = () => {
