@@ -140,6 +140,19 @@ window.PRODUCTS_DATA = {
         ],
         "hasWhole": true,
         "hasCut": false
+      },
+      {
+        "title": "Полёт-безе без ореха с варёным сгущённым молоком",
+        "slug": "polet-bez-oreha",
+        "description": "Три воздушных коржа-безе прослоены сливочным кремом с варёной сгущёнкой.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "665 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "other": [
