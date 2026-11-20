@@ -269,19 +269,6 @@ window.PRODUCTS_DATA = {
         "hasCut": true
       },
       {
-        "title": "Шоколадно-ореховый",
-        "slug": "snikers",
-        "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
-        "weights": [
-          {
-            "label": "1 кг",
-            "price": "уточняйте"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
         "title": "Фисташковый",
         "slug": "fistashkovyy",
         "description": "Фисташковый бисквит со сливочным кремом.",
@@ -559,6 +546,19 @@ window.PRODUCTS_DATA = {
         ],
         "hasWhole": true,
         "hasCut": false
+      },
+      {
+        "title": "Шоколадно-ореховый",
+        "slug": "snikers",
+        "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
       }
     ],
     "homemade": [
