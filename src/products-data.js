@@ -76,7 +76,7 @@ window.PRODUCTS_DATA = {
           }
         ],
         "hasWhole": true,
-        "hasCut": false,
+        "hasCut": true,
         "note": "Ждём полное описание от мамы."
       },
       {

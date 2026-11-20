@@ -1086,17 +1086,18 @@
     "polet-varenka": {
       "slug": "polet-varenka",
       "images": {
-        "whole": "./assets/webp/cakes/polet-varenka-whole.webp"
+        "whole": "./assets/webp/cakes/polet-varenka-whole.webp",
+        "cut": "./assets/webp/cakes/polet-varenka-cut.webp"
       },
       "sources": [
         {
-          "file": "assets\\new cakes2\\полет_с_варенным_сгущенным_молоком_общий_0.5.jpg",
+          "file": "assetscatalog-sourcepolet-varenka.jpg",
           "view": "whole",
           "origin": "new"
         },
         {
-          "file": "assets\\new cakes2\\полет_с_варенным_сгущенным_молоком_общий_1.0кг.jpg",
-          "view": "whole",
+          "file": "assetsnew cakes2полет_с_варенным_сгущенным_молоком_общий_1.0кг.jpg",
+          "view": "cut",
           "origin": "new"
         }
       ],
@@ -1480,7 +1481,7 @@
           }
         ],
         "hasWhole": true,
-        "hasCut": false,
+        "hasCut": true,
         "note": "Ждём полное описание от мамы."
       },
       {
@@ -2649,6 +2650,7 @@
   "unmapped_sources": [
     "assets\\new cakes2\\desktop_hero.jpg",
     "assets\\new cakes2\\mobile_hero.jpg",
+    "assets\\new cakes2\\полет_с_варенным_сгущенным_молоком_общий_0.5.jpg",
     "assets\\new cakes2\\полет_со_сливочным_кремом_0.5.jpg"
   ]
 }
