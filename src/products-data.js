@@ -350,7 +350,7 @@ window.PRODUCTS_DATA = {
         "hasCut": true
       },
       {
-        "title": "Царский клубничный",
+        "title": "Царский (клубничный)",
         "slug": "tsarskiy-klubnichnyy",
         "description": "Ажурные блинчики прослоены взбитыми сливками со вкусом клубники.",
         "weights": [
