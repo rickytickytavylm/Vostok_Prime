@@ -12,7 +12,7 @@ window.PRODUCTS_DATA = {
     },
     {
       "id": "other",
-      "label": "Другие"
+      "label": "Праздничные"
     },
     {
       "id": "pastries",
@@ -21,6 +21,10 @@ window.PRODUCTS_DATA = {
     {
       "id": "candies",
       "label": "Конфеты"
+    },
+    {
+      "id": "airnut",
+      "label": "Воздушно-ореховые"
     }
   ],
   "products": {
@@ -529,74 +533,6 @@ window.PRODUCTS_DATA = {
         "note": "Ждём описание и вес от мамы."
       },
       {
-        "title": "Полёт-Премиум",
-        "slug": "polet-premium",
-        "description": "Воздушно-ореховое безе со сливочным кремом.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "970 ₽"
-          },
-          {
-            "label": "1 кг",
-            "price": "1 890 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
-      },
-      {
-        "title": "Полёт с кедровым орехом",
-        "slug": "polet-kedrovyy",
-        "description": "Воздушно-ореховое безе с кедровым орехом и сливочным кремом.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "1 285 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
-      },
-      {
-        "title": "Полёт с варёным сгущённым молоком",
-        "slug": "polet-varenka",
-        "description": "Воздушно-ореховое безе со сливочным кремом на варёном сгущённом молоке.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "уточняйте"
-          },
-          {
-            "label": "1,0 кг",
-            "price": "уточняйте"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
-      },
-      {
-        "title": "Полёт со сливочным кремом",
-        "slug": "polet-slivochnyy",
-        "description": "Воздушно-ореховое безе со сливочным кремом.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "885 ₽"
-          },
-          {
-            "label": "1 кг",
-            "price": "1 670 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false,
-        "note": "Ждём полное описание от мамы."
-      },
-      {
         "title": "Вишня со сливками",
         "slug": "vishnya-so-slivkami",
         "description": "Нежный бисквит с вишнёвой начинкой и воздушными сливками.",
@@ -670,8 +606,8 @@ window.PRODUCTS_DATA = {
         "description": "Шоколадный торт с карамелью, арахисом и нежным кремом.",
         "weights": [
           {
-            "label": "0,9 кг",
-            "price": "1 170 ₽"
+            "label": "1 кг",
+            "price": "уточняйте"
           }
         ],
         "hasWhole": true,
@@ -734,7 +670,7 @@ window.PRODUCTS_DATA = {
         "hasCut": false
       },
       {
-        "title": "Царский",
+        "title": "Царский (вареная сгущёнка)",
         "slug": "tsarskiy",
         "description": "Премиальный торт с богатым декором и насыщенным вкусом.",
         "weights": [
@@ -924,20 +860,82 @@ window.PRODUCTS_DATA = {
         "description": "Конфеты с воздушным ванильно-сливочным суфле в шоколадной глазури.",
         "weights": [
           {
-            "label": "220 гр",
-            "price": "290 ₽"
-          },
-          {
-            "label": "300 гр",
-            "price": "360 ₽"
-          },
-          {
-            "label": "500 гр",
-            "price": "670 ₽"
+            "label": "0,5 кг",
+            "price": "630 ₽"
           }
         ],
         "hasWhole": false,
         "hasCut": true
+      }
+    ],
+    "airnut": [
+      {
+        "title": "Полёт-Премиум",
+        "slug": "polet-premium",
+        "description": "Воздушно-ореховое безе со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "970 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 890 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт с кедровым орехом",
+        "slug": "polet-kedrovyy",
+        "description": "Воздушно-ореховое безе с кедровым орехом и сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "1 285 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт с варёным сгущённым молоком",
+        "slug": "polet-varenka",
+        "description": "Воздушно-ореховое безе со сливочным кремом на варёном сгущённом молоке.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "уточняйте"
+          },
+          {
+            "label": "1,0 кг",
+            "price": "уточняйте"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт со сливочным кремом",
+        "slug": "polet-slivochnyy",
+        "description": "Воздушно-ореховое безе со сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "885 ₽"
+          },
+          {
+            "label": "1 кг",
+            "price": "1 670 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём полное описание от мамы."
       }
     ],
     "cookies": []
