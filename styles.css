@@ -146,9 +146,21 @@ body.is-footer-visible .header {
   display: none;
 }
 
+.logo--desktop {
+  display: none;
+}
+
 /* Десктоп: в hero-состоянии (прозрачная шапка) лого скрыто, появляется при скролле */
 @media (min-width: 721px) {
   .header:not(.is-scrolled) .logo {
+    display: none;
+  }
+
+  .header.is-scrolled .logo--desktop {
+    display: block;
+  }
+
+  .header .logo--mobile {
     display: none;
   }
 }
