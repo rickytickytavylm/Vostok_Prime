@@ -600,7 +600,7 @@
         }
       ],
       "title": "Соблазн",
-      "section": "other",
+      "section": "homemade",
       "biscuit": null,
       "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением.",
       "desc_source": "placeholder"
@@ -1702,19 +1702,6 @@
         "hasCut": true
       },
       {
-        "title": "Соблазн",
-        "slug": "soblazn",
-        "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением.",
-        "weights": [
-          {
-            "label": "0,8 кг",
-            "price": "1 105 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false
-      },
-      {
         "title": "Лакомка",
         "slug": "lakomka",
         "description": "Шоколадно-ореховый торт со сгущённым молоком.",
@@ -2586,6 +2573,19 @@
         ],
         "hasWhole": true,
         "hasCut": true
+      },
+      {
+        "title": "Соблазн",
+        "slug": "soblazn",
+        "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 105 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "pastries": [

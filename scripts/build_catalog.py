@@ -263,7 +263,7 @@ CAKE_META: dict[str, dict] = {
         "description": "Песочные коржи с нежной начинкой по традиционному рецепту."},
     "prazdnichnyy": {"title": "Праздничный", "section": "other", "desc_source": "placeholder",
         "description": "Яркий праздничный торт с праздничным декором для особых случаев."},
-    "soblazn": {"title": "Соблазн", "section": "other", "desc_source": "placeholder",
+    "soblazn": {"title": "Соблазн", "section": "homemade", "desc_source": "placeholder",
         "description": "Изысканный фирменный торт с насыщенным вкусом и элегантным оформлением."},
     "lakomka": {"title": "Лакомка", "section": "other", "desc_source": "pending",
         "description": "Шоколадно-ореховый торт со сгущённым молоком.",
