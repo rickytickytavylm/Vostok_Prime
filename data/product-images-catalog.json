@@ -1484,6 +1484,24 @@
       "biscuit": null,
       "description": "Три воздушных коржа-безе прослоены сливочным кремом с варёной сгущёнкой.",
       "desc_source": "mom"
+    },
+    "polet-bez-oreha-slivki": {
+      "slug": "polet-bez-oreha-slivki",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-bez-oreha-slivki-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assetscatalog-sourcepolet-bez-oreha-slivki.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт-безе без ореха со сливочным кремом",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "Три воздушных коржа-безе прослоены ванильно-сливочным кремом.",
+      "desc_source": "mom"
     }
   },
   "products": {
@@ -1608,6 +1626,19 @@
           {
             "label": "0,5 кг",
             "price": "665 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Полёт-безе без ореха со сливочным кремом",
+        "slug": "polet-bez-oreha-slivki",
+        "description": "Три воздушных коржа-безе прослоены ванильно-сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "760 ₽"
           }
         ],
         "hasWhole": true,

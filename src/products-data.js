@@ -153,6 +153,19 @@ window.PRODUCTS_DATA = {
         ],
         "hasWhole": true,
         "hasCut": false
+      },
+      {
+        "title": "Полёт-безе без ореха со сливочным кремом",
+        "slug": "polet-bez-oreha-slivki",
+        "description": "Три воздушных коржа-безе прослоены ванильно-сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "760 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "other": [
