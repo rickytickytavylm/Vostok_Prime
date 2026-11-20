@@ -3194,8 +3194,8 @@ body.is-sheet-open {
   .product-hero__media {
     position: relative;
     top: auto;
-    height: 52vh;
-    min-height: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .product-hero__panel {

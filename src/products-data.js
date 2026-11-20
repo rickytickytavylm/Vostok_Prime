@@ -874,7 +874,7 @@ window.PRODUCTS_DATA = {
       {
         "title": "Муравьиная горка",
         "slug": "muraviynaya-gorka",
-        "description": "Шарики из песочной крошки в карамельном креме со сгущёнкой, орехом и маком.",
+        "description": "",
         "weights": [
           {
             "label": "0,4 кг",

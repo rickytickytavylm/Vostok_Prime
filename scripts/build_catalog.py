@@ -238,7 +238,7 @@ CAKE_META: dict[str, dict] = {
         "weights": [{"label": "0,450 кг", "price": "600 ₽"}],
         "note": "Ждём описание от мамы."},
     "muraviynaya-gorka": {"title": "Муравьиная горка", "section": "pastries", "desc_source": "pending",
-        "description": "Шарики из песочной крошки в карамельном креме со сгущёнкой, орехом и маком.",
+        "description": "",
         "weights": [{"label": "0,4 кг", "price": "435 ₽"}],
         "note": "Ждём описание от мамы."},
 
