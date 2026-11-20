@@ -114,6 +114,19 @@ window.PRODUCTS_DATA = {
         "hasWhole": true,
         "hasCut": true,
         "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт-Мелодия",
+        "slug": "polet-melodiya",
+        "description": "Воздушные коржи-безе с абрикосовыми косточками в сочетании с белково-сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 230 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "other": [

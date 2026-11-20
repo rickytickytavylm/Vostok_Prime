@@ -1430,6 +1430,24 @@
       "biscuit": null,
       "description": "",
       "desc_source": "pending"
+    },
+    "polet-melodiya": {
+      "slug": "polet-melodiya",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-melodiya-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assetscatalog-sourcepolet-melodiya.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт-Мелодия",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "Воздушные коржи-безе с абрикосовыми косточками в сочетании с белково-сливочным кремом.",
+      "desc_source": "mom"
     }
   },
   "products": {
@@ -1519,6 +1537,19 @@
         "hasWhole": true,
         "hasCut": true,
         "note": "Ждём полное описание от мамы."
+      },
+      {
+        "title": "Полёт-Мелодия",
+        "slug": "polet-melodiya",
+        "description": "Воздушные коржи-безе с абрикосовыми косточками в сочетании с белково-сливочным кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 230 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "other": [
