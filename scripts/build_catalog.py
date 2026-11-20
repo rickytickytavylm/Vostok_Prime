@@ -282,6 +282,10 @@ CAKE_META: dict[str, dict] = {
         "note": "Ждём описание и вес от мамы."},
     "tsarskiy": {"title": "Царский (вареная сгущёнка)", "section": "other", "desc_source": "placeholder",
         "description": "Премиальный торт с богатым декором и насыщенным вкусом."},
+    "tsarskiy-klubnichnyy": {"title": "Царский клубничный", "section": "other", "desc_source": "pending",
+        "description": "Ажурные блинчики прослоены взбитыми сливками со вкусом клубники.",
+        "weights": [{"label": "0,6 кг", "price": "1 000 ₽"}, {"label": "1,2 кг", "price": "1 705 ₽"}],
+        "note": "Ждём описание от мамы."},
 
     # ========== КОНФЕТЫ ==========
     "zefir-assorti": {"title": "Зефир", "section": "candies", "desc_source": "mom",
@@ -326,6 +330,8 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "shu-whole.png": ("shu", "whole"),
     "kartoshka-whole.png": ("kartoshka", "whole"),
     "napoleon-pastry-whole.png": ("napoleon-pirozhnoe", "whole"),
+    "tsarskiy-klubnichnyy.jpg": ("tsarskiy-klubnichnyy", "whole"),
+    "tsarskiy-klubnichnyy-cut.jpg": ("tsarskiy-klubnichnyy", "cut"),
 }
 
 # В «Домашнем» по согласованию используется только общий вид.

@@ -1297,6 +1297,30 @@
       "description": "Заварное тесто с хрустящей корочкой (кракелин) с начинкой из заварного крема.",
       "desc_source": "mom"
     },
+    "tsarskiy-klubnichnyy": {
+      "slug": "tsarskiy-klubnichnyy",
+      "images": {
+        "cut": "./assets/webp/cakes/tsarskiy-klubnichnyy-cut.webp",
+        "whole": "./assets/webp/cakes/tsarskiy-klubnichnyy-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\tsarskiy-klubnichnyy-cut.jpg",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\catalog-source\\tsarskiy-klubnichnyy.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Царский клубничный",
+      "section": "other",
+      "biscuit": null,
+      "description": "Ажурные блинчики прослоены взбитыми сливками со вкусом клубники.",
+      "desc_source": "pending"
+    },
     "zabaykalskaya-ptichka-konfety": {
       "slug": "zabaykalskaya-ptichka-konfety",
       "images": {
@@ -1685,6 +1709,24 @@
         ],
         "hasWhole": true,
         "hasCut": true
+      },
+      {
+        "title": "Царский клубничный",
+        "slug": "tsarskiy-klubnichnyy",
+        "description": "Ажурные блинчики прослоены взбитыми сливками со вкусом клубники.",
+        "weights": [
+          {
+            "label": "0,6 кг",
+            "price": "1 000 ₽"
+          },
+          {
+            "label": "1,2 кг",
+            "price": "1 705 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true,
+        "note": "Ждём описание от мамы."
       }
     ],
     "classic": [
