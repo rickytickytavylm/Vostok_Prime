@@ -1192,12 +1192,18 @@
     "tsarskiy-bananovyy": {
       "slug": "tsarskiy-bananovyy",
       "images": {
-        "whole": "./assets/webp/cakes/tsarskiy-bananovyy-whole.webp"
+        "whole": "./assets/webp/cakes/tsarskiy-bananovyy-whole.webp",
+        "cut": "./assets/webp/cakes/tsarskiy-bananovyy-cut.webp"
       },
       "sources": [
         {
           "file": "assets\\new cakes2\\царский_банановый_общий.jpg",
           "view": "whole",
+          "origin": "new"
+        },
+        {
+          "file": "assetscatalog-source\tsarskiy-bananovyy-cut.jpg",
+          "view": "cut",
           "origin": "new"
         }
       ],
@@ -1690,7 +1696,7 @@
           }
         ],
         "hasWhole": true,
-        "hasCut": false,
+        "hasCut": true,
         "note": "Ждём описание и вес от мамы."
       },
       {

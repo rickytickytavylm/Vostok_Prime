@@ -332,6 +332,7 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "napoleon-pastry-whole.png": ("napoleon-pirozhnoe", "whole"),
     "tsarskiy-klubnichnyy.jpg": ("tsarskiy-klubnichnyy", "whole"),
     "tsarskiy-klubnichnyy-cut.jpg": ("tsarskiy-klubnichnyy", "cut"),
+    "tsarskiy-bananovyy-cut.jpg": ("tsarskiy-bananovyy", "cut"),
 }
 
 # В «Домашнем» по согласованию используется только общий вид.
