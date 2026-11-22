@@ -19,6 +19,10 @@ window.PRODUCTS_DATA = {
       "label": "Домашние"
     },
     {
+      "id": "sufle",
+      "label": "Торты суфле"
+    },
+    {
       "id": "pastries",
       "label": "Пирожные"
     },
@@ -332,19 +336,6 @@ window.PRODUCTS_DATA = {
         "hasCut": true
       },
       {
-        "title": "Трюфельный",
-        "slug": "tryufelnyy",
-        "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом.",
-        "weights": [
-          {
-            "label": "0,8 кг",
-            "price": "1 040 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": true
-      },
-      {
         "title": "Эльбрус",
         "slug": "elbrus",
         "description": "Бисквитный торт со сливочным кремом и воздушным безе.",
@@ -547,19 +538,6 @@ window.PRODUCTS_DATA = {
         ],
         "hasWhole": true,
         "hasCut": true
-      },
-      {
-        "title": "Забайкальская птичка",
-        "slug": "zabaykalskaya-ptichka",
-        "description": "Ванильно-сливочное суфле в сочетании с классическим белым бисквитом. Оформлен шоколадной глазурью.",
-        "weights": [
-          {
-            "label": "0,5 кг",
-            "price": "630 ₽"
-          }
-        ],
-        "hasWhole": true,
-        "hasCut": false
       },
       {
         "title": "Шоколадно-ореховый",
@@ -871,6 +849,73 @@ window.PRODUCTS_DATA = {
         ],
         "hasWhole": true,
         "hasCut": false
+      },
+      {
+        "title": "Трюфельный",
+        "slug": "tryufelnyy",
+        "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 040 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": true
+      }
+    ],
+    "sufle": [
+      {
+        "title": "Забайкальская птичка",
+        "slug": "zabaykalskaya-ptichka",
+        "description": "Ванильно-сливочное суфле, тонкий классический бисквит и шоколадная глазурь.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "630 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Мишутка",
+        "slug": "mishutka",
+        "description": "Ванильно-сливочное суфле покрыто шоколадной глазурью.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "540 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Мулен Руж",
+        "slug": "mulen-ruzh",
+        "description": "Ванильно-сливочное суфле со свежемороженой вишней, тонкий шоколадный бисквит на сгущенном молоке и шоколадная глазурь.",
+        "weights": [
+          {
+            "label": "0,5 кг",
+            "price": "685 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Шоколадный гламур",
+        "slug": "shokoladnyy-glyamur",
+        "description": "Ванильно-сливочное суфле покрыто шоколадной глазурью.",
+        "weights": [
+          {
+            "label": "0,7 кг",
+            "price": "655 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "pastries": [
@@ -996,17 +1041,35 @@ window.PRODUCTS_DATA = {
         "hasCut": false
       },
       {
-        "title": "Наполеон",
+        "title": "Пирожное «Наполеон»",
         "slug": "napoleon-pirozhnoe",
         "description": "Тонкие слои слоёного теста в сочетании с белковым кремом.",
         "weights": [
           {
-            "label": "0,4 кг",
-            "price": "420 ₽"
+            "label": "0,1 кг",
+            "price": "120 ₽"
+          },
+          {
+            "label": "0,2 кг",
+            "price": "255 ₽"
           }
         ],
         "hasWhole": true,
         "hasCut": false
+      },
+      {
+        "title": "Зефир ванильный в шоколадной глазури",
+        "slug": "zefir-v-shokoladnoy-glazuri",
+        "description": "",
+        "weights": [
+          {
+            "label": "1 кг",
+            "price": "460 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false,
+        "note": "Ждём описание от мамы."
       }
     ],
     "candies": [

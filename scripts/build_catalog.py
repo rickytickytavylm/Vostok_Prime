@@ -67,6 +67,7 @@ SECTIONS = [
     {"id": "other", "label": "Праздничные"},
     {"id": "classic", "label": "Классические"},
     {"id": "homemade", "label": "Домашние"},
+    {"id": "sufle", "label": "Торты суфле"},
     {"id": "pastries", "label": "Пирожные"},
     {"id": "candies", "label": "Конфеты"},
     {"id": "cookies", "label": "Печенье"},
@@ -134,8 +135,8 @@ CAKE_META: dict[str, dict] = {
         "description": "Классический белый бисквит прослоен взбитыми сливками с кусочками фруктов и грецким орехом."},
     "napoleon": {"title": "Наполеон", "section": "classic", "desc_source": "mom",
         "description": "Тонкие коржи слоёного теста прослоены сгущённым молоком."},
-    "zabaykalskaya-ptichka": {"title": "Забайкальская птичка", "section": "classic", "desc_source": "mom",
-        "description": "Ванильно-сливочное суфле в сочетании с классическим белым бисквитом. Оформлен шоколадной глазурью."},
+    "zabaykalskaya-ptichka": {"title": "Забайкальская птичка", "section": "sufle", "desc_source": "mom",
+        "description": "Ванильно-сливочное суфле, тонкий классический бисквит и шоколадная глазурь."},
 
     # ========== ДОМАШНИЕ — а) бисквит на сметане и сгущённом молоке ==========
     "vostochnaya-skazka": {"title": "Восточная сказка", "section": "homemade", "biscuit": "a", "desc_source": "mom",
@@ -289,7 +290,7 @@ CAKE_META: dict[str, dict] = {
         "note": "Ждём описание от мамы."},
     "vishnya-so-slivkami": {"title": "Вишня со сливками", "section": "other", "desc_source": "placeholder",
         "description": "Нежный бисквит с вишнёвой начинкой и воздушными сливками."},
-    "tryufelnyy": {"title": "Трюфельный", "section": "other", "desc_source": "placeholder",
+    "tryufelnyy": {"title": "Трюфельный", "section": "homemade", "desc_source": "placeholder",
         "description": "Насыщенный шоколадный вкус с трюфельной начинкой и бархатистым кремом."},
     "elbrus": {"title": "Эльбрус", "section": "other", "desc_source": "pending",
         "description": "Бисквитный торт со сливочным кремом и воздушным безе.",
@@ -311,6 +312,17 @@ CAKE_META: dict[str, dict] = {
         "description": "Шоколадный бисквит прослоен взбитыми сливками со вкусом шоколада и вишнёвым конфитюром.",
         "weights": [{"label": "0,8 кг", "price": "1 155 ₽"}]},
 
+    # ========== ТОРТЫ СУФЛЕ ==========
+    "mishutka": {"title": "Мишутка", "section": "sufle", "desc_source": "mom",
+        "description": "Ванильно-сливочное суфле покрыто шоколадной глазурью.",
+        "weights": [{"label": "0,5 кг", "price": "540 ₽"}]},
+    "mulen-ruzh": {"title": "Мулен Руж", "section": "sufle", "desc_source": "mom",
+        "description": "Ванильно-сливочное суфле со свежемороженой вишней, тонкий шоколадный бисквит на сгущенном молоке и шоколадная глазурь.",
+        "weights": [{"label": "0,5 кг", "price": "685 ₽"}]},
+    "shokoladnyy-glyamur": {"title": "Шоколадный гламур", "section": "sufle", "desc_source": "mom",
+        "description": "Ванильно-сливочное суфле покрыто шоколадной глазурью.",
+        "weights": [{"label": "0,7 кг", "price": "655 ₽"}]},
+
     # ========== КОНФЕТЫ ==========
     "zefir-assorti": {"title": "Зефир", "section": "candies", "desc_source": "mom",
         "description": "Воздушный зефир с нежной текстурой со вкусами ванили, манго, клубники, малины, банана, дыни, апельсина.",
@@ -329,9 +341,13 @@ CAKE_META: dict[str, dict] = {
     "kartoshka": {"title": "Картошка", "section": "pastries", "desc_source": "mom",
         "description": "Пирожное из шоколадной бисквитной крошки с кремом.",
         "weights": [{"label": "0,42 кг / уп.", "price": "350 ₽"}]},
-    "napoleon-pirozhnoe": {"title": "Наполеон", "section": "pastries", "desc_source": "mom",
+    "napoleon-pirozhnoe": {"title": "Пирожное «Наполеон»", "section": "pastries", "desc_source": "mom",
         "description": "Тонкие слои слоёного теста в сочетании с белковым кремом.",
         "weights": [{"label": "0,2 кг / уп. 2 шт.", "price": "255 ₽"}]},
+    "zefir-v-shokoladnoy-glazuri": {"title": "Зефир ванильный в шоколадной глазури", "section": "pastries", "desc_source": "pending",
+        "description": "",
+        "weights": [{"label": "1 кг", "price": "460 ₽"}],
+        "note": "Ждём описание от мамы."},
 }
 
 DEFAULT_WEIGHTS = [{"label": "1 кг", "price": "уточняйте"}]
@@ -369,6 +385,10 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "kievskiy-cut.jpg": ("kievskiy", "cut"),
     "kompliment.jpg": ("kompliment", "whole"),
     "kompliment-shokoladnyy.jpg": ("kompliment-shokoladnyy", "whole"),
+    "zefir-v-glazuri.jpg": ("zefir-v-shokoladnoy-glazuri", "whole"),
+    "mishutka.jpg": ("mishutka", "whole"),
+    "mulen-ruzh.jpg": ("mulen-ruzh", "whole"),
+    "shokoladnyy-glyamur.jpg": ("shokoladnyy-glyamur", "whole"),
 }
 
 # В «Домашнем» по согласованию используется только общий вид.
