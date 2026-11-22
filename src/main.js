@@ -630,7 +630,6 @@ function initReveal() {
     ".factory-link",
     ".advantage-card",
     ".purchase-order__item",
-    ".feed__intro",
     ".footer__top",
     ".footer__col",
     ".footer__bottom",
