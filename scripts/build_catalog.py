@@ -304,6 +304,12 @@ CAKE_META: dict[str, dict] = {
         "description": "Ажурные блинчики прослоены взбитыми сливками со вкусом клубники.",
         "weights": [{"label": "1,2 кг", "price": "1 705 ₽"}],
         "note": "Ждём описание от мамы."},
+    "kompliment": {"title": "Комплимент", "section": "other", "desc_source": "mom",
+        "description": "Классический бисквит прослоен взбитыми сливками и вишнёвым конфитюром.",
+        "weights": [{"label": "0,8 кг", "price": "1 155 ₽"}]},
+    "kompliment-shokoladnyy": {"title": "Комплимент шоколадный", "section": "other", "desc_source": "mom",
+        "description": "Шоколадный бисквит прослоен взбитыми сливками со вкусом шоколада и вишнёвым конфитюром.",
+        "weights": [{"label": "0,8 кг", "price": "1 155 ₽"}]},
 
     # ========== КОНФЕТЫ ==========
     "zefir-assorti": {"title": "Зефир", "section": "candies", "desc_source": "mom",
@@ -361,6 +367,8 @@ CATALOG_SOURCE_MAP: dict[str, tuple[str, str]] = {
     "krasnyy-barhat-cut.jpg": ("krasnyy-barhat", "cut"),
     "kievskiy.jpg": ("kievskiy", "whole"),
     "kievskiy-cut.jpg": ("kievskiy", "cut"),
+    "kompliment.jpg": ("kompliment", "whole"),
+    "kompliment-shokoladnyy.jpg": ("kompliment-shokoladnyy", "whole"),
 }
 
 # В «Домашнем» по согласованию используется только общий вид.

@@ -936,18 +936,18 @@
     "krasnyy-barhat": {
       "slug": "krasnyy-barhat",
       "images": {
-        "cut": "./assets/webp/cakes/krasnyy-barhat-cut.webp",
-        "whole": "./assets/webp/cakes/krasnyy-barhat-whole.webp"
+        "whole": "./assets/webp/cakes/krasnyy-barhat-whole.webp",
+        "cut": "./assets/webp/cakes/krasnyy-barhat-cut.webp"
       },
       "sources": [
         {
-          "file": "assetscatalog-sourcekrasnyy-barhat-cut.jpg",
-          "view": "cut",
+          "file": "assets\\new cakes2\\красный-бархат_общий.jpg",
+          "view": "whole",
           "origin": "new"
         },
         {
-          "file": "assets\\new cakes2\\красный-бархат_общий.jpg",
-          "view": "whole",
+          "file": "assets\\catalog-source\\krasnyy-barhat-cut.jpg",
+          "view": "cut",
           "origin": "new"
         }
       ],
@@ -1086,18 +1086,18 @@
     "polet-varenka": {
       "slug": "polet-varenka",
       "images": {
-        "whole": "./assets/webp/cakes/polet-varenka-whole.webp",
-        "cut": "./assets/webp/cakes/polet-varenka-cut.webp"
+        "cut": "./assets/webp/cakes/polet-varenka-cut.webp",
+        "whole": "./assets/webp/cakes/polet-varenka-whole.webp"
       },
       "sources": [
         {
-          "file": "assetscatalog-sourcepolet-varenka.jpg",
-          "view": "whole",
+          "file": "assets\\new cakes2\\полет_с_варенным_сгущенным_молоком_общий_1.0кг.jpg",
+          "view": "cut",
           "origin": "new"
         },
         {
-          "file": "assetsnew cakes2полет_с_варенным_сгущенным_молоком_общий_1.0кг.jpg",
-          "view": "cut",
+          "file": "assets\\catalog-source\\polet-varenka.jpg",
+          "view": "whole",
           "origin": "new"
         }
       ],
@@ -1128,18 +1128,18 @@
     "polet-slivochnyy": {
       "slug": "polet-slivochnyy",
       "images": {
-        "whole": "./assets/webp/cakes/polet-slivochnyy-whole.webp",
-        "cut": "./assets/webp/cakes/polet-slivochnyy-cut.webp"
+        "cut": "./assets/webp/cakes/polet-slivochnyy-cut.webp",
+        "whole": "./assets/webp/cakes/polet-slivochnyy-whole.webp"
       },
       "sources": [
         {
-          "file": "assetscatalog-sourcepolet-slivochnyy.jpg",
-          "view": "whole",
+          "file": "assets\\new cakes2\\полет_со_со_сливочным_кремом_1.0кг.jpg",
+          "view": "cut",
           "origin": "new"
         },
         {
-          "file": "assetsnew cakes2полет_со_со_сливочным_кремом_1.0кг.jpg",
-          "view": "cut",
+          "file": "assets\\catalog-source\\polet-slivochnyy.jpg",
+          "view": "whole",
           "origin": "new"
         }
       ],
@@ -1263,6 +1263,84 @@
       "description": "Пирожное из шоколадной бисквитной крошки с кремом.",
       "desc_source": "mom"
     },
+    "kievskiy": {
+      "slug": "kievskiy",
+      "images": {
+        "cut": "./assets/webp/cakes/kievskiy-cut.webp",
+        "whole": "./assets/webp/cakes/kievskiy-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\kievskiy-cut.jpg",
+          "view": "cut",
+          "origin": "new"
+        },
+        {
+          "file": "assets\\catalog-source\\kievskiy.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Киевский",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "",
+      "desc_source": "pending"
+    },
+    "kompliment-shokoladnyy": {
+      "slug": "kompliment-shokoladnyy",
+      "images": {
+        "whole": "./assets/webp/cakes/kompliment-shokoladnyy-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\kompliment-shokoladnyy.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Комплимент шоколадный",
+      "section": "other",
+      "biscuit": null,
+      "description": "Шоколадный бисквит прослоен взбитыми сливками со вкусом шоколада и вишнёвым конфитюром.",
+      "desc_source": "mom"
+    },
+    "kompliment": {
+      "slug": "kompliment",
+      "images": {
+        "whole": "./assets/webp/cakes/kompliment-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\kompliment.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Комплимент",
+      "section": "other",
+      "biscuit": null,
+      "description": "Классический бисквит прослоен взбитыми сливками и вишнёвым конфитюром.",
+      "desc_source": "mom"
+    },
+    "muraviynaya-gorka": {
+      "slug": "muraviynaya-gorka",
+      "images": {
+        "whole": "./assets/webp/cakes/muraviynaya-gorka-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\muraviynaya-gorka.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Муравьиная горка",
+      "section": "pastries",
+      "biscuit": null,
+      "description": "",
+      "desc_source": "pending"
+    },
     "napoleon-pirozhnoe": {
       "slug": "napoleon-pirozhnoe",
       "images": {
@@ -1279,6 +1357,78 @@
       "section": "pastries",
       "biscuit": null,
       "description": "Тонкие слои слоёного теста в сочетании с белковым кремом.",
+      "desc_source": "mom"
+    },
+    "podsolnukh": {
+      "slug": "podsolnukh",
+      "images": {
+        "whole": "./assets/webp/cakes/podsolnukh-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\podsolnukh.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Подсолнух",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "Воздушные коржи-безе с жареными ядрами подсолнечника прослоены кремом из взбитых сливок с халвой.",
+      "desc_source": "mom"
+    },
+    "polet-bez-oreha-slivki": {
+      "slug": "polet-bez-oreha-slivki",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-bez-oreha-slivki-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\polet-bez-oreha-slivki.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт-безе без ореха со сливочным кремом",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "Три воздушных коржа-безе прослоены ванильно-сливочным кремом.",
+      "desc_source": "mom"
+    },
+    "polet-bez-oreha": {
+      "slug": "polet-bez-oreha",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-bez-oreha-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\polet-bez-oreha.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт-безе без ореха с варёным сгущённым молоком",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "Три воздушных коржа-безе прослоены сливочным кремом с варёной сгущёнкой.",
+      "desc_source": "mom"
+    },
+    "polet-melodiya": {
+      "slug": "polet-melodiya",
+      "images": {
+        "whole": "./assets/webp/cakes/polet-melodiya-whole.webp"
+      },
+      "sources": [
+        {
+          "file": "assets\\catalog-source\\polet-melodiya.jpg",
+          "view": "whole",
+          "origin": "new"
+        }
+      ],
+      "title": "Полёт-Мелодия",
+      "section": "airnut",
+      "biscuit": null,
+      "description": "Воздушные коржи-безе с абрикосовыми косточками в сочетании с белково-сливочным кремом.",
       "desc_source": "mom"
     },
     "shu": {
@@ -1387,120 +1537,6 @@
       "section": "candies",
       "biscuit": null,
       "description": "Воздушный зефир с нежной текстурой со вкусами ванили, манго, клубники, малины, банана, дыни, апельсина.",
-      "desc_source": "mom"
-    },
-    "muraviynaya-gorka": {
-      "slug": "muraviynaya-gorka",
-      "images": {
-        "whole": "./assets/webp/cakes/muraviynaya-gorka-whole.webp"
-      },
-      "sources": [
-        {
-          "file": "assetscatalog-sourcemuraviynaya-gorka.jpg",
-          "view": "whole",
-          "origin": "new"
-        }
-      ],
-      "title": "Муравьиная горка",
-      "section": "pastries",
-      "biscuit": null,
-      "description": "",
-      "desc_source": "pending"
-    },
-    "kievskiy": {
-      "slug": "kievskiy",
-      "images": {
-        "whole": "./assets/webp/cakes/kievskiy-whole.webp",
-        "cut": "./assets/webp/cakes/kievskiy-cut.webp"
-      },
-      "sources": [
-        {
-          "file": "assetscatalog-sourcekievskiy.jpg",
-          "view": "whole",
-          "origin": "new"
-        },
-        {
-          "file": "assetscatalog-sourcekievskiy-cut.jpg",
-          "view": "cut",
-          "origin": "new"
-        }
-      ],
-      "title": "Киевский",
-      "section": "airnut",
-      "biscuit": null,
-      "description": "",
-      "desc_source": "pending"
-    },
-    "polet-melodiya": {
-      "slug": "polet-melodiya",
-      "images": {
-        "whole": "./assets/webp/cakes/polet-melodiya-whole.webp"
-      },
-      "sources": [
-        {
-          "file": "assetscatalog-sourcepolet-melodiya.jpg",
-          "view": "whole",
-          "origin": "new"
-        }
-      ],
-      "title": "Полёт-Мелодия",
-      "section": "airnut",
-      "biscuit": null,
-      "description": "Воздушные коржи-безе с абрикосовыми косточками в сочетании с белково-сливочным кремом.",
-      "desc_source": "mom"
-    },
-    "podsolnukh": {
-      "slug": "podsolnukh",
-      "images": {
-        "whole": "./assets/webp/cakes/podsolnukh-whole.webp"
-      },
-      "sources": [
-        {
-          "file": "assetscatalog-sourcepodsolnukh.jpg",
-          "view": "whole",
-          "origin": "new"
-        }
-      ],
-      "title": "Подсолнух",
-      "section": "airnut",
-      "biscuit": null,
-      "description": "Воздушные коржи-безе с жареными ядрами подсолнечника прослоены кремом из взбитых сливок с халвой.",
-      "desc_source": "mom"
-    },
-    "polet-bez-oreha": {
-      "slug": "polet-bez-oreha",
-      "images": {
-        "whole": "./assets/webp/cakes/polet-bez-oreha-whole.webp"
-      },
-      "sources": [
-        {
-          "file": "assetscatalog-sourcepolet-bez-oreha.jpg",
-          "view": "whole",
-          "origin": "new"
-        }
-      ],
-      "title": "Полёт-безе без ореха с варёным сгущённым молоком",
-      "section": "airnut",
-      "biscuit": null,
-      "description": "Три воздушных коржа-безе прослоены сливочным кремом с варёной сгущёнкой.",
-      "desc_source": "mom"
-    },
-    "polet-bez-oreha-slivki": {
-      "slug": "polet-bez-oreha-slivki",
-      "images": {
-        "whole": "./assets/webp/cakes/polet-bez-oreha-slivki-whole.webp"
-      },
-      "sources": [
-        {
-          "file": "assetscatalog-sourcepolet-bez-oreha-slivki.jpg",
-          "view": "whole",
-          "origin": "new"
-        }
-      ],
-      "title": "Полёт-безе без ореха со сливочным кремом",
-      "section": "airnut",
-      "biscuit": null,
-      "description": "Три воздушных коржа-безе прослоены ванильно-сливочным кремом.",
       "desc_source": "mom"
     }
   },
@@ -1875,6 +1911,32 @@
         "hasWhole": true,
         "hasCut": true,
         "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Комплимент",
+        "slug": "kompliment",
+        "description": "Классический бисквит прослоен взбитыми сливками и вишнёвым конфитюром.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 155 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Комплимент шоколадный",
+        "slug": "kompliment-shokoladnyy",
+        "description": "Шоколадный бисквит прослоен взбитыми сливками со вкусом шоколада и вишнёвым конфитюром.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 155 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "classic": [

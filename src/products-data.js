@@ -398,6 +398,32 @@ window.PRODUCTS_DATA = {
         "hasWhole": true,
         "hasCut": true,
         "note": "Ждём описание от мамы."
+      },
+      {
+        "title": "Комплимент",
+        "slug": "kompliment",
+        "description": "Классический бисквит прослоен взбитыми сливками и вишнёвым конфитюром.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 155 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
+      },
+      {
+        "title": "Комплимент шоколадный",
+        "slug": "kompliment-shokoladnyy",
+        "description": "Шоколадный бисквит прослоен взбитыми сливками со вкусом шоколада и вишнёвым конфитюром.",
+        "weights": [
+          {
+            "label": "0,8 кг",
+            "price": "1 155 ₽"
+          }
+        ],
+        "hasWhole": true,
+        "hasCut": false
       }
     ],
     "classic": [
