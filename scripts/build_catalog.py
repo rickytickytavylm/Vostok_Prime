@@ -302,7 +302,7 @@ CAKE_META: dict[str, dict] = {
         "description": "Премиальный торт с богатым декором и насыщенным вкусом."},
     "tsarskiy-klubnichnyy": {"title": "Царский (клубничный)", "section": "other", "desc_source": "pending",
         "description": "Ажурные блинчики прослоены взбитыми сливками со вкусом клубники.",
-        "weights": [{"label": "0,6 кг", "price": "1 000 ₽"}, {"label": "1,2 кг", "price": "1 705 ₽"}],
+        "weights": [{"label": "1,2 кг", "price": "1 705 ₽"}],
         "note": "Ждём описание от мамы."},
 
     # ========== КОНФЕТЫ ==========

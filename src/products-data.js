@@ -364,10 +364,6 @@ window.PRODUCTS_DATA = {
         "description": "Царский торт с банановой начинкой.",
         "weights": [
           {
-            "label": "0,6 кг",
-            "price": "1 000 ₽"
-          },
-          {
             "label": "1,2 кг",
             "price": "1 705 ₽"
           }
@@ -382,10 +378,6 @@ window.PRODUCTS_DATA = {
         "description": "Премиальный торт с богатым декором и насыщенным вкусом.",
         "weights": [
           {
-            "label": "0,6 кг",
-            "price": "1 000 ₽"
-          },
-          {
             "label": "1,2 кг",
             "price": "1 705 ₽"
           }
@@ -398,10 +390,6 @@ window.PRODUCTS_DATA = {
         "slug": "tsarskiy-klubnichnyy",
         "description": "Ажурные блинчики прослоены взбитыми сливками со вкусом клубники.",
         "weights": [
-          {
-            "label": "0,6 кг",
-            "price": "1 000 ₽"
-          },
           {
             "label": "1,2 кг",
             "price": "1 705 ₽"
